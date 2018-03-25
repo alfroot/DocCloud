@@ -60,7 +60,7 @@ desired effect
     <header class="main-header">
 
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>D</b>OC</span>
             <!-- logo for regular state and mobile devices -->
@@ -296,7 +296,7 @@ desired effect
             Anything you want
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2018 <a href="#">DocCloud</a>.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->
