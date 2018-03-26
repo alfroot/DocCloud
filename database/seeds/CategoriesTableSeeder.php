@@ -1,5 +1,6 @@
 <?php
 
+use App\Category;
 use Illuminate\Database\Seeder;
 
 class CategoriesTableSeeder extends Seeder
@@ -15,8 +16,8 @@ class CategoriesTableSeeder extends Seeder
 
 
         $documento = new Category;
-        $documento->nombre = 'Categoria 1';
-        $documento->url = 'Categoria-1';
+        $documento->name = 'Categoria 1';
+        $documento->description = 'Categoria uno ';
         $documento->save();
     }
 }

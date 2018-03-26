@@ -1,5 +1,6 @@
 <?php
 
+use App\Document;
 use Illuminate\Database\Seeder;
 
 class DocumentsTableSeeder extends Seeder
@@ -14,8 +15,8 @@ class DocumentsTableSeeder extends Seeder
         Document::truncate();
 
 
-        $documento = new Document;
+        //$documento = new Document;
         //$documento->user_id = 1;
-        $documento->save();
+        //$documento->save();
     }
 }
