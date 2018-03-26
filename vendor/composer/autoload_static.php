@@ -12,10 +12,10 @@ class ComposerStaticInit821567a0a582379404f8db397a0d00a5
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
-        '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
+        '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
     );
 
@@ -320,15 +320,9 @@ class ComposerStaticInit821567a0a582379404f8db397a0d00a5
     );
 
     public static $classMap = array (
-<<<<<<< Updated upstream
-        'App\\Categoria' => __DIR__ . '/../..' . '/app/Categoria.php',
-        'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
-        'App\\Documento' => __DIR__ . '/../..' . '/app/Documento.php',
-=======
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Document' => __DIR__ . '/../..' . '/app/Document.php',
->>>>>>> Stashed changes
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminController.php',
         'App\\Http\\Controllers\\Admin\\DocumentosController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DocumentosController.php',
@@ -1361,11 +1355,13 @@ class ComposerStaticInit821567a0a582379404f8db397a0d00a5
         'Illuminate\\Foundation\\Console\\TestMakeCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/TestMakeCommand.php',
         'Illuminate\\Foundation\\Console\\UpCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/UpCommand.php',
         'Illuminate\\Foundation\\Console\\VendorPublishCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/VendorPublishCommand.php',
+        'Illuminate\\Foundation\\Console\\ViewCacheCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/ViewCacheCommand.php',
         'Illuminate\\Foundation\\Console\\ViewClearCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/ViewClearCommand.php',
         'Illuminate\\Foundation\\EnvironmentDetector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/EnvironmentDetector.php',
         'Illuminate\\Foundation\\Events\\Dispatchable' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Events/Dispatchable.php',
         'Illuminate\\Foundation\\Events\\LocaleUpdated' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Events/LocaleUpdated.php',
         'Illuminate\\Foundation\\Exceptions\\Handler' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php',
+        'Illuminate\\Foundation\\Exceptions\\WhoopsHandler' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Exceptions/WhoopsHandler.php',
         'Illuminate\\Foundation\\Http\\Events\\RequestHandled' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Http/Events/RequestHandled.php',
         'Illuminate\\Foundation\\Http\\Exceptions\\MaintenanceModeException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Http/Exceptions/MaintenanceModeException.php',
         'Illuminate\\Foundation\\Http\\FormRequest' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php',
@@ -1397,6 +1393,7 @@ class ComposerStaticInit821567a0a582379404f8db397a0d00a5
         'Illuminate\\Foundation\\Testing\\Concerns\\MakesHttpRequests' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php',
         'Illuminate\\Foundation\\Testing\\Concerns\\MocksApplicationServices' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.php',
         'Illuminate\\Foundation\\Testing\\Constraints\\HasInDatabase' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Testing/Constraints/HasInDatabase.php',
+        'Illuminate\\Foundation\\Testing\\Constraints\\SeeInOrder' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Testing/Constraints/SeeInOrder.php',
         'Illuminate\\Foundation\\Testing\\Constraints\\SoftDeletedInDatabase' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Testing/Constraints/SoftDeletedInDatabase.php',
         'Illuminate\\Foundation\\Testing\\DatabaseMigrations' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseMigrations.php',
         'Illuminate\\Foundation\\Testing\\DatabaseTransactions' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseTransactions.php',
