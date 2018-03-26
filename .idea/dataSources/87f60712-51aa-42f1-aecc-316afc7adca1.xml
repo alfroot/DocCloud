@@ -1211,11 +1211,11 @@
       <Engine>InnoDB</Engine>
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="307" parent="9" name="categorias">
+    <table id="307" parent="9" name="categories">
       <Engine>InnoDB</Engine>
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="308" parent="9" name="documentos">
+    <table id="308" parent="9" name="documents">
       <Engine>InnoDB</Engine>
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
@@ -1926,19 +1926,19 @@ role_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="437" parent="307" name="nombre">
+    <column id="437" parent="307" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="438" parent="307" name="url">
+    <column id="438" parent="307" name="description">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="439" parent="307" name="padre_id">
+    <column id="439" parent="307" name="category_parent_id">
       <Position>4</Position>
       <DataType>int(10) unsigned|0</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -1965,296 +1965,320 @@ role_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="444" parent="308" name="created_at">
+    <column id="444" parent="308" name="user_id">
       <Position>2</Position>
-      <DataType>timestamp|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="445" parent="308" name="updated_at">
-      <Position>3</Position>
-      <DataType>timestamp|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="446" parent="308" name="user_id">
-      <Position>4</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="447" parent="308" name="PRIMARY">
+    <column id="445" parent="308" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="446" parent="308" name="description">
+      <Position>4</Position>
+      <DataType>mediumtext|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="447" parent="308" name="url">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="448" parent="308" name="category_id">
+      <Position>6</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="449" parent="308" name="created_at">
+      <Position>7</Position>
+      <DataType>timestamp|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="450" parent="308" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="451" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="448" parent="309" name="id">
+    <column id="452" parent="309" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="449" parent="309" name="migration">
+    <column id="453" parent="309" name="migration">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="450" parent="309" name="batch">
+    <column id="454" parent="309" name="batch">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="451" parent="309" name="PRIMARY">
+    <key id="455" parent="309" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="452" parent="310" name="permission_id">
+    <column id="456" parent="310" name="permission_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="453" parent="310" name="model_type">
+    <column id="457" parent="310" name="model_type">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="454" parent="310" name="model_id">
+    <column id="458" parent="310" name="model_id">
       <Position>3</Position>
       <DataType>bigint(20) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="455" parent="310" name="model_has_permissions_model_type_model_id_index">
+    <index id="459" parent="310" name="model_has_permissions_model_type_model_id_index">
       <ColNames>model_type
 model_id</ColNames>
     </index>
-    <key id="456" parent="310" name="PRIMARY">
+    <key id="460" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>permission_id
 model_id
 model_type</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="457" parent="310" name="model_has_permissions_permission_id_foreign">
+    <foreign-key id="461" parent="310" name="model_has_permissions_permission_id_foreign">
       <ColNames>permission_id</ColNames>
       <RefSchemaName>doccloud</RefSchemaName>
       <RefTableName>permissions</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="458" parent="311" name="role_id">
+    <column id="462" parent="311" name="role_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="459" parent="311" name="model_type">
+    <column id="463" parent="311" name="model_type">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="460" parent="311" name="model_id">
+    <column id="464" parent="311" name="model_id">
       <Position>3</Position>
       <DataType>bigint(20) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="461" parent="311" name="model_has_roles_model_type_model_id_index">
+    <index id="465" parent="311" name="model_has_roles_model_type_model_id_index">
       <ColNames>model_type
 model_id</ColNames>
     </index>
-    <key id="462" parent="311" name="PRIMARY">
+    <key id="466" parent="311" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>role_id
 model_id
 model_type</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="463" parent="311" name="model_has_roles_role_id_foreign">
+    <foreign-key id="467" parent="311" name="model_has_roles_role_id_foreign">
       <ColNames>role_id</ColNames>
       <RefSchemaName>doccloud</RefSchemaName>
       <RefTableName>roles</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="464" parent="312" name="email">
+    <column id="468" parent="312" name="email">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="465" parent="312" name="token">
+    <column id="469" parent="312" name="token">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="466" parent="312" name="created_at">
+    <column id="470" parent="312" name="created_at">
       <Position>3</Position>
       <DataType>timestamp|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="467" parent="312" name="password_resets_email_index">
+    <index id="471" parent="312" name="password_resets_email_index">
       <ColNames>email</ColNames>
     </index>
-    <column id="468" parent="313" name="id">
+    <column id="472" parent="313" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="469" parent="313" name="name">
+    <column id="473" parent="313" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="470" parent="313" name="guard_name">
+    <column id="474" parent="313" name="guard_name">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="471" parent="313" name="created_at">
+    <column id="475" parent="313" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="472" parent="313" name="updated_at">
+    <column id="476" parent="313" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="473" parent="313" name="PRIMARY">
+    <key id="477" parent="313" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="474" parent="314" name="permission_id">
+    <column id="478" parent="314" name="permission_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="475" parent="314" name="role_id">
+    <column id="479" parent="314" name="role_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="476" parent="314" name="role_has_permissions_role_id_foreign">
+    <index id="480" parent="314" name="role_has_permissions_role_id_foreign">
       <ColNames>role_id</ColNames>
     </index>
-    <key id="477" parent="314" name="PRIMARY">
+    <key id="481" parent="314" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>permission_id
 role_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="478" parent="314" name="role_has_permissions_permission_id_foreign">
+    <foreign-key id="482" parent="314" name="role_has_permissions_permission_id_foreign">
       <ColNames>permission_id</ColNames>
       <RefSchemaName>doccloud</RefSchemaName>
       <RefTableName>permissions</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="479" parent="314" name="role_has_permissions_role_id_foreign">
+    <foreign-key id="483" parent="314" name="role_has_permissions_role_id_foreign">
       <ColNames>role_id</ColNames>
       <RefSchemaName>doccloud</RefSchemaName>
       <RefTableName>roles</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="480" parent="315" name="id">
+    <column id="484" parent="315" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="481" parent="315" name="name">
+    <column id="485" parent="315" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="482" parent="315" name="guard_name">
+    <column id="486" parent="315" name="guard_name">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="483" parent="315" name="created_at">
+    <column id="487" parent="315" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="484" parent="315" name="updated_at">
+    <column id="488" parent="315" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="485" parent="315" name="PRIMARY">
+    <key id="489" parent="315" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="486" parent="316" name="id">
+    <column id="490" parent="316" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="487" parent="316" name="name">
+    <column id="491" parent="316" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="488" parent="316" name="email">
+    <column id="492" parent="316" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="489" parent="316" name="password">
+    <column id="493" parent="316" name="password">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="490" parent="316" name="remember_token">
+    <column id="494" parent="316" name="remember_token">
       <Position>5</Position>
       <DataType>varchar(100)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="491" parent="316" name="created_at">
+    <column id="495" parent="316" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="492" parent="316" name="updated_at">
+    <column id="496" parent="316" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="493" parent="316" name="users_email_unique">
+    <index id="497" parent="316" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="494" parent="316" name="PRIMARY">
+    <key id="498" parent="316" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="495" parent="316" name="users_email_unique">
+    <key id="499" parent="316" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
