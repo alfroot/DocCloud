@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c2ee6db7-9f33-4c99-b636-78780b0ad3a0" name="Default" comment="">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/DocCloud.iml" afterPath="$PROJECT_DIR$/.idea/DocCloud.iml" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/87f60712-51aa-42f1-aecc-316afc7adca1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/87f60712-51aa-42f1-aecc-316afc7adca1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
@@ -22,6 +26,12 @@
       <change beforePath="$PROJECT_DIR$/Tareas.txt" afterPath="$PROJECT_DIR$/Tareas.txt" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+>>>>>>> Stashed changes
+=======
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_03_25_114048_create_documentos_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_03_25_114048_create_documentos_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_03_25_114108_create_categorias_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_03_25_114108_create_categorias_table.php" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CategoriasTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/CategoriasTableSeeder.php" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DocumentosTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DocumentosTableSeeder.php" />
 >>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,6 +88,13 @@
         <item name="doccloud@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="doccloud: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="migrations: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="doccloud@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="doccloud: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="users: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -86,11 +103,16 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <file leaf-file-name="2018_03_25_114048_create_documentos_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_25_114048_create_documentos_table.php">
+=======
+      <file leaf-file-name="2014_10_12_000000_create_users_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+>>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            <state relative-caret-position="180">
+              <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               <folding>
                 <element signature="e#7#45#0#PHP" expanded="true" />
               </folding>
@@ -116,11 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentosTableSeeder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DocumentosTableSeeder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/DocumentosTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
               <folding>
                 <element signature="e#7#25#0#PHP" expanded="true" />
               </folding>
@@ -137,8 +159,13 @@
         </entry>
       </file>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <file leaf-file-name="Documento.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Documento.php">
+=======
+      <file leaf-file-name="2018_03_25_121849_create_permission_tables.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_25_121849_create_permission_tables.php">
+>>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -147,26 +174,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/User.php">
+      <file leaf-file-name="2018_03_25_114108_create_categorias_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_25_114108_create_categorias_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-              <folding>
-                <element signature="e#23#63#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="361">
+              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersTableSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
+      <file leaf-file-name="2014_10_12_100000_create_password_resets_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="5" />
-              <folding>
-                <element signature="e#7#20#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,8 +197,8 @@
       <file leaf-file-name="CategoriasTableSeeder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/CategoriasTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="360">
+              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding>
                 <element signature="e#7#25#0#PHP" expanded="true" />
               </folding>
@@ -192,22 +215,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <file leaf-file-name="UsersTableSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#7#20#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-              <folding />
+      <file leaf-file-name="users" pinned="false" current-in-tab="false">
+        <entry file="das://table:/a8fa3f98/87f60712-51aa-42f1-aecc-316afc7adca1/doccloud.users">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -245,12 +269,12 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_03_25_114108_create_categorias_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/partials/nav.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_03_25_114048_create_documentos_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DocumentosTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DocumentosTableSeeder.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_03_25_114048_create_documentos_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_03_25_114108_create_categorias_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/CategoriasTableSeeder.php" />
 =======
         <option value="$PROJECT_DIR$/Tareas.txt" />
@@ -348,10 +372,15 @@
     </include_path>
   </component>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="7">
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="93" />
+>>>>>>> Stashed changes
     <option name="y" value="27" />
     <option name="width" value="1717" />
-    <option name="height" value="941" />
+    <option name="height" value="953" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -378,6 +407,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -500,8 +530,11 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+<<<<<<< Updated upstream
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+>>>>>>> Stashed changes
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,30 +589,39 @@
       <workItem from="1521748916731" duration="3574000" />
       <workItem from="1521909821156" duration="1553000" />
       <workItem from="1521916793057" duration="8170000" />
+<<<<<<< Updated upstream
       <workItem from="1521967084332" duration="6975000" />
 =======
       <workItem from="1522079265609" duration="996000" />
+>>>>>>> Stashed changes
+=======
+      <workItem from="1521967084332" duration="7517000" />
+      <workItem from="1522013938541" duration="3958000" />
 >>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="24813000" />
+=======
+    <option name="totallyTimeSpent" value="29313000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38854167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.196875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26659527" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
 =======
     <option name="totallyTimeSpent" value="1383000" />
@@ -598,6 +640,9 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26445395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
 >>>>>>> Stashed changes
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -622,6 +667,7 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -636,6 +682,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env.example" />
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
 =======
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
@@ -666,20 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521920912471" expanded="true" signature="190:221" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="952:983" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1045:1064" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1128:1142" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1219:1236" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1281:1295" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1502:1518" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1599:1618" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1825:1856" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1936:1955" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="2015:2029" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="2131:2147" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,13 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -775,24 +802,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/a8fa3f98/87f60712-51aa-42f1-aecc-316afc7adca1/doccloud.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome2.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521575016244" expanded="true" signature="9:22" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="34:43" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="299:316" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="406:425" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -800,24 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1044">
           <caret line="58" column="52" lean-forward="false" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
-          <folding>
-            <marker date="1521575016244" expanded="true" signature="30:50" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="284:298" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="317:348" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="400:420" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="673:695" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="909:919" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="946:977" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="1764:1780" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="1786:1799" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="1871:1890" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="1896:1912" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="2235:2255" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="2486:2503" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="2725:2739" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="2853:2870" ph="..." />
-            <marker date="1521575016244" expanded="true" signature="3240:3249" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,7 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3240">
           <caret line="180" column="14" lean-forward="false" selection-start-line="180" selection-start-column="9" selection-end-line="180" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -851,7 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,9 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1521924414574" expanded="true" signature="9:31" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,20 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-198">
           <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="46" />
-          <folding>
-            <marker date="1521920912471" expanded="true" signature="190:221" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="952:983" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1045:1064" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1128:1142" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1219:1236" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1281:1295" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1502:1518" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1599:1618" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1825:1856" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="1936:1955" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="2015:2029" ph="..." />
-            <marker date="1521920912471" expanded="true" signature="2131:2147" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -903,19 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="298" column="58" lean-forward="false" selection-start-line="298" selection-start-column="58" selection-end-line="298" selection-end-column="58" />
-          <folding>
-            <element signature="e#14411#14417#0#HTML" expanded="false" />
-            <marker date="1521972429299" expanded="true" signature="299:330" ph="..." />
-            <marker date="1521972429299" expanded="true" signature="13309:13329" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,23 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_25_121849_create_permission_tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_25_114108_create_categorias_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,7 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,7 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -963,7 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="63" lean-forward="false" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,12 +918,13 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-255.0" y="-18.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-255.0" y="-18.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -988,7 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,18 +986,19 @@
               <point x="56.5" y="82.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-128.5" y="190.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-128.0" y="190.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="234">
           <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding />
         </state>
@@ -1069,32 +1012,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/a8fa3f98/87f60712-51aa-42f1-aecc-316afc7adca1/doccloud.model_has_permissions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#23#63#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_25_114048_create_documentos_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        <state relative-caret-position="232">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding>
             <element signature="e#7#45#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#20#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1102,22 +1040,45 @@
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/CategoriasTableSeeder.php">
+    <entry file="das://table:/a8fa3f98/87f60712-51aa-42f1-aecc-316afc7adca1/doccloud.migrations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="270">
+          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_25_121849_create_permission_tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding>
-            <element signature="e#7#25#0#PHP" expanded="true" />
+            <element signature="e#7#45#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/a8fa3f98/87f60712-51aa-42f1-aecc-316afc7adca1/doccloud.categorias">
+    <entry file="das://table:/a8fa3f98/87f60712-51aa-42f1-aecc-316afc7adca1/doccloud.users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1131,10 +1092,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/a8fa3f98/87f60712-51aa-42f1-aecc-316afc7adca1/doccloud.categorias">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#20#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DocumentosTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding>
 <<<<<<< Updated upstream
             <element signature="e#7#25#0#PHP" expanded="true" />
@@ -1149,6 +1127,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1209,6 +1188,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+=======
+    <entry file="file://$PROJECT_DIR$/database/seeds/CategoriasTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#7#25#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_03_25_114108_create_categorias_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>

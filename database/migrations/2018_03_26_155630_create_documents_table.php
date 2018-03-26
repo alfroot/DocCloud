@@ -19,7 +19,11 @@ class CreateDocumentsTable extends Migration
             $table->string('name');
             $table->mediumText('description');
             $table->string('url');
+<<<<<<< Updated upstream:database/migrations/2018_03_26_155630_create_documents_table.php
             $table->unsignedInteger('category_id');
+=======
+            $table->unsignedInteger('padre_id')->nullable();
+>>>>>>> Stashed changes:database/migrations/2018_03_25_114108_create_categorias_table.php
             $table->timestamps();
         });
     }
