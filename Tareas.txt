@@ -1,2 +1,4 @@
 -Crear BBDD 
 -Crear crud usuarios
+-cread crud archivos
+-crear crud categorias

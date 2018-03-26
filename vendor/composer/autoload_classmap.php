@@ -6,9 +6,15 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+<<<<<<< Updated upstream
     'App\\Categoria' => $baseDir . '/app/Categoria.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Documento' => $baseDir . '/app/Documento.php',
+=======
+    'App\\Category' => $baseDir . '/app/Category.php',
+    'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Document' => $baseDir . '/app/Document.php',
+>>>>>>> Stashed changes
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Admin\\AdminController' => $baseDir . '/app/Http/Controllers/Admin/AdminController.php',
     'App\\Http\\Controllers\\Admin\\DocumentosController' => $baseDir . '/app/Http/Controllers/Admin/DocumentosController.php',

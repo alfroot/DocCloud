@@ -320,9 +320,15 @@ class ComposerStaticInit821567a0a582379404f8db397a0d00a5
     );
 
     public static $classMap = array (
+<<<<<<< Updated upstream
         'App\\Categoria' => __DIR__ . '/../..' . '/app/Categoria.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Documento' => __DIR__ . '/../..' . '/app/Documento.php',
+=======
+        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Document' => __DIR__ . '/../..' . '/app/Document.php',
+>>>>>>> Stashed changes
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminController.php',
         'App\\Http\\Controllers\\Admin\\DocumentosController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DocumentosController.php',
