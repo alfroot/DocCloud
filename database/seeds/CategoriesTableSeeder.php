@@ -1,9 +1,8 @@
 <?php
 
-use App\Categoria;
 use Illuminate\Database\Seeder;
 
-class CategoriasTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,10 +11,10 @@ class CategoriasTableSeeder extends Seeder
      */
     public function run()
     {
-        Categoria::truncate();
+        Category::truncate();
 
 
-        $documento = new Categoria;
+        $documento = new Category;
         $documento->nombre = 'Categoria 1';
         $documento->url = 'Categoria-1';
         $documento->save();

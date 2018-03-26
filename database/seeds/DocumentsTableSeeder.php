@@ -1,9 +1,8 @@
 <?php
 
-use App\Documento;
 use Illuminate\Database\Seeder;
 
-class DocumentosTableSeeder extends Seeder
+class DocumentsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,10 +11,10 @@ class DocumentosTableSeeder extends Seeder
      */
     public function run()
     {
-        Documento::truncate();
+        Document::truncate();
 
 
-        $documento = new Documento;
+        $documento = new Document;
         //$documento->user_id = 1;
         $documento->save();
     }
