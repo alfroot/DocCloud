@@ -18,20 +18,36 @@ class UsersTableSeeder extends Seeder
         Role::truncate();
         User::truncate();
 
-        $adminRole = Role::create(['name' => 'Admin']);
+        $SuperAdminRole = Role::create(['name' => 'SuperAdmin']);
+        $AdminRole = Role::create(['name' => 'Admin']);
+        $UserRole = Role::create(['name' => 'User']);
 
         $user = new User;
         $user->name = 'Alfonso';
         $user->email = 'alfonso@gmail.com';
         $user->password = bcrypt('01020304');
         $user->save();
-        $user->assignRole($adminRole);
+        $user->assignRole($SuperAdminRole);
 
         $user = new User;
         $user->name = 'Ramon';
         $user->email = 'ramon@gmail.com';
         $user->password = bcrypt('123456');
         $user->save();
-        $user->assignRole($adminRole);
+        $user->assignRole($SuperAdminRole);
+
+        $user = new User;
+        $user->name = 'Pepe';
+        $user->email = 'pepe@gmail.com';
+        $user->password = bcrypt('01020304');
+        $user->save();
+        $user->assignRole($AdminRole);
+
+        $user = new User;
+        $user->name = 'Alex';
+        $user->email = 'alex@gmail.com';
+        $user->password = bcrypt('01020304');
+        $user->save();
+        $user->assignRole($UserRole);
     }
 }

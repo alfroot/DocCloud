@@ -274,6 +274,12 @@ desired effect
         <!-- Main content -->
         <section class="content container-fluid">
 
+            @if (session()->has('danger'))
+                <div class="alert alert-danger">
+                    {{ session('danger') }}
+                </div>
+            @endif
+
             @if (session()->has('flash'))
                 <div class="alert alert-success">
                     {{ session('flash') }}
