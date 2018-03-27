@@ -6,7 +6,7 @@
         <div class="box-header">
             <h3 class="box-title">Crear Categorias</h3>
             <a
-                    href="/admin/category"
+                    href={{ route('admin.category.index') }}
                     class="btn btn-primary pull-right"
             >
                 Volver
@@ -17,7 +17,6 @@
             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                 <label for="">Nombre de la categoria</label>
                 <input type="text" name="name" class="form-control"
-
                        placeholder="Escribe el nombre de la categoria">
                 {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
             </div>

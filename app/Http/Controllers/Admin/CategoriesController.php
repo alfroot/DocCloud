@@ -46,7 +46,7 @@ class CategoriesController extends Controller
         $category = new Category($request->all());
         $category->save();
 
-        return redirect('/admin/category');
+        return redirect('/admin/category')->with('flash', 'La Categoria ha sido guardada');;
     }
 
     /**
@@ -57,7 +57,8 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Category::find($id);
+        return view('admin.category.show', compact('category'));
     }
 
     /**
@@ -82,7 +83,18 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category = Category::find($id);
+        $this->validate($request, [
+            'name' => 'required|min:3',
+            'description' => 'required |min:3'
+        ]);
+
+        $category->name = $request->name;
+        $category->description = $request->description;
+        $category->category_parent_id = $request->category_parent_id;
+        $category->save();
+
+        return redirect('/admin/category')->with('flash', 'La Categoria ha sido actualizada');
     }
 
     /**
@@ -93,6 +105,9 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        return $id;
+        $category = Category::find($id);
+        $category->delete();
+        return redirect()->back()->with('flash', 'Categoria Borrada');
+
     }
 }

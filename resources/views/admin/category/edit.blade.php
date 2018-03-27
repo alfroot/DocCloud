@@ -6,7 +6,7 @@
         <div class="box-header">
             <h3 class="box-title">Crear Categorias</h3>
             <a
-                    href="/admin/category"
+                    href={{ route('admin.category.index') }}
                     class="btn btn-primary pull-right"
             >
                 Volver
