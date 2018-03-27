@@ -5,7 +5,7 @@
         <div class="box-header">
             <h3 class="box-title">Editar Usuario</h3>
             <a
-                    href="{{ route('admin.users.index') }}"
+                    href={{ route('admin.users.index') }}"
                     class="btn btn-primary pull-right"
             >
                 Volver
