@@ -29,7 +29,7 @@
         </ul>
     </li>
     <li><a href="#"><i class="fa fa-link"></i> <span>Documentos</span></a></li>
-    <li><a href="#"><i class="fa fa-link"></i> <span>Categorias</span></a></li>
+    <li><a href="/admin/category"><i class="fa fa-link"></i> <span>Categorias</span></a></li>
     <li class="treeview">
         <a href="#"><i class="fa fa-link"></i> <span>Pagos</span>
             <span class="pull-right-container">
