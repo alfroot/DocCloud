@@ -13,23 +13,25 @@
               </span>
         </a>
         <ul class="treeview-menu">
-            <li >
+            <li {{ request()->is('admin/users') ? 'class=active' : '' }}>
                 <a href="{{ route('admin.users.index') }}">
                     <i class="fa fa-eye"></i>
                     Ver todos los usuarios
                 </a>
             </li>
-            <li>
-                 <a href="#" data-toggle="modal" data-target="#myModal">
+            <li {{ request()->is('admin/users/create') ? 'class=active' : '' }}>
+                 <a href="{{route('admin.users.create')}}" >
                         <i class="fa fa-pencil"></i>
-                        Crear un post
+                     Crear un usuario
                  </a>
 
             </li>
         </ul>
     </li>
     <li><a href="#"><i class="fa fa-link"></i> <span>Documentos</span></a></li>
-    <li><a href="/admin/category"><i class="fa fa-link"></i> <span>Categorias</span></a></li>
+    <li {{ request()->is('admin/category*') ? 'class=active' : '' }}>
+
+        <a href="{{route('admin.category.index')}}"><i class="fa fa-link"></i> <span>Categorias</span></a></li>
     <li class="treeview">
         <a href="#"><i class="fa fa-link"></i> <span>Pagos</span>
             <span class="pull-right-container">

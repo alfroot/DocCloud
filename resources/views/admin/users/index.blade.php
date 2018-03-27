@@ -1,24 +1,17 @@
 @extends('admin.layouts.layout')
 
-@section('header')
-    <h1>
-        USERS
-        <small>Listado</small>
-    </h1>
-    <ol class="breadcrumb">
-        <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">Posts</li>
-    </ol>
-@endsection
 
 @section('content')
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Listado de Usuarios</h3>
-            <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">
-                <i class="fa fa-plus"></i>
+            <a
+                    href="{{route('admin.users.create')}}"
+                    class="btn btn-primary pull-right"
+            >
                 Crear Usuario
-            </button>
+                <i class="fa fa-plus"></i>
+            </a>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -38,16 +31,16 @@
                         <td>{{$user->id}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td>{{$user->getRoleNames()}}</td>
-                        
+                        <td>{{$user->getRoleNames()[0]}}</td>
+
 
                         <td>
                             <a href="" target="_blank" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
-                            <a href="" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
+                            <a href="{{route('admin.users.edit', $user->id)}}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
 
 
 
-                            <form action=""
+                            <form action="{{route('admin.users.destroy', $user->id)}}"
                                   method="POST" style="display: inline">
                                 {{ csrf_field() }} {{ method_field('DELETE') }}
                                 <button class="btn btn-xs btn-danger"
