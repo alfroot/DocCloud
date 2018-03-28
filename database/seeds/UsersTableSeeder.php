@@ -49,5 +49,8 @@ class UsersTableSeeder extends Seeder
         $user->password = bcrypt('01020304');
         $user->save();
         $user->assignRole($UserRole);
+
+
+        factory(User::class,30)->create()->each->assignRole($UserRole);
     }
 }
