@@ -14,10 +14,13 @@ class CreateDocumentsTable extends Migration
         Schema::create('documents', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->string('name');
-            $table->mediumText('description');
-            $table->string('url');
-            $table->unsignedInteger('category_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('name')->nullable();
+            $table->mediumText('description')->nullable();
+            $table->string('url')->nullable();
+            $table->unsignedInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
+
             $table->timestamps();
         });
     }

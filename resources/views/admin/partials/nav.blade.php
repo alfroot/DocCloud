@@ -28,8 +28,22 @@
             </li>
         </ul>
     </li>
-    <li><a href="#"><i class="fa fa-link"></i> <span>Documentos</span></a></li>
-    <li {{ request()->is('admin/category*') ? 'class=active' : '' }}>
+    <li class="treeview {{ request()->is('admin/documents*') ? 'active' : '' }}">
+        <a href=""><i class="fa fa-link"></i> <span>Documentos</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+        </a>
+        <ul class="treeview-menu">
+            <li {{ request()->is('admin/documents') ? 'class=active' : '' }}>
+                <a href="{{ route('admin.documents.index') }}">
+                    <i class="fa fa-eye"></i>
+                    Ver todos los documentos
+                </a>
+            </li>
+
+        </ul>
+    </li>    <li {{ request()->is('admin/category*') ? 'class=active' : '' }}>
 
         <a href="{{route('admin.category.index')}}"><i class="fa fa-link"></i> <span>Categorias</span></a></li>
     <li class="treeview">

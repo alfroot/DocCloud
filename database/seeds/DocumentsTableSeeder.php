@@ -11,8 +11,13 @@ class DocumentsTableSeeder extends Seeder
     public function run()
     {
         Document::truncate();
-        //$documento = new Document;
-        //$documento->user_id = 1;
-        //$documento->save();
+        $documento = new Document;
+        $documento->user_id = 1;
+        $documento->name = 'Tutorial de cria de Caracoles';
+        $documento->description = 'Tutorial sobre la cria y doma de caracoles
+        serranos, lugares preferidos, apareamiento.';
+        $documento->url = 'tutorial-de-cria-de-caracoles';
+        $documento->category_id = 1;
+        $documento->save();
     }
 }

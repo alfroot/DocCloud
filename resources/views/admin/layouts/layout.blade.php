@@ -275,7 +275,7 @@ desired effect
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-
+        @yield('header')
         </section>
 
         <!-- Main content -->
@@ -401,6 +401,11 @@ desired effect
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
+
+@unless(request()->is('admin/posts/*'))
+    @include('admin.documents.create')
+@endunless
+
 @stack('scripts')
 </body>
 </html>
