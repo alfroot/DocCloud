@@ -15,8 +15,12 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('admin.category.index', compact('categories'));
+        if (auth()->user()->hasrole('SuperAdmin')) {
+            $categories = Category::all();
+            return view('admin.category.index', compact('categories'));
+        }else{
+            return redirect()->back()->with('danger', 'No tienes permisos');
+        }
     }
 
     /**
@@ -26,8 +30,12 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view('admin.category.create', compact('categories'));
+        if (auth()->user()->hasrole('SuperAdmin')) {
+            $categories = Category::all();
+            return view('admin.category.create', compact('categories'));
+        }else{
+            return redirect()->back()->with('danger', 'No tienes permisos');
+        }
     }
 
     /**
@@ -38,15 +46,19 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required|min:3',
-            'description' => 'required |min:3',
-        ]);
+        if (auth()->user()->hasrole('SuperAdmin')) {
+            $this->validate($request, [
+                'name' => 'required|min:3',
+                'description' => 'required |min:3',
+            ]);
 
-        $category = new Category($request->all());
-        $category->save();
+            $category = new Category($request->all());
+            $category->save();
 
-        return redirect('/admin/category')->with('flash', 'La Categoria ha sido guardada');;
+            return redirect('/admin/category')->with('flash', 'La Categoria ha sido guardada');
+        }else{
+            return redirect()->back()->with('danger', 'No tienes permisos');
+        }
     }
 
     /**
@@ -57,8 +69,12 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
-        $category = Category::find($id);
-        return view('admin.category.show', compact('category'));
+        if (auth()->user()->hasrole('SuperAdmin')) {
+            $category = Category::find($id);
+            return view('admin.category.show', compact('category'));
+        }else{
+            return redirect()->back()->with('danger', 'No tienes permisos');
+        }
     }
 
     /**
@@ -69,9 +85,13 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::find($id);
-        $categories = Category::all();
-        return view('admin.category.edit', compact('category', 'categories'));
+        if (auth()->user()->hasrole('SuperAdmin')) {
+            $category = Category::find($id);
+            $categories = Category::all();
+            return view('admin.category.edit', compact('category', 'categories'));
+        }else{
+            return redirect()->back()->with('danger', 'No tienes permisos');
+        }
     }
 
     /**
@@ -83,18 +103,22 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = Category::find($id);
-        $this->validate($request, [
-            'name' => 'required|min:3',
-            'description' => 'required |min:3'
-        ]);
+        if (auth()->user()->hasrole('SuperAdmin')) {
+            $category = Category::find($id);
+            $this->validate($request, [
+                'name' => 'required|min:3',
+                'description' => 'required |min:3'
+            ]);
 
-        $category->name = $request->name;
-        $category->description = $request->description;
-        $category->category_parent_id = $request->category_parent_id;
-        $category->save();
+            $category->name = $request->name;
+            $category->description = $request->description;
+            $category->category_parent_id = $request->category_parent_id;
+            $category->save();
 
-        return redirect('/admin/category')->with('flash', 'La Categoria ha sido actualizada');
+            return redirect('/admin/category')->with('flash', 'La Categoria ha sido actualizada');
+        }else{
+            return redirect()->back()->with('danger', 'No tienes permisos');
+        }
     }
 
     /**
@@ -105,9 +129,13 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        $category = Category::find($id);
-        $category->delete();
-        return redirect()->back()->with('flash', 'Categoria Borrada');
+        if(auth()->user()->hasrole('SuperAdmin')) {
+            $category = Category::find($id);
+            $category->delete();
+            return redirect()->back()->with('flash', 'Categoria Borrada');
+        }else{
+            return redirect()->back()->with('danger', 'No tienes permisos');
+        }
 
     }
 }

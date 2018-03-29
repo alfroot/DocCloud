@@ -17,6 +17,7 @@
             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                 <label for="">Nombre de la categoria</label>
                 <input type="text" name="name" class="form-control"
+                       value="{{ old('name') }}"
                        placeholder="Escribe el nombre de la categoria">
                 {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
             </div>
@@ -25,7 +26,7 @@
                 <label for="">Descripción de la categoria</label>
                 <textarea name="description" id="editor"
                           class="form-control" rows="10"
-                          placeholder="Escribe la descripción de la categoria"></textarea>
+                          placeholder="Escribe la descripción de la categoria">{{ old('description') }}</textarea>
                 {!! $errors->first('description', '<span class="help-block">:message</span>') !!}
             </div>
 
@@ -35,6 +36,7 @@
                     <option value=" ">Ninguna</option>
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}"
+                                {{ old('category_id') == $category->id ? 'selected' : '' }}
                         >{{ $category->name }}</option>
                     @endforeach
                 </select>

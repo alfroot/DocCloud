@@ -213,7 +213,14 @@ desired effect
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        {{ csrf_field() }}
+                                        <div>
+                                            <button class="btn btn-default btn-flat btn-block">
+                                                Cerrar Sesión
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
                             </li>
                         </ul>
