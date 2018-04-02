@@ -56,11 +56,13 @@ class DocumentsController extends Controller
     public function storedoc(Document $document)
     {
         $this->validate(request(), [
-            'photo' => 'required|image|max:2048'
+            'document' => 'required|File'
         ]);
-        $document->create([
-            'url'   =>  request()->file('photo')->store('posts','public')
-        ]);
+
+        $documentsave = request()->file('document');
+        $documentstorage = $documentsave->store('public/documents');
+
+        return $documentstorage;
     }
     public function show($id)
     {

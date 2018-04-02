@@ -30,5 +30,5 @@ Route::group([
         Route::resource('category', 'CategoriesController', ['as' => 'admin']);
         Route::resource('users', 'UsersController',['except' => 'show', 'as' => 'admin']);
         Route::resource('documents', 'DocumentsController',['except' => 'show', 'as' => 'admin']);
-
+        Route::post('documents/{document}/documents', 'DocumentsController@storedoc')->name('documentsave');
     });

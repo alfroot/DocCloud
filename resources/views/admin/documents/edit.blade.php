@@ -99,19 +99,19 @@
         });
 
         var myDropzone = new Dropzone('.dropzone', {
-            url: '/admin/posts/{{ $document->url }}/photos',
+            url: '/admin/documents/{{ $document->id }}/documents',
             paramName: 'document',
-            acceptedFiles: '*',
+            acceptedFiles: 'application/pdf,image/*',
             maxFilesize: 1,
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },
             dictDefaultMessage: 'Arrastra aquí tu archivo para subirlo'
         });
-        myDropzone.on('error', function(file, res) {
-            var msg = res.errors.photo[0];
+        /*myDropzone.on('error', function(file, res) {
+            var msg = res.errors.document[0];
             $('.dz-error-message:last > span').text(msg);
-        });
+        });*/
         Dropzone.autoDiscover = false;
     </script>
 
