@@ -6,6 +6,7 @@ use App\Category;
 use App\Document;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class DocumentsController extends Controller
@@ -37,9 +38,10 @@ class DocumentsController extends Controller
 
             $user = Auth::id();
 
-            $this->validate($request, ['title' => 'required|min:3']);
+            $this->validate($request, ['name' => 'required|min:3']);
 
             $request->request->add(['user_id' => $user]);
+            $request->request->add(['url' => str_slug($request->name)]);
             $document = Document::create($request->all());
 
             return redirect()->route('admin.documents.edit', $document);
@@ -51,7 +53,15 @@ class DocumentsController extends Controller
 
     }
 
-
+    public function storedoc(Document $document)
+    {
+        $this->validate(request(), [
+            'photo' => 'required|image|max:2048'
+        ]);
+        $document->create([
+            'url'   =>  request()->file('photo')->store('posts','public')
+        ]);
+    }
     public function show($id)
     {
         //
@@ -76,14 +86,38 @@ class DocumentsController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Document $document)
     {
-        //
+        if (auth()->user()->hasrole('SuperAdmin')) {
+
+            $this->validate($request, [
+                'name' => 'required|min:3',
+                'description' => 'required|min:6',
+
+                 ]);
+           // dd($request->all());
+
+            $document->update($request->all());
+            return redirect()->route('admin.documents.index')->with('flash', 'Realizado');
+
+        }else  {
+            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+        }
+
     }
 
 
     public function destroy($id)
     {
-        //
+        if (auth()->user()->hasrole('SuperAdmin')) {
+
+            $document = Document::find($id);
+            $document->delete();
+
+            return redirect()->route('admin.documents.index')->with('flash', 'Documento Borrado');
+
+        }else  {
+            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+        }
     }
 }

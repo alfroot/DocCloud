@@ -8,11 +8,11 @@
                     <h4 class="modal-title" id="myModalLabel">Título del nuevo documento</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
-                        <input type="text" name="title" class="form-control"
-                               value="{{ old('title') }}" id="post-title"
+                    <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                        <input type="text" name="name" class="form-control"
+                               value="{{ old('name') }}" id="post-title"
                                placeholder="Escribe el título del documento" required autofocus>
-                        {!! $errors->first('title', '<span class="help-block">:message</span>') !!}
+                        {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -29,11 +29,12 @@
         if (window.location.hash === '#create'){
             $('#myModal').modal('show');
         }
+
         $('#myModal').on('hide.bs.modal', function(){
             window.location.hash = '#';
         });
         $('#myModal').on('shown.bs.modal', function(){
-            $('#post-title').focus();
+            $('#post-name').focus();
             window.location.hash = '#create';
         });
     </script>

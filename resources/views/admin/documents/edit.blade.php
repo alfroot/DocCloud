@@ -2,7 +2,7 @@
 
 @section('header')
     <h1>
-        POSTS
+        Usuarios
         <small>Crear publicación</small>
     </h1>
     <ol class="breadcrumb">
@@ -16,23 +16,23 @@
 
     <div class="row">
 
-        <form action="{{ route('admin.documents.store') }}" method="POST">
+        <form action="{{ route('admin.documents.update' ,$document ) }}" method="POST">
             {{ csrf_field() }} {{ method_field('PUT') }}
             <div class="col-md-8">
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                             <label for="">Título del documento</label>
-                            <input type="text" name="title" class="form-control"
-                                   value="{{ old('title', $document->name) }}"
+                            <input type="text" name="name" class="form-control"
+                                   value="{{ old('name', $document->name) }}"
                                    placeholder="Escribe el título de la publicación">
-                            {!! $errors->first('title', '<span class="help-block">:message</span>') !!}
+                            {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
                         </div>
                         <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
                             <label for="">Descripcion del documento</label>
-                            <textarea name="body" id="editor"
+                            <textarea name="description" id="editor"
                                       class="form-control" rows="10"
-                                      placeholder="Escribe el contenido de la publicación"></textarea>
+                                      placeholder="Escribe una descripcion para el Documento">{{ old('name', $document->name) }}</textarea>
                             {!! $errors->first('description', '<span class="help-block">:message</span>') !!}
                         </div>
 
@@ -50,6 +50,8 @@
                                 </div>
                                 <input type="text" name="published_at"
                                        class="form-control pull-right"
+                                       value="{{ old('published_at', $document->published_at ? $document->published_at->format('m/d/y') : null) }}"
+
                                        id="datepicker">
                             </div>
                         </div>
@@ -59,6 +61,7 @@
                                 <option value="">Selecciona una categoría</option>
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}"
+                                    {{ old('category_id', $document->category_id) == $category->id ? 'selected' : '' }}
                                     >{{ $category->name }}</option>
                                 @endforeach
                             </select>
@@ -93,11 +96,23 @@
     <script>
         $('#datepicker').datepicker({
             autoclose: true
-        })
-        CKEDITOR.replace('editor')
-        $('.select2').select2({
-            tags: true
-        })
+        });
 
+        var myDropzone = new Dropzone('.dropzone', {
+            url: '/admin/posts/{{ $document->url }}/photos',
+            paramName: 'document',
+            acceptedFiles: '*',
+            maxFilesize: 1,
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            dictDefaultMessage: 'Arrastra aquí tu archivo para subirlo'
+        });
+        myDropzone.on('error', function(file, res) {
+            var msg = res.errors.photo[0];
+            $('.dz-error-message:last > span').text(msg);
+        });
+        Dropzone.autoDiscover = false;
     </script>
+
 @endpush

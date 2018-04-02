@@ -402,7 +402,7 @@ desired effect
      Both of these plugins are recommended to enhance the
      user experience. -->
 
-@unless(request()->is('admin/posts/*'))
+@unless(request()->is('admin/documents/*'))
     @include('admin.documents.create')
 @endunless
 

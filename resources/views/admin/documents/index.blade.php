@@ -44,7 +44,7 @@
 
                     <td>
                         <a href="" target="_blank" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
-                        <a href="{{route('admin.users.edit', $document->id)}}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
+                        <a href="{{route('admin.documents.edit', $document)}}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
 
 
 
@@ -52,7 +52,7 @@
                               method="POST" style="display: inline">
                             {{ csrf_field() }} {{ method_field('DELETE') }}
                             <button class="btn btn-xs btn-danger"
-                                    onclick="return confirm('Seguro que quieres eliminar al usuario?')"><i class="fa fa-times"></i></button>
+                                    onclick="return confirm('Seguro que quieres eliminar el documento?')"><i class="fa fa-times"></i></button>
                         </form>
                     </td>
                 </tr>
