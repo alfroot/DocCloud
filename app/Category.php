@@ -13,6 +13,11 @@ class Category extends Model
         return $this->hasMany(Document::class);
     }
 
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
     /*
      * Relacion reflexiva
      * public function category()
