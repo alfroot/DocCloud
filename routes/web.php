@@ -12,13 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $documents = \App\Document::all();
+    return view('documents/index', compact('documents'));
 });
 
 Auth::routes();
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('payment', 'PaymentsController');
 
 Route::group([
     'prefix'    =>  'admin',
@@ -30,5 +33,6 @@ Route::group([
         Route::resource('category', 'CategoriesController', ['as' => 'admin']);
         Route::resource('users', 'UsersController',['except' => 'show', 'as' => 'admin']);
         Route::resource('documents', 'DocumentsController',['except' => 'show', 'as' => 'admin']);
+        Route::resource('payment', 'PaymentsController', ['as' => 'admin']);
         Route::post('documents/{document}/documents', 'DocumentsController@storedoc')->name('documentsave');
     });
