@@ -4,12 +4,12 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Listado de Categorias</h3>
+            <h3 class="box-title">Listado de Compras</h3>
             <a
-                    href="/admin/payment/create"
+                    href="{{ route('admin.payment.create') }}"
                     class="btn btn-primary pull-right"
             >
-                Crear Categoria
+                Crear Compra
                 <i class="fa fa-plus"></i>
             </a>
         </div>
