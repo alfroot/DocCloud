@@ -31,8 +31,8 @@
                         <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
                             <label for="">Descripcion del documento</label>
                             <textarea name="description" id="editor"
-                                      class="form-control" rows="10"
-                                      placeholder="Escribe una descripcion para el Documento">{{ old('name', $document->name) }}</textarea>
+                                      class="form-control" rows="5"
+                                      placeholder="Escribe una descripcion para el Documento">{{ old('name', $document->description) }}</textarea>
                             {!! $errors->first('description', '<span class="help-block">:message</span>') !!}
                         </div>
 
@@ -54,6 +54,7 @@
 
                                        id="datepicker">
                             </div>
+
                         </div>
                         <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
                             <label for="">Categorías</label>

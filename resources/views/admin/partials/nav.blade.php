@@ -7,7 +7,7 @@
         </a>
     </li>
     <li class="treeview {{ request()->is('admin/users*') ? 'active' : '' }}">
-        <a href=""><i class="fa fa-link"></i> <span>Usuarios</span>
+        <a href=""><i class="fa fa-users"></i> <span>Usuarios</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -29,7 +29,7 @@
         </ul>
     </li>
     <li class="treeview {{ request()->is('admin/documents*') ? 'active' : '' }}">
-        <a href=""><i class="fa fa-link"></i> <span>Documentos</span>
+        <a href=""><i class="fa  fa-file-pdf-o"></i> <span>Documentos</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -68,10 +68,10 @@
     </li>
 
     <li class="treeview {{ request()->is('admin/payment*') ? 'active' : '' }}">
-        <a href=""><i class="fa fa-link"></i> <span>Compras</span>
+        <a href=""><i class="fa fa-credit-card"></i> <span>Compras</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
-              </span>
+            </span>
         </a>
         <ul class="treeview-menu">
             <li {{ request()->is('admin/payment') ? 'class=active' : '' }}>

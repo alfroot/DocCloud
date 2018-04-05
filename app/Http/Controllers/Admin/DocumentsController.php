@@ -95,6 +95,7 @@ class DocumentsController extends Controller
             $this->validate($request, [
                 'name' => 'required|min:3',
                 'description' => 'required|min:6',
+                'published_at' => 'date'
 
                  ]);
            // dd($request->all());

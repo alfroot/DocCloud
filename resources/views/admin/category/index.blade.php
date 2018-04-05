@@ -2,16 +2,26 @@
 
 @section('content')
 
-    <div class="box">
+
+
+    <div class="box box-default collapsed-box">
+
         <div class="box-header">
+
+            <div class="box-tools">
+                <a
+                        href="/admin/category/create"
+                        class="btn btn-primary center"
+                >
+                    Crear Categoria
+                    <i class="fa col-lg-pull-2"></i>
+                </a>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+            </div>
             <h3 class="box-title">Listado de Categorias</h3>
-            <a
-                    href="/admin/category/create"
-                    class="btn btn-primary pull-right"
-            >
-                Crear Categoria
-                <i class="fa fa-plus"></i>
-            </a>
+
+
         </div>
         <div class="box-body">
             @if(count($categories))
@@ -52,6 +62,83 @@
         </div>
     </div>
 
+        <div class="box box-default collapsed-box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Categorias Padre</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body col-md-2">
+                <div class="box box-default collapsed-box" >
+                    <div class="box-header with-border">
+                        <h3 class="box-title">FOR</h3>
+
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+                        <!-- /.box-tools -->
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        The body of the box
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+            @foreach($categories as $category)
+                @if(!$category->category_parent_id)
+            <div class="box-body col-md-2">
+                <div class="box box-default collapsed-box" >
+                    <div class="box-header with-border">
+                        <h3 class="box-title">{{$category->name}}</h3>
+
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+                        <!-- /.box-tools -->
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+
+                        @foreach($categories as $categorychild)
+                            @if($category->id == $categorychild->category_parent_id)
+                                <div class="box-body col-md-auto">
+                                    <div class="box box-default collapsed-box" >
+                                        <div class="box-header with-border">
+                                            <h3 class="box-title">{{$categorychild->name}}</h3>
+
+                                            <div class="box-tools pull-right">
+                                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.box-tools -->
+                                        </div>
+                                        <!-- /.box-header -->
+                                        <div class="box-body">
+
+                                        </div>
+                                        <!-- /.box-body -->
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach()
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+                @endif
+            @endforeach
+
+        </div>
+
+
 @endsection
 
 @push('styles')
@@ -63,7 +150,7 @@
     <script src="/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <script>
         $(function () {
-            $('#users-table').DataTable({
+            $('#category-table').DataTable({
                 'paging'      : true,
                 'lengthChange': false,
                 'searching'   : false,

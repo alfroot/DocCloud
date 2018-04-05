@@ -17,7 +17,9 @@ class CategoriesController extends Controller
     {
         if (auth()->user()->hasrole('SuperAdmin')) {
             $categories = Category::all();
-            return view('admin.category.index', compact('categories'));
+            $ordercategories = Category::all()->crossJoin();
+
+            return view('admin.category.index', compact('categories', 'ordercategories'));
         }else{
             return redirect()->back()->with('danger', 'No tienes permisos');
         }

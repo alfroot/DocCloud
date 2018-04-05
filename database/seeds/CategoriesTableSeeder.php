@@ -19,5 +19,9 @@ class CategoriesTableSeeder extends Seeder
         $documento->name = 'Categoria 1';
         $documento->description = 'Categoria uno ';
         $documento->save();
+
+        factory(Category::class,10)->create([ 'category_parent_id' => null]);
+        factory(Category::class,40)->create();
+
     }
 }
