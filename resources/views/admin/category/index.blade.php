@@ -62,90 +62,38 @@
         </div>
     </div>
 
-        <div class="box box-default collapsed-box">
-            <div class="box-header with-border">
-                <h3 class="box-title">Categorias Padre</h3>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                    </button>
-                </div>
-                <!-- /.box-tools -->
+
+    <div class="box box-default collapsed-box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Arbol</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body col-md-2">
-                <div class="box box-default collapsed-box" >
-                    <div class="box-header with-border">
-                        <h3 class="box-title">FOR</h3>
-
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                            </button>
-                        </div>
-                        <!-- /.box-tools -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        The body of the box
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-            </div>
-            @foreach($categories as $category)
-                @if(!$category->category_parent_id)
-            <div class="box-body col-md-2">
-                <div class="box box-default collapsed-box" >
-                    <div class="box-header with-border">
-                        <h3 class="box-title">{{$category->name}}</h3>
-
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                            </button>
-                        </div>
-                        <!-- /.box-tools -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-
-                        @foreach($categories as $categorychild)
-                            @if($category->id == $categorychild->category_parent_id)
-                                <div class="box-body col-md-auto">
-                                    <div class="box box-default collapsed-box" >
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">{{$categorychild->name}}</h3>
-
-                                            <div class="box-tools pull-right">
-                                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                                                </button>
-                                            </div>
-                                            <!-- /.box-tools -->
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-
-                                        </div>
-                                        <!-- /.box-body -->
-                                    </div>
-                                </div>
-                            @endif
-                        @endforeach()
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-            </div>
-                @endif
-            @endforeach
-
         </div>
+        <div class="box-body">
+            @include('admin.category.partials.tree', $category)
+        </div>
+    </div>
+
+
+
 
 
 @endsection
 
 @push('styles')
+
+    <link href="/css/treeview.css" rel="stylesheet">
     <link rel="stylesheet" href="/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+
+
 @endpush
 
 @push('scripts')
+
     <script src="/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <script>
@@ -160,5 +108,14 @@
             })
         })
     </script>
+
+    <script src="/js/treeview.js"></script>
+
+
+
+
+
+
+
 
 @endpush
