@@ -44,6 +44,7 @@ class UsersController extends Controller
 
             $this->validate($request, [
                 'name' => 'required|min:3',
+                'lastname' => 'required|min:3',
                 'password'=>'required|min:5',
                 'email' => 'required|email',
                 'role'  => 'required'
@@ -53,6 +54,7 @@ class UsersController extends Controller
             $rol = Role::findById($request->role);
            // dd($rol->name);
             $usuario->name = $request->name;
+            $usuario->lastname = $request->lastname;
             $usuario->email = $request->email;
             $usuario->password = bcrypt($request->password);
 
@@ -90,6 +92,7 @@ class UsersController extends Controller
 
             $this->validate($request, [
                 'name' => 'required|min:3',
+                'lastname' => 'required|min:3',
                 'password'=>'required|min:5',
                 'email' => 'required|email',
                 'role'  => 'required'
@@ -99,6 +102,7 @@ class UsersController extends Controller
             $rol = Role::findById($request->role);
             // dd($rol->name);
             $usuario->name = $request->name;
+            $usuario->lastname = $request->lastname;
             $usuario->email = $request->email;
             $usuario->password = bcrypt($request->password);
 

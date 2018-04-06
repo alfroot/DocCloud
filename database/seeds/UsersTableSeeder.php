@@ -24,6 +24,7 @@ class UsersTableSeeder extends Seeder
 
         $user = new User;
         $user->name = 'Alfonso';
+        $user->lastname = 'Pozo';
         $user->email = 'alfonso@gmail.com';
         $user->password = bcrypt('01020304');
         $user->save();
@@ -31,26 +32,14 @@ class UsersTableSeeder extends Seeder
 
         $user = new User;
         $user->name = 'Ramon';
+        $user->lastname = 'Mayor';
         $user->email = 'ramon@gmail.com';
         $user->password = bcrypt('123456');
         $user->save();
         $user->assignRole($SuperAdminRole);
 
-        $user = new User;
-        $user->name = 'Pepe';
-        $user->email = 'pepe@gmail.com';
-        $user->password = bcrypt('01020304');
-        $user->save();
-        $user->assignRole($AdminRole);
 
-        $user = new User;
-        $user->name = 'Alex';
-        $user->email = 'alex@gmail.com';
-        $user->password = bcrypt('01020304');
-        $user->save();
-        $user->assignRole($UserRole);
-
-
+        factory(User::class,4)->create()->each->assignRole($AdminRole);
         factory(User::class,30)->create()->each->assignRole($UserRole);
     }
 }

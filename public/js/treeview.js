@@ -32,7 +32,7 @@ $.fn.extend({
 
         var tree = $(this);
 
-        tree.addClass("tree");
+        tree.addClass("tree1");
 
         tree.find('li').has("ul").each(function () {
 

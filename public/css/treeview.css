@@ -1,4 +1,4 @@
-.tree, .tree ul {
+.tree1, .tree1 ul {
 
     margin:0;
 
@@ -8,7 +8,7 @@
 
 }
 
-.tree ul {
+.tree1 ul {
 
     margin-left:1em;
 
@@ -16,13 +16,13 @@
 
 }
 
-.tree ul ul {
+.tree1 ul ul {
 
     margin-left:.5em
 
 }
 
-.tree ul:before {
+.tree1 ul:before {
 
     content:"";
 
@@ -42,7 +42,7 @@
 
 }
 
-.tree li {
+.tree1 li {
 
     margin:0;
 
@@ -58,7 +58,7 @@
 
 }
 
-.tree ul li:before {
+.tree1 ul li:before {
 
     content:"";
 
@@ -80,7 +80,7 @@
 
 }
 
-.tree ul li:last-child:before {
+.tree1 ul li:last-child:before {
 
     background:#fff;
 
@@ -98,7 +98,7 @@
 
 }
 
-.tree li a {
+.tree1 li a {
 
     text-decoration: none;
 
@@ -106,7 +106,7 @@
 
 }
 
-.tree li button, .tree li button:active, .tree li button:focus {
+.tree1 li button, .tree1 li button:active, .tree1 li button:focus {
 
     text-decoration: none;
 

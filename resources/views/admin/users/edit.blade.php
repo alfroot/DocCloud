@@ -21,6 +21,14 @@
                 {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
             </div>
 
+            <div class="form-group {{ $errors->has('lastname') ? 'has-error' : '' }}">
+                <label for="">Apellido del usuario</label>
+                <input type="text" name="lastname" class="form-control"
+                       value="{{ old('lastname', $user->lastname) }}"
+                       placeholder="Escribe el nombre del usuario">
+                {!! $errors->first('lastname', '<span class="help-block">:message</span>') !!}
+            </div>
+
             <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                 <label for="">Email del usuario</label>
                 <input type="text" name="email" class="form-control"
