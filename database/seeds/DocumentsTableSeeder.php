@@ -18,8 +18,7 @@ class DocumentsTableSeeder extends Seeder
         $documento->name = 'Tutorial de cria de Caracoles';
         $documento->description = 'Tutorial sobre la cria y doma de caracoles serranos, lugares preferidos, apareamiento.';
         $documento->url = 'tutorial-de-cria-de-caracoles';
-        $documento->published_at = carbon::now();
-        $documento->category_id = 1;
+        $documento->category_id = 6;
         $documento->save();
     }
 }

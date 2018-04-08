@@ -3,13 +3,21 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Document extends Model
 {
-    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id'];
-    protected $dates = ['published_at'];
+    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'storage'];
 
 
+    public static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($documento) {
+
+            Storage::disk('public/documents')->delete($documento->storage);
+        });
+    }
 
     public function category()
     {

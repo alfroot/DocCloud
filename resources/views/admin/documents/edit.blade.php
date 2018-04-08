@@ -2,13 +2,13 @@
 
 @section('header')
     <h1>
-        Usuarios
-        <small>Crear publicación</small>
+        Documentos
+        <small>Editar Documento</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li><a href="{{ route('admin.documents.index') }}"><i class="fa fa-list"></i> Documents</a></li>
-        <li class="active">Crear</li>
+        <li><a href="{{ route('admin.documents.index') }}"><i class="fa fa-list"></i> Documentos</a></li>
+        <li class="active">Editar</li>
     </ol>
 @endsection
 
@@ -32,7 +32,7 @@
                             <label for="">Descripcion del documento</label>
                             <textarea name="description" id="editor"
                                       class="form-control" rows="5"
-                                      placeholder="Escribe una descripcion para el Documento">{{ old('name', $document->description) }}</textarea>
+                                      placeholder="Escribe una descripcion para el Documento">{{ old('description', $document->description) }}</textarea>
                             {!! $errors->first('description', '<span class="help-block">:message</span>') !!}
                         </div>
 
@@ -42,20 +42,7 @@
             <div class="col-md-4">
                 <div class="box box-primary">
                     <div class="box-body">
-                        <div class="form-group">
-                            <label>Fecha de publicación:</label>
-                            <div class="input-group date">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                </div>
-                                <input type="text" name="published_at"
-                                       class="form-control pull-right"
-                                       value="{{ old('published_at', $document->published_at ? $document->published_at->format('m/d/y') : null) }}"
 
-                                       id="datepicker">
-                            </div>
-
-                        </div>
                         <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
                             <label for="">Categorías</label>
                             <select name="category_id" class="form-control select2">
@@ -69,10 +56,11 @@
                             {!! $errors->first('category_id', '<span class="help-block">:message</span>') !!}
                         </div>
 
-
+                        @if(empty($document->storage))
                         <div class="form-goup">
                             <div class="dropzone"></div>
                         </div>
+                        @endif
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">Guardar Publicación</button>
                         </div>
@@ -81,29 +69,26 @@
             </div>
         {!! Form::close() !!}
     </div>
+
+
 @endsection
 
 @push('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/dropzone.css">
-    <link rel="stylesheet" href="/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="/adminlte/bower_components/select2/dist/css/select2.min.css">
 @endpush
 
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.js"></script>
-    <script src="/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="/adminlte/bower_components/ckeditor/ckeditor.js"></script>
     <script src="/adminlte/bower_components/select2/dist/js/select2.full.min.js"></script>
     <script>
-        $('#datepicker').datepicker({
-            autoclose: true
-        });
 
         var myDropzone = new Dropzone('.dropzone', {
             url: '/admin/documents/{{ $document->id }}/documents',
             paramName: 'document',
             acceptedFiles: 'application/pdf,image/*',
-            maxFilesize: 1,
+            maxFilesize: 3,
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },

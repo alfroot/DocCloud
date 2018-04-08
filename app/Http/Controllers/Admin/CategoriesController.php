@@ -132,7 +132,12 @@ class CategoriesController extends Controller
     {
         if(auth()->user()->hasrole('SuperAdmin')) {
             $category = Category::find($id);
+
+            if($category->id === 1){
+                return redirect()->back()->with('danger', 'La categoria raiz no es borrable');
+            }
             $category->delete();
+
             return redirect()->back()->with('flash', 'Categoria Borrada');
         }else{
             return redirect()->back()->with('danger', 'No tienes permisos');

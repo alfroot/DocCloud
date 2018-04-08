@@ -38,7 +38,9 @@ class DocumentsController extends Controller
 
             $user = Auth::id();
 
-            $this->validate($request, ['name' => 'required|min:3']);
+            $this->validate($request,
+                ['name' => 'required|min:3'
+            ]);
 
             $request->request->add(['user_id' => $user]);
             $request->request->add(['url' => str_slug($request->name)]);
@@ -59,10 +61,16 @@ class DocumentsController extends Controller
             'document' => 'required|File'
         ]);
 
-        $documentsave = request()->file('document');
-        $documentstorage = $documentsave->store('public/documents');
 
-        return $documentstorage;
+
+
+        $document->update([
+            'storage'   =>  request()->file('document')->store('public/documents')
+        ]);
+
+
+
+
     }
     public function show($id)
     {
@@ -95,10 +103,9 @@ class DocumentsController extends Controller
             $this->validate($request, [
                 'name' => 'required|min:3',
                 'description' => 'required|min:6',
-                'published_at' => 'date'
+                'category_id' => 'required'
 
                  ]);
-           // dd($request->all());
 
             $document->update($request->all());
             return redirect()->route('admin.documents.index')->with('flash', 'Realizado');

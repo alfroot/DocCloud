@@ -14,10 +14,15 @@ class CategoriesTableSeeder extends Seeder
     {
         Category::truncate();
 
+        $documento = new Category;
+        $documento->name = 'Root';
+        $documento->description = 'Root';
+        $documento->save();
 
         $documento = new Category;
         $documento->name = 'Deportes';
         $documento->description = 'Categoria Deportiva';
+        $documento->category_parent_id = 1;
         $documento->save();
 
 
@@ -25,10 +30,11 @@ class CategoriesTableSeeder extends Seeder
         $documento = new Category;
         $documento->name = 'Politica';
         $documento->description = 'Categoria sobre Politica';
+        $documento->category_parent_id = 1;
         $documento->save();
 
-        factory(Category::class,10)->create([ 'category_parent_id' => 1]);
         factory(Category::class,10)->create([ 'category_parent_id' => 2]);
+        factory(Category::class,10)->create([ 'category_parent_id' => 3]);
         factory(Category::class,5)->create([ 'category_parent_id' => 5]);
         factory(Category::class,5)->create([ 'category_parent_id' => 8]);
         factory(Category::class,3)->create([ 'category_parent_id' => 12]);

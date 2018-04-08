@@ -21,7 +21,6 @@ class CreateDocumentsTable extends Migration
             $table->string('storage')->nullable();
             $table->unsignedInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }

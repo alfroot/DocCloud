@@ -245,7 +245,7 @@ desired effect
                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>{{ auth()->user()->name }}</p>
+                    <p>{{ auth()->user()->name.' '.auth()->user()->lastname }}</p>
                     <!-- Status -->
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
@@ -397,14 +397,16 @@ desired effect
 <script src="/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/adminlte/dist/js/adminlte.min.js"></script>
-@stack('scripts')
+
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
 
+
 @unless(request()->is('admin/documents/*'))
     @include('admin.documents.create')
 @endunless
+@stack('scripts')
 
 
 </body>

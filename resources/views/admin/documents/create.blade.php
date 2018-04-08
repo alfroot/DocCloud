@@ -10,7 +10,7 @@
                 <div class="modal-body">
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                         <input type="text" name="name" class="form-control"
-                               value="{{ old('name') }}" id="post-title"
+                               value="{{ old('name') }}" id="document-title"
                                placeholder="Escribe el título del documento" required autofocus>
                         {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
                     </div>
@@ -29,12 +29,11 @@
         if (window.location.hash === '#create'){
             $('#myModal').modal('show');
         }
-
         $('#myModal').on('hide.bs.modal', function(){
             window.location.hash = '#';
         });
         $('#myModal').on('shown.bs.modal', function(){
-            $('#post-name').focus();
+            $('#document-title').focus();
             window.location.hash = '#create';
         });
     </script>
