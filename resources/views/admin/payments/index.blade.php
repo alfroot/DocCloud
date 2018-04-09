@@ -20,7 +20,8 @@
                     <tr>
                         <th>ID</th>
                         <th>USUARIO</th>
-                        <th>PRODUCTO</th>
+                        <th>DOCUMENTO</th>
+                        <th>CATEGORIA</th>
                         <th>ACCIONES</th>
                     </tr>
                     </thead>
@@ -29,7 +30,8 @@
                         <tr>
                             <td>{{$payment->id}}</td>
                             <td>{{$payment->user->name}}</td>
-                            <td>{{$payment->document->name}}</td>
+                            <td>{{ is_null($payment->document_id)? '-': $payment->document->name}}</td>
+                            <td>{{ is_null($payment->category_id)? '-': $payment->category->name}}</td>
                             <td>
                                 <a href="{{ route('admin.payment.show', $payment->id) }}"  class="btn btn-xs btn-default">
                                     <i class="fa fa-eye"></i>

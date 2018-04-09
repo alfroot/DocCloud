@@ -17,14 +17,16 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">Producto</th>
+                    <th scope="col">Documento</th>
+                    <th scope="col">Categoria</th>
                     <th scope="col">Usuario</th>
                     <th scope="col">Precio</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>{{$payment->document->name}}</td>
+                    <td>{{ is_null($payment->document_id)? '-': $payment->document->name}}</td>
+                    <td>{{ is_null($payment->category_id)? '-': $payment->category->name}}</td>
                     <td>{{$payment->user->name}}</td>
                     <td>{{ $payment->price }}</td>
                 </tr>

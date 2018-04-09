@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Document;
 use App\Payment;
 use App\User;
@@ -30,8 +31,9 @@ class PaymentsController extends Controller
     {
         if (auth()->user()->hasrole('SuperAdmin')) {
             $users = User::all();
+            $categories = Category::all();
             $documents = Document::all();
-            return view('admin.payments.create', compact('users', 'documents'));
+            return view('admin.payments.create', compact('users', 'documents', 'categories'));
         }else{
             return redirect()->back()->with('danger', 'No tienes permisos');
         }
@@ -48,7 +50,6 @@ class PaymentsController extends Controller
         if (auth()->user()->hasrole('SuperAdmin')) {
             $this->validate($request, [
                 'user_id' => 'required',
-                'document_id' => 'required',
                 'price' => 'numeric'
             ]);
 
@@ -88,8 +89,9 @@ class PaymentsController extends Controller
         if (auth()->user()->hasrole('SuperAdmin')) {
             $payment = Payment::find($id);
             $users = User::all();
+            $categories = Category::all();
             $documents = Document::all();
-            return view('admin.payments.edit', compact('payment', 'documents', 'users'));
+            return view('admin.payments.edit', compact('payment', 'documents', 'users', 'categories'));
         }else{
             return redirect()->back()->with('danger', 'No tienes permisos');
         }
@@ -108,12 +110,12 @@ class PaymentsController extends Controller
             $payment = Payment::find($id);
             $this->validate($request, [
                 'user_id' => 'required',
-                'document_id' => 'required',
                 'price' => 'numeric'
             ]);
 
             $payment->user_id = $request->user_id;
             $payment->document_id = $request->document_id;
+            $payment->category_id = $request->category_id;
             $payment->price = $request->price;
             $payment->save();
 
