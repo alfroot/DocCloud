@@ -29,46 +29,63 @@
                             {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
                         </div>
                         <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
-                            <label for="">Descripcion del documento</label>
+                            <label for="">Descripción del documento</label>
                             <textarea name="description" id="editor"
                                       class="form-control" rows="5"
-                                      placeholder="Escribe una descripcion para el Documento">{{ old('description', $document->description) }}</textarea>
+                                      placeholder="Escribe una descripción para el Documento">{{ old('description', $document->description) }}</textarea>
                             {!! $errors->first('description', '<span class="help-block">:message</span>') !!}
                         </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box box-primary">
-                    <div class="box-body">
-
                         <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
                             <label for="">Categorías</label>
                             <select name="category_id" class="form-control select2">
                                 <option value="">Selecciona una categoría</option>
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}"
-                                    {{ old('category_id', $document->category_id) == $category->id ? 'selected' : '' }}
+                                            {{ old('category_id', $document->category_id) == $category->id ? 'selected' : '' }}
                                     >{{ $category->name }}</option>
                                 @endforeach
                             </select>
                             {!! $errors->first('category_id', '<span class="help-block">:message</span>') !!}
                         </div>
 
-                        @if(empty($document->storage))
-                        <div class="form-goup">
-                            <div class="dropzone"></div>
-                        </div>
-                        @endif
+
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">Guardar Publicación</button>
                         </div>
                     </div>
+                    </div>
                 </div>
+                @if (!empty($document->storage))
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box box-primary">
+                                <div class="box-body">
+
+                                    <form action="{{ route('admin.documents.destroy', $document) }}" method="POST">
+                                        {{ csrf_field() }} {{ method_field('DELETE') }}
+                                        <div class="col-md-2 align-content-center">
+                                            <button class="btn btn-danger btn-xs" style="position: absolute">
+                                                <i class="fa fa-remove"></i>
+                                            </button>
+                                            <img src="/images/if_document_1055071.png" class="img-bordered"  width="150" height="150">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+                @if(empty($document->storage))
+                    <div class="form-goup col-md-4">
+                        <div class="dropzone"></div>
+                    </div>
+                @endif
             </div>
+
+
+
         {!! Form::close() !!}
-    </div>
+
 
 
 @endsection
@@ -92,7 +109,8 @@
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },
-            dictDefaultMessage: 'Arrastra aquí tu archivo para subirlo'
+            dictDefaultMessage: '<img src="/images/if_file_documents-09_854127.png" class="img-thumbnail"  width="50" height="50">' +
+            '<br><br><p>Arrastra aquí tus documentos</p>'
         });
         /*myDropzone.on('error', function(file, res) {
             var msg = res.errors.document[0];

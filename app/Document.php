@@ -15,7 +15,7 @@ class Document extends Model
         parent::boot();
         static::deleting(function ($documento) {
 
-            Storage::disk('public/documents')->delete($documento->storage);
+            Storage::disk('public')->delete($documento->storage);
         });
     }
 

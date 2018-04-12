@@ -32,7 +32,7 @@ Route::group([
         Route::get('/', 'AdminController@index')->name('dashboard');
         Route::resource('category', 'CategoriesController', ['as' => 'admin']);
         Route::resource('users', 'UsersController',['except' => 'show', 'as' => 'admin']);
-        Route::resource('documents', 'DocumentsController',['except' => 'show', 'as' => 'admin']);
+        Route::resource('documents', 'DocumentsController',[ 'as' => 'admin']);
         Route::resource('payment', 'PaymentsController', ['as' => 'admin']);
         Route::post('documents/{document}/documents', 'DocumentsController@storedoc')->name('documentsave');
     });

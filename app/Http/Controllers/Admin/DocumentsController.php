@@ -65,7 +65,8 @@ class DocumentsController extends Controller
 
 
         $document->update([
-            'storage'   =>  request()->file('document')->store('public/documents')
+            'storage'   =>  request()->file('document')->store('documents', 'public')
+
         ]);
 
 
@@ -74,7 +75,16 @@ class DocumentsController extends Controller
     }
     public function show($id)
     {
-        //
+        if (auth()->user()->hasrole('SuperAdmin')) {
+
+            $document = Document::find($id);
+
+
+            return redirect('/storage/'.$document->storage) ;
+
+        }else  {
+            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+        }
     }
 
 
