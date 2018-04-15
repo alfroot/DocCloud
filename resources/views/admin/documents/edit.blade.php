@@ -8,7 +8,7 @@
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
         <li><a href="{{ route('admin.documents.index') }}"><i class="fa fa-file-pdf-o"></i> Documentos</a></li>
-        <li class="active"><i class="fa fa-pencil"></i>Editar</li>
+        <li class="active"><a href=""><i class="fa fa-pencil"></i>Editar</a></li>
     </ol>
 @endsection
 

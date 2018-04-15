@@ -1,5 +1,12 @@
 @extends('admin.layouts.layout')
-
+@section('header')
+<h1>Categorias</h1>
+<ol class="breadcrumb">
+    <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i>Inicio</a></li>
+    <li class=""><a href="{{ route('admin.category.index') }}"><i class="fa fa-tags"></i>Categorias</a></li>
+    <li class="active"><a href=""><i class="fa fa-pencil"></i>Editar</a></li>
+</ol>
+@endsection
 @section('content')
 
     <div class="box">

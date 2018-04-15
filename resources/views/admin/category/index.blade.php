@@ -1,13 +1,15 @@
 @extends('admin.layouts.layout')
-
+@section('header')
+    <h1>Categorias</h1>
+    <ol class="breadcrumb">
+        <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i>Inicio</a></li>
+        <li class="active"><a href="{{ route('admin.category.index') }}"><i class="fa fa-tags"></i>Categorias</a></li>
+    </ol>
+@endsection
 @section('content')
 
-
-
-    <div class="box box-default collapsed-box">
-
+    <div class="box">
         <div class="box-header">
-
             <div class="box-tools">
                 <a
                         href="/admin/category/create"
@@ -20,18 +22,16 @@
                 </button>
             </div>
             <h3 class="box-title">Listado de Categorias</h3>
-
-
         </div>
         <div class="box-body">
             @if(count($categories))
             <table id="category-table" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>CATEGORIA</th>
-                    <th>DESCRIPCION</th>
-                    <th>ACCIONES</th>
+                    <th>Id</th>
+                    <th>Categoria</th>
+                    <th>Descripcion</th>
+                    <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -63,37 +63,13 @@
     </div>
 
 
-
-    <div class="box box-default collapsed-box">
-        <div class="box-header with-border">
-            <h3 class="box-title">Arbol</h3>
-
-            <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                </button>
-            </div>
-        </div>
-        <div class="box-body">
-            @include('admin.category.partials.tree', $category)
-        </div>
-    </div>
-
-
-
-
-
 @endsection
 
 @push('styles')
-
-    <link href="/css/treeview.css" rel="stylesheet">
     <link rel="stylesheet" href="/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-
-
 @endpush
 
 @push('scripts')
-
     <script src="/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <script>
@@ -108,14 +84,4 @@
             })
         })
     </script>
-
-    <script src="/js/treeview.js"></script>
-
-
-
-
-
-
-
-
 @endpush

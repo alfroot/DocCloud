@@ -41,11 +41,17 @@
                     Ver todos los documentos
                 </a>
             </li>
+            <li {{ request()->is('admin/documents/create') ? 'class=active' : '' }}>
+                <a href="" data-toggle="modal" data-target="#myModal">
+                    <i class="fa fa-pencil"></i>
+                    Crear documento
+                </a>
+            </li>
         </ul>
     </li>
 
     <li class="treeview {{ request()->is('admin/category*') ? 'active' : '' }}">
-        <a href=""><i class="fa fa-link"></i> <span>Categorias</span>
+        <a href=""><i class="fa fa-tags"></i> <span>Categorias</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -63,6 +69,12 @@
                     Crear una categoria
                 </a>
 
+            </li>
+            <li {{ request()->is('admin/category/tree') ? 'class=active' : '' }}>
+                <a href="{{ route('tree') }}">
+                    <i class="fa fa-sitemap"></i>
+                    Árbol de categorias
+                </a>
             </li>
         </ul>
     </li>

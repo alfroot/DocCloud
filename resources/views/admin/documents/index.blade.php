@@ -7,7 +7,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">Documentos</li>
+        <li class="active"><a href=""><i class="fa  fa-file-pdf-o"></i>Documentos</a></li>
     </ol>
 @endsection
 @section('content')

@@ -1,16 +1,16 @@
 @extends('admin.layouts.layout')
 @section('header')
-
+    <h1>Usuarios</h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active"><i class="fa fa-user"></i>Usuarios</li>
+        <li class="active"><a href=""><i class="fa fa-users"></i>Usuarios</a></li>
     </ol>
 @endsection
 
 @section('content')
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Listado de Usuarios</h3>
+            <h3 class="box-title">Listado</h3>
             <a
                     href="{{route('admin.users.create')}}"
                     class="btn btn-primary pull-right"
