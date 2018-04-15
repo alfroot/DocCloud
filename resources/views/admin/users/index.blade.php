@@ -1,5 +1,11 @@
 @extends('admin.layouts.layout')
+@section('header')
 
+    <ol class="breadcrumb">
+        <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li class="active"><i class="fa fa-user"></i>Usuarios</li>
+    </ol>
+@endsection
 
 @section('content')
     <div class="box">

@@ -7,10 +7,11 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li><a href="{{ route('admin.documents.index') }}"><i class="fa fa-list"></i> Documentos</a></li>
-        <li class="active">Editar</li>
+        <li><a href="{{ route('admin.documents.index') }}"><i class="fa fa-file-pdf-o"></i> Documentos</a></li>
+        <li class="active"><i class="fa fa-pencil"></i>Editar</li>
     </ol>
 @endsection
+
 
 @section('content')
 
@@ -55,6 +56,7 @@
                     </div>
                     </div>
                 </div>
+            {!! Form::close() !!}
                 @if (!empty($document->storage))
                     <div class="row">
                         <div class="col-md-4">
@@ -84,7 +86,7 @@
 
 
 
-        {!! Form::close() !!}
+
 
 
 
@@ -104,13 +106,13 @@
         var myDropzone = new Dropzone('.dropzone', {
             url: '/admin/documents/{{ $document->id }}/documents',
             paramName: 'document',
-            acceptedFiles: 'application/pdf,image/*',
-            maxFilesize: 3,
+            acceptedFiles: 'application/pdf,.odt,.ods,',
+            maxFilesize: 10,
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },
             dictDefaultMessage: '<img src="/images/if_file_documents-09_854127.png" class="img-thumbnail"  width="50" height="50">' +
-            '<br><br><p>Arrastra aquí tus documentos</p>'
+            '<br><br><p>Arrastra aquí tu documento</p>'
         });
         /*myDropzone.on('error', function(file, res) {
             var msg = res.errors.document[0];

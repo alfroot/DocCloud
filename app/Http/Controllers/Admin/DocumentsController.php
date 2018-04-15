@@ -80,7 +80,7 @@ class DocumentsController extends Controller
             $document = Document::find($id);
 
 
-            return redirect('/storage/'.$document->storage) ;
+            return view('admin.documents.show', compact('document'));
 
         }else  {
             return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');

@@ -43,7 +43,7 @@
 
 
                     <td>
-                        <a href="{{route('admin.documents.show', $document->id)}}" target="_blank" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
+                        <a href="{{route('admin.documents.show', $document->id)}}"  class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
                         <a href="{{route('admin.documents.edit', $document)}}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
 
 
