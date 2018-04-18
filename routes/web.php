@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     $documents = \App\Document::all();
-    return view('documents/index', compact('documents'));
+    return view('pages/home', compact('documents'));
 });
 
 Auth::routes();
@@ -37,3 +37,7 @@ Route::group([
         Route::resource('payment', 'PaymentsController', ['as' => 'admin']);
         Route::post('documents/{document}/documents', 'DocumentsController@storedoc')->name('documentsave');
     });
+
+route::get('/doccloud', 'PagesController@doccloud')->name('doccloud.pages');
+route::get('/documents', 'PagesController@documents')->name('documents.pages');
+route::get('/categories', 'PagesController@categories')->name('categories.pages');

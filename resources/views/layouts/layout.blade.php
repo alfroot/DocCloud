@@ -7,6 +7,12 @@
 <html>
 <head>
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link media="all" type="text/css" rel="stylesheet" href="css/estilos.css">
+    @stack('styles')
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -26,49 +32,10 @@
 <!-- Header -->
 <header id="header" class="skel-layers-fixed">
     <h1><a href="#">{{ config('app.name', 'Laravel') }}</a></h1>
-    <nav id="nav">
-        <ul>
-
-            @if (Route::has('login'))
-
-                    @auth
-                    <li><a href="{{ url('/home') }}" class="button special">Home</a></li>
-                    <form action="{{ route('logout') }}" method="POST">
-                        {{ csrf_field() }}
-                        <li><a href=""><button  type="submit"  class="button special">Salir</button></a></li>
-                    </form>
-
-                    @else
-                        <li><a href="{{ route('login') }}" class="button special">Login</a></li>
-                        <li><a href="{{ route('register') }}" class="button special">Registro</a></li>
-                    @endauth
-
-            @endif
-
-        </ul>
-    </nav>
+    @include('layouts.compontents.navbar')
 </header>
 
-<!-- Banner -->
-<section id="banner">
-    <div class="inner">
-        <h2>{{ config('app.name', 'Laravel') }}</h2>
-        <p>Web para..</p>
-        <ul class="actions">
-            @if (Route::has('login'))
-
-                @auth
-                    <li><a href="{{ url('/home') }}" class="button big special">Home</a></li>
-                @else
-                    <li><a href="{{ route('login') }}" class="button big special">Login</a></li>
-                @endauth
-
-            @endif
-
-            <li><a href="#elements" class="button big alt">Learn More</a></li>
-        </ul>
-    </div>
-</section>
+@yield('banner')
 
 @yield('content')
 
@@ -118,6 +85,7 @@
         </ul>
     </div>
 </footer>
-
+@stack('scripts')
 </body>
 </html>
+
