@@ -40,8 +40,9 @@
                                     <i class="fa fa-pencil"></i>
                                 </a>
                                 {!! Form::open(['action' => ['Admin\PaymentsController@destroy',$payment->id], 'method' => 'delete', 'class' => 'pull-right']) !!}
-                                <button class="btn btn-xs btn-danger"
-                                        onclick="return confirm('¿Seguro que quiere eliminar esta compra?')">
+                                <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar esta compra?"
+                                        data-confirm-button="Eliminar"
+                                        data-cancel-button="Whoops no">
                                     <i class="fa fa-times"></i>
                                 </button>
                                 {!! Form::close() !!}
@@ -61,8 +62,12 @@
 @endpush
 
 @push('scripts')
+    <script src="/adminlte/bower_components/bootstrap/js/jquery.confirm.js"></script>
     <script src="/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(".confirm").confirm();
+    </script>
     <script>
         $(function () {
             $('#users-table').DataTable({

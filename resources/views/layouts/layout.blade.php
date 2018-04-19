@@ -47,7 +47,7 @@
             <div class="6u">
                 <div class="row collapse-at-2">
                     <div class="6u">
-                        <h3>Accumsan</h3>
+                        <h3>Accumsan </h3>
                         <ul class="alt">
                             <li><a href="#">Nascetur nunc varius</a></li>
                             <li><a href="#">Vis faucibus sed tempor</a></li>

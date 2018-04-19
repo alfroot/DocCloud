@@ -48,12 +48,17 @@
                                 <i class="fa fa-pencil"></i>
                             </a>
                             {!! Form::open(['action' => ['Admin\CategoriesController@destroy',$category->id], 'method' => 'delete', 'class' => 'pull-right']) !!}
-                            <button class="btn btn-xs btn-danger"
-                                    onclick="return confirm('¿Seguro que quiere eliminar esta categoria?')">
+
+                            <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar la categoria? Esto eliminará también sus documentos asociados"
+                                    data-confirm-button="Eliminar"
+                                    data-cancel-button="Whoops no">
                                 <i class="fa fa-times"></i>
                             </button>
                             {!! Form::close() !!}
                         </td>
+
+
+
                     </tr>
                 @endforeach
                 </tbody>
@@ -70,8 +75,14 @@
 @endpush
 
 @push('scripts')
+
+    <script src="/adminlte/bower_components/bootstrap/js/jquery.confirm.js"></script>
     <script src="/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(".confirm").confirm();
+    </script>
+
     <script>
         $(function () {
             $('#category-table').DataTable({
@@ -80,8 +91,15 @@
                 'searching'   : false,
                 'ordering'    : true,
                 'info'        : true,
-                'autoWidth'   : false
-            })
+                'autoWidth'   : false,
+                language: {
+                url: '/adminlte/bower_components/Spanish.json'
+            }
         })
+        });
+        $('[data-toggle=confirmation]').confirmation({
+            rootSelector: '[data-toggle=confirmation]',
+            // other options
+        });
     </script>
 @endpush

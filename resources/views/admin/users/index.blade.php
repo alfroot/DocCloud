@@ -51,8 +51,11 @@
                             <form action="{{route('admin.users.destroy', $user->id)}}"
                                   method="POST" style="display: inline">
                                 {{ csrf_field() }} {{ method_field('DELETE') }}
-                                <button class="btn btn-xs btn-danger"
-                                        onclick="return confirm('Seguro que quieres eliminar al usuario?')"><i class="fa fa-times"></i></button>
+                                <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar al usuario?"
+                                        data-confirm-button="Eliminar"
+                                        data-cancel-button="Whoops no">
+                                    <i class="fa fa-times"></i>
+                                </button>
                             </form>
                         </td>
                     </tr>
@@ -69,8 +72,12 @@
 @endpush
 
 @push('scripts')
+    <script src="/adminlte/bower_components/bootstrap/js/jquery.confirm.js"></script>
     <script src="/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(".confirm").confirm();
+    </script>
     <script>
         $(function () {
             $('#users-table').DataTable({
@@ -79,9 +86,14 @@
                 'searching'   : false,
                 'ordering'    : true,
                 'info'        : true,
-                'autoWidth'   : false
+                'autoWidth'   : false,
+                language: {
+                    url: '/adminlte/bower_components/Spanish.json'
+                }
             })
         })
     </script>
+
+
 
 @endpush

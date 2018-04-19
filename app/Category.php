@@ -29,4 +29,12 @@ class Category extends Model
         return $this->hasMany(Category::class, 'category_parent_id');
     }
 
+    public static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($category) {
+
+            $category->documents->each->delete();
+        });
+    }
 }
