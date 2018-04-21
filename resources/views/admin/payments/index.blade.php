@@ -1,46 +1,57 @@
 @extends('admin.layouts.layout')
 
-@section('content')
 
+@section('header')
+    <h1>
+        PAGOS
+        <small>Listado</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="{{ route('admin.payment.index') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li class="active"><a href=""><i class="fa  fa-file-pdf-o"></i>Documentos</a></li>
+    </ol>
+@endsection
+@section('content')
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Listado de Compras</h3>
-            <a
-                    href="{{ route('admin.payment.create') }}"
-                    class="btn btn-primary pull-right"
-            >
+            <div class="align-center">
+                <br>
+            <a href="{{ route('admin.payment.create') }}"
+             class="btn btn-primary">
                 Crear Compra
-                <i class="fa fa-plus"></i>
+
             </a>
+            </div>
         </div>
         <div class="box-body">
             @if(count($payments))
-                <table id="category-table" class="table table-bordered table-striped">
+                <table id="payments-table" class="table table-hover table-bordered table-striped">
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>USUARIO</th>
-                        <th>DOCUMENTO</th>
-                        <th>CATEGORIA</th>
-                        <th>ACCIONES</th>
+                        <th>Usuario</th>
+                        <th>Documento</th>
+                        <th>Categoria</th>
+                        <th>Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($payments as $payment)
-                        <tr>
-                            <td>{{$payment->id}}</td>
-                            <td>{{$payment->user->name}}</td>
-                            <td>{{ is_null($payment->document_id)? '-': $payment->document->name}}</td>
-                            <td>{{ is_null($payment->category_id)? '-': $payment->category->name}}</td>
+                        <tr id="filter_global">
+                            <td class="global_filter" id="global_filter">{{$payment->id}}</td>
+                            <td class="global_filter" id="global_filter">{{$payment->user->name}}</td>
+                            <td class="global_filter" id="global_filter">{{ is_null($payment->document_id)? '-': $payment->document->name}}</td>
+                            <td class="global_filter" id="global_filter">{{ is_null($payment->category_id)? '-': $payment->category->name}}</td>
                             <td>
+                                {!! Form::open(['action' => ['Admin\PaymentsController@destroy',$payment->id], 'method' => 'delete', 'class' => 'align-content-center']) !!}
                                 <a href="{{ route('admin.payment.show', $payment->id) }}"  class="btn btn-xs btn-default">
                                     <i class="fa fa-eye"></i>
                                 </a>
                                 <a href="{{ route('admin.payment.edit', $payment->id) }}" class="btn btn-xs btn-info">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                                {!! Form::open(['action' => ['Admin\PaymentsController@destroy',$payment->id], 'method' => 'delete', 'class' => 'pull-right']) !!}
-                                <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar esta compra?"
+                                 <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar esta compra?"
                                         data-confirm-button="Eliminar"
                                         data-cancel-button="Whoops no">
                                     <i class="fa fa-times"></i>
@@ -69,16 +80,46 @@
         $(".confirm").confirm();
     </script>
     <script>
-        $(function () {
-            $('#users-table').DataTable({
+        function filterGlobal () {
+
+            $('#payments-table').DataTable().search(
+                $('#global_filter').val(),
+                $('#global_regex').prop('checked'),
+                $('#global_smart').prop('checked')
+            ).draw();
+        }
+
+        function filterColumn ( i ) {
+            $('#payments-table').DataTable().column( i ).search(
+                $('#col'+i+'_filter').val(),
+                $('#col'+i+'_regex').prop('checked'),
+                $('#col'+i+'_smart').prop('checked')
+            ).draw();
+        }
+
+        $(document).ready(function() {
+            $('#payments-table').DataTable({
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : false,
+                'searching'   : true,
                 'ordering'    : true,
                 'info'        : true,
-                'autoWidth'   : false
-            })
-        })
+                'autoWidth'   : false,
+
+                language: {
+                    url: '/adminlte/bower_components/Spanish.json'
+                }
+            });
+            $('#payments-table').DataTable();
+
+            $('input.global_filter').on( 'keyup click', function () {
+                filterGlobal();
+            } );
+
+            $('input.column_filter').on( 'keyup click', function () {
+                filterColumn( $(this).parents('tr').attr('data-column') );
+            } );
+        } );
     </script>
 
 @endpush

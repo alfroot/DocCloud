@@ -1,6 +1,9 @@
 @extends('admin.layouts.layout')
 @section('header')
-    <h1>Categorias</h1>
+    <h1>
+        CATEGORÍAS
+        <small>Listado</small>
+    </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i>Inicio</a></li>
         <li class="active"><a href="{{ route('admin.category.index') }}"><i class="fa fa-tags"></i>Categorias</a></li>
@@ -10,54 +13,50 @@
 
     <div class="box">
         <div class="box-header">
-            <div class="box-tools">
-                <a
-                        href="/admin/category/create"
-                        class="btn btn-primary center"
-                >
-                    Crear Categoria
-                    <i class="fa col-lg-pull-2"></i>
+            <h3 class="box-title">Listado de CategorÍas</h3>
+            <div class="align-center">
+                <br>
+                <a href="/admin/category/create"class="btn btn-primary" >
+                    Crear CategorÍa
                 </a>
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                </button>
             </div>
-            <h3 class="box-title">Listado de Categorias</h3>
         </div>
+
         <div class="box-body">
             @if(count($categories))
-            <table id="category-table" class="table table-bordered table-striped">
-                <thead>
+            <table id="category-table" class="table table-hover table-bordered table-striped">
+            <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Categoria</th>
+                    <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($categories as $category)
-                    <tr>
-                        <td>{{$category->id}}</td>
-                        <td>{{$category->name}}</td>
-                        <td>{{$category->description}}</td>
+                    <tr id="filter_global">
+                        <td class="global_filter " id="global_filter">{{$category->id}}</td>
+                        <td class="global_filter" id="global_filter">{{$category->name}}</td>
+                        <td class="global_filter" id="global_filter">{{$category->description}}</td>
                         <td>
-                            <a href="{{ route('admin.category.show', $category->id) }}"  class="btn btn-xs btn-default">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                            <a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-xs btn-info">
-                                <i class="fa fa-pencil"></i>
-                            </a>
-                            {!! Form::open(['action' => ['Admin\CategoriesController@destroy',$category->id], 'method' => 'delete', 'class' => 'pull-right']) !!}
+                            <div class="align-content-center">
 
+                            {!! Form::open(['action' => ['Admin\CategoriesController@destroy',$category->id], 'method' => 'delete', 'class' => 'align-content-center']) !!}
+                                <a href="{{ route('admin.category.show', $category->id) }}"  class="btn btn-xs btn-default">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-xs btn-info">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
                             <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar la categoria? Esto eliminará también sus documentos asociados"
                                     data-confirm-button="Eliminar"
                                     data-cancel-button="Whoops no">
                                 <i class="fa fa-times"></i>
                             </button>
                             {!! Form::close() !!}
+                            </div>
                         </td>
-
-
 
                     </tr>
                 @endforeach
@@ -82,24 +81,50 @@
     <script>
         $(".confirm").confirm();
     </script>
-
     <script>
-        $(function () {
+        function filterGlobal () {
+
+            $('#category-table').DataTable().search(
+                $('#global_filter').val(),
+                $('#global_regex').prop('checked'),
+                $('#global_smart').prop('checked')
+            ).draw();
+        }
+
+        function filterColumn ( i ) {
+            $('#category-table').DataTable().column( i ).search(
+                $('#col'+i+'_filter').val(),
+                $('#col'+i+'_regex').prop('checked'),
+                $('#col'+i+'_smart').prop('checked')
+            ).draw();
+        }
+
+        $(document).ready(function() {
             $('#category-table').DataTable({
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : false,
+                'searching'   : true,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false,
+                'hover'        :true,
+
                 language: {
-                url: '/adminlte/bower_components/Spanish.json'
-            }
-        })
-        });
-        $('[data-toggle=confirmation]').confirmation({
-            rootSelector: '[data-toggle=confirmation]',
-            // other options
-        });
+                    url: '/adminlte/bower_components/Spanish.json'
+                }
+            });
+            $('#category-table').DataTable();
+
+            $('input.global_filter').on( 'keyup click', function () {
+                filterGlobal();
+            } );
+
+            $('input.column_filter').on( 'keyup click', function () {
+                filterColumn( $(this).parents('tr').attr('data-column') );
+            } );
+        } );
     </script>
+
+
+
 @endpush

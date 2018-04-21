@@ -14,14 +14,18 @@
 <div class="box">
     <div class="box-header">
         <h3 class="box-title">Listado de Documentos</h3>
-        <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">
-            <i class="fa fa-plus"></i>
+        <div class="align-center">
+            <br>
+        <button class="btn btn-primary " data-toggle="modal" data-target="#myModal">
+
             Crear Documento
         </button>
+        </div>
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-        <table id="documents-table" class="table table-bordered table-striped">
+        @if(count($documents))
+        <table id="documents-table" class="table table-hover table-bordered table-striped">
             <thead>
             <tr>
                 <th>ID</th>
@@ -34,35 +38,33 @@
             </thead>
             <tbody>
             @foreach($documents as $document)
-                <tr>
-                    <td>{{$document->id}}</td>
-                    <td>{{$document->user->name}}</td>
-                    <td>{{$document->name}}</td>
-                    <td>{{$document->description}}</td>
-                    <td>{{isset($document->category->name) ? $document->category->name : ''}}</td>
+                <tr id="filter_global">
+                    <td class="global_filter" id="global_filter">{{$document->id}}</td>
+                    <td class="global_filter" id="global_filter">{{$document->user->name}}</td>
+                    <td class="global_filter" id="global_filter">{{$document->name}}</td>
+                    <td class="global_filter" id="global_filter">{{$document->description}}</td>
+                    <td class="global_filter" id="global_filter">{{isset($document->category->name) ? $document->category->name : ''}}</td>
 
 
                     <td>
-                        <a href="{{route('admin.documents.show', $document->id)}}"  class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
-                        <a href="{{route('admin.documents.edit', $document)}}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
-
-
-
-                        <form action="{{route('admin.documents.destroy', $document->id)}}"
-                              method="POST" style="display: inline">
+                        <div class="align-content-center">
+                        <form action="{{route('admin.documents.destroy', $document->id)}}" method="POST" class="align-content-center">
                             {{ csrf_field() }} {{ method_field('DELETE') }}
+                            <a href="{{route('admin.documents.show', $document->id)}}"  class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
+                        <a href="{{route('admin.documents.edit', $document)}}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
                             <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar el documento?"
                                     data-confirm-button="Eliminar"
                                     data-cancel-button="Whoops no">
                                 <i class="fa fa-times"></i>
                             </button>
                         </form>
-
+                        </div>
                     </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
+            @endif
     </div>
     <!-- /.box-body -->
 </div>
@@ -81,37 +83,46 @@
         $(".confirm").confirm();
     </script>
     <script>
+        function filterGlobal () {
 
-        $(".confirm").confirm({
-            text: "Are you sure you want to desdfas",
-            title: "Confirmation required",
-            confirm: function(button) {
-                delete();
-            },
-            cancel: function(button) {
-                // nothing to do
-            },
-            confirmButton: "Yes I am",
-            cancelButton: "No",
-            post: false,
-            confirmButtonClass: "btn-danger",
-            cancelButtonClass: "btn-default",
-            dialogClass: "modal-dialog modal-lg" // Bootstrap classes for large modal
-        });</script>
-    <script>
-        $(function () {
+            $('#documents-table').DataTable().search(
+                $('#global_filter').val(),
+                $('#global_regex').prop('checked'),
+                $('#global_smart').prop('checked')
+            ).draw();
+        }
+
+        function filterColumn ( i ) {
+            $('#documents-table').DataTable().column( i ).search(
+                $('#col'+i+'_filter').val(),
+                $('#col'+i+'_regex').prop('checked'),
+                $('#col'+i+'_smart').prop('checked')
+            ).draw();
+        }
+
+        $(document).ready(function() {
             $('#documents-table').DataTable({
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : false,
+                'searching'   : true,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false,
+
                 language: {
                     url: '/adminlte/bower_components/Spanish.json'
                 }
-            })
-        })
+            });
+            $('#documents-table').DataTable();
+
+            $('input.global_filter').on( 'keyup click', function () {
+                filterGlobal();
+            } );
+
+            $('input.column_filter').on( 'keyup click', function () {
+                filterColumn( $(this).parents('tr').attr('data-column') );
+            } );
+        } );
     </script>
 
 @endpush
