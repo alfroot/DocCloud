@@ -42,3 +42,7 @@ Route::resource('documents', 'DocumentsController');
 route::get('/doccloud', 'PagesController@doccloud')->name('doccloud.pages');
 route::get('/documents', 'PagesController@documents')->name('documents.pages');
 route::get('/categories', 'PagesController@categories')->name('categories.pages');
+
+Route::resource('users', 'UsersController');
+
+Route::get('/category', 'CategoriesController@index')->name('user.category.index');
