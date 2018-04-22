@@ -1,12 +1,22 @@
 @extends('admin.layouts.layout')
-
+@section('header')
+    <h1>
+        PAGOS
+        <small>Listado</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="{{ route('admin.payment.create') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li class="active"><a href="{{ route('admin.payment.index') }}"><i class="fa fa-credit-card"></i>Compras</a></li>
+        <li class="active"><a href=""><i class="fa fa-plus"></i>Crear</a></li>
+    </ol>
+@endsection
 @section('content')
 
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Crear Compras</h3>
             <a
-                    href={{ route('admin.payment.index') }}
+                    href="{{ route('admin.payment.index') }}"
                             class="btn btn-primary pull-right"
             >
             Volver
@@ -62,7 +72,7 @@
                 {!! $errors->first('price', '<span class="help-block">:message</span>') !!}
             </div>
 
-            {{ Form::bsSubmit('CREAR', ['class'=>'btn btn-primary']) }}
+            {{ Form::bsSubmit('Crear', ['class'=>'btn btn-primary']) }}
             {!! Form::close() !!}
         </div>
     </div>

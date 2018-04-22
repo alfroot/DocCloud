@@ -8,7 +8,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.payment.index') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active"><a href=""><i class="fa  fa-file-pdf-o"></i>Documentos</a></li>
+        <li class="active"><a href=""><i class="fa fa-credit-card"></i>Compras</a></li>
     </ol>
 @endsection
 @section('content')

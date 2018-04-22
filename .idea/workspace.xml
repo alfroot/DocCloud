@@ -2,12 +2,748 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38f2084d-5216-4700-b8a5-8cebb46608d4" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/animate.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/helper.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/advance-widget.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/amchart.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/badge.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/booking-system.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/breadcrumb.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/button.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/calendar.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/card.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/carousel.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/chart.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/chartist.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/chat.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/compose-email.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/data-table.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/datamap.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/error.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/favourite_menu.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/flot-chart.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/font.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/fonts.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/footer.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/form-validation.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/forms.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/global.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/gmap.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/header.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/invoice-edit.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/invoice.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/knob.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/login.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/menu-upload.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/mixins.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/modal.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/morris-chart.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/nestable.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/order-list.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/order-progress.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/pagination.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/panel.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/preloader.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/products_1.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/products_2.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/products_3.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/profile-widget.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/profile.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/progress-bar.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/recent-comments.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/recent-message.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/responsive.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/scrollable.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/search.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/sidebar.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/social-media-stats.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/style.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/tab.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/table-export.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/table.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/timeline.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/todo-list.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/ui-block-quote.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/ui-element-basic.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/ui-user-card.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/variable.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/vector-map.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/vertical-carousel.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/weather.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/less/widget-stat.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/amchart/export.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/barRating/barRating.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/bootstrap/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/c3/c3.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/calendar/fullcalendar.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/calendar2/pignose.calendar.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/calendar2/semantic.ui.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/chartist/chartist.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/data-table/buttons.bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/data-table/buttons.dataTables.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/data-table/dataTables.bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/datepicker/bootstrap-datepicker3.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/dropzone/dropzone.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/html5-editor/bootstrap-wysihtml5.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/jsgrid/jsgrid-theme.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/jsgrid/jsgrid.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/line-progress/jquery.lineProgressbar.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/lobi-panel/lobipanel.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/menubar/sidebar.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/metismenu/menu.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/nestable/nestable.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/owl.carousel.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/owl.theme.default.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/preloader/pace.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/rangSlider/ion.rangeSlider.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/rangSlider/ion.rangeSlider.skinFlat.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/rangSlider/ion.rangeSlider.skinHTML5.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/rangSlider/ion.rangeSlider.skinModern.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/rangSlider/ion.rangeSlider.skinNice.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/rangSlider/ion.rangeSlider.skinSimple.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/rangSlider/normalize.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/rickshaw-chart/rickshaw.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/scrollable/scrollable.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/select2/select2.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/sweetalert/sweetalert.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/toastr/toastr.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/lib/vector-map/jqvmap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/spinners.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/css/style.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flag-icon.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ad.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ae.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/af.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ag.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ai.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/al.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/am.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ao.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/aq.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ar.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/as.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/at.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/au.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/aw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ax.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/az.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ba.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bb.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bd.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/be.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bf.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bh.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bi.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bj.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bl.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bo.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bq.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/br.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bs.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bt.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bv.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/by.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/bz.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ca.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cc.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cd.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cf.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ch.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ci.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ck.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cl.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/co.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cu.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cv.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cx.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cy.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/cz.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/de.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/dj.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/dk.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/dm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/do.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/dz.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ec.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ee.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/eg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/eh.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/er.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/es.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/et.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/fi.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/fj.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/fk.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/fm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/fo.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/fr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ga.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gb.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gd.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ge.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gf.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gh.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gi.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gl.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gp.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gq.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gs.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gt.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gu.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/gy.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/hk.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/hm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/hn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/hr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ht.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/hu.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/id.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ie.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/il.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/im.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/in.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/io.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/iq.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ir.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/is.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/it.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/je.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/jm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/jo.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/jp.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ke.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/kg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/kh.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ki.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/km.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/kn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/kp.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/kr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/kw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ky.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/kz.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/la.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/lb.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/lc.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/li.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/lk.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/lr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ls.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/lt.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/lu.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/lv.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ly.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ma.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mc.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/md.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/me.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mf.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mh.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mk.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ml.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mo.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mp.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mq.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ms.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mt.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mu.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mv.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mx.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/my.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/mz.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/na.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/nc.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ne.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/nf.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ng.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ni.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/nl.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/no.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/np.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/nr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/nu.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/nz.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/om.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pa.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pe.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pf.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ph.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pk.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pl.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ps.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pt.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/pw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/py.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/qa.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/re.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ro.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/rs.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ru.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/rw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sa.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sb.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sc.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sd.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/se.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sh.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/si.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sj.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sk.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sl.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/so.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ss.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/st.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sv.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sx.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sy.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/sz.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tc.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/td.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tf.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/th.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tj.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tk.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tl.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/to.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tr.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tt.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tv.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/tz.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ua.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ug.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/um.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/us.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/uy.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/uz.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/va.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/vc.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ve.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/vg.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/vi.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/vn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/vu.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/wf.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ws.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/ye.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/yt.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/za.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/zm.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/flag-icon-css/flags/zw.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/font-awesome/css/font-awesome.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/font-awesome/fonts/fontawesome-webfont3e6e.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/font-awesome/fonts/fontawesome-webfont3e6e.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/font-awesome/fonts/fontawesome-webfont3e6e.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/font-awesome/fonts/fontawesome-webfont3e6e.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/font-awesome/fonts/fontawesome-webfont3e6e.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/font-awesome/fonts/fontawesome-webfontd41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-arrows-10.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-arrows-10.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-arrows-10.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-arrows-10.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-arrows-10d41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-10.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-10.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-10.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-10.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-10d41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-elaboration-10.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-elaboration-10.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-elaboration-10.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-elaboration-10.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-basic-elaboration-10d41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-ecommerce-10.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-ecommerce-10.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-ecommerce-10.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-ecommerce-10.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-ecommerce-10d41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-music-10.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-music-10.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-music-10.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-music-10.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-music-10d41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-software-10.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-software-10.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-software-10.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-software-10.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-software-10d41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-weather-10.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-weather-10.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-weather-10.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-weather-10.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/fonts/linea-weather-10d41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/linea-icons/linea.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/material-design-iconic-font/css/materialdesignicons.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/material-design-iconic-font/fonts/materialdesignicons-webfontd41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/simple-line-icons/css/simple-line-icons.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/simple-line-icons/fonts/Simple-Line-Icons4c82.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/simple-line-icons/fonts/Simple-Line-Icons4c82.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/simple-line-icons/fonts/Simple-Line-Icons4c82.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/simple-line-icons/fonts/Simple-Line-Icons4c82.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/simple-line-icons/fonts/Simple-Line-Icons4c82.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/simple-line-icons/fonts/Simple-Line-Iconsd41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/themify-icons/fonts/themify.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/themify-icons/fonts/themify.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/themify-icons/fonts/themify9f24.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/themify-icons/fonts/themify9f24.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/themify-icons/fonts/themifyd41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/themify-icons/themify-icons.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/weather-icons/css/weather-icons.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/weather-icons/fonts/weathericons-regular-webfont.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/weather-icons/fonts/weathericons-regular-webfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/weather-icons/fonts/weathericons-regular-webfont.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/weather-icons/fonts/weathericons-regular-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/icons/weather-icons/fonts/weathericons-regular-webfont.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/8.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/alert.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/alert2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/alert3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/alert4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/alert5.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/alert6.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/alert7.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/model.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/model2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/alert/model3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/attached-files/img-1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/attached-files/img-2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/attached-files/img-3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar/1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar/2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar/3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar/4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar/5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar/6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar/7.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar/8.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/avatar/usa-flag.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/background/error-bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/background/login-register.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/background/profile-bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/background/socialbg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/background/user-bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/background/user-info.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/big/img1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/big/img2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/big/img3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/big/img4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/big/img5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/big/img6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/bookingSystem/1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/bookingSystem/2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/bookingSystem/3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/bookingSystem/4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/bookingSystem/5.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/bookingSystem/6.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/bookingSystem/7.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/bookingSystem/8.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/browser/chrome-logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/browser/firefox-logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/browser/internet-logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/browser/opera-logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/browser/safari-logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/c1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/c2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/c3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/card/c1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/card/c2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/card/c3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/card/c4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/chat-person-add.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/close.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/custom-select.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/favicon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/fjords.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/gallery/chair.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/gallery/chair2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/gallery/chair3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/gallery/chair4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/hand.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/lights.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/logo-text.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/maximize.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/minimize.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/nature.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/newyork.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/paris.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/paypal.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/picture.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/preview1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product-2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/burger.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/download.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/image-10.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/image-8-226x223.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/image-9.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/images.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/product_1/pizza2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/profile-bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/rangeSliderimg/sprite-skin-flat.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/rangeSliderimg/sprite-skin-modern.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/rangeSliderimg/sprite-skin-nice.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/rangeSliderimg/sprite-skin-simple.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/sanfran.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/scrollable/view-1-1200x800.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/smile.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/tooltip/Euclid.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/user-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/user-bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/user-female.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/user-profile.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/user.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/7.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/8.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/avatar-1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/avatar-2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/avatar-3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/avatar-4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/avatar-5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/avatar-6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/avatar-7.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/avatar-8.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/avatar-9.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/users/profile.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/video-cam.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/images/watch.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/custom.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/jquery.slimscroll.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/barRating/barRating.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/barRating/jquery.barrating.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/bootstrap/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/bootstrap/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/bootstrap/js/popper.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/c3/c3-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/c3/c3.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/c3/d3.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/calendar-2/moment.latest.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/calendar-2/pignose.calendar.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/calendar-2/pignose.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/calendar-2/prism.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/calendar-2/semantic.ui.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/calendar/fullcalendar-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/calendar/fullcalendar.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-amchart/amchart-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-amchart/amcharts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-amchart/ammap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-amchart/amstock.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-amchart/export.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-amchart/light.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-amchart/pie.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-amchart/serial.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-amchart/worldLow.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-js/Chart.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chart-js/chartjs-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chartist/chartist-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chartist/chartist-plugin-tooltip.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chartist/chartist.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/chat-widget/chat-widget-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/circle-progress/circle-progress-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/circle-progress/circle-progress.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datamap/d3.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datamap/datamap-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datamap/datamaps.world.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datamap/topojson.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/cdn.rawgit.com/google/code-prettify/master/loader/run_prettify2102.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/datatables-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datatables/datatables.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/datepicker/bootstrap-datepicker.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/dropzone/dropzone.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/easing/jquery.easing.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/easing/stepup-form-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/echart/dashboard1-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/echart/echarts-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/echart/echarts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/curvedLines.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/excanvas.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/flot-chart-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/flot-tooltip/jquery.flot.tooltip.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/jquery.flot.categories.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/jquery.flot.crosshair.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/jquery.flot.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/jquery.flot.pie.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/jquery.flot.resize.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/jquery.flot.stack.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/jquery.flot.threshold.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/flot-chart/jquery.flot.time.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/form-validation/jquery.validate-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/form-validation/jquery.validate.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/form-validation/jquery.validate.unobtrusive.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/form-validation/jquery.validate.unobtrusive.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/gmap/gmap.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/gmap/gmapApi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/gmap/gmaps.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/google-chart/google-charts.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/google-chart/google-jsapi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/granim/granim-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/granim/granim.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/highchart/highcharts-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/highchart/highcharts-modules-exporting.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/highchart/highcharts-more.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/highchart/highcharts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/html5-editor/bootstrap-wysihtml5.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/html5-editor/wysihtml5-0.3.0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/html5-editor/wysihtml5-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jquery-ui/jquery-ui.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jquery-ui/jquery.ui.touch-punch.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jquery.nicescroll/jquery.nicescroll.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jquery.nicescroll/jquery.nicescroll.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jquery/jquery.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/db.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/fields/jsgrid.field.checkbox.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/fields/jsgrid.field.control.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/fields/jsgrid.field.number.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/fields/jsgrid.field.select.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/fields/jsgrid.field.text.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/fields/jsgrid.field.textarea.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/jsgrid-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/jsgrid.core.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/jsgrid.field.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/jsgrid.load-indicator.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/jsgrid.load-strategies.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/jsgrid.sort-strategies.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/jsgrid/jsgrid.validation.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/justgage/justgage.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/justgage/justgage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/justgage/raphael-min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/knob/jquery.knob.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/knob/knob.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/line-progress/jquery.lineProgressbar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/line-progress/line-progress-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/menubar/sidebar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/metismenu/jquery.slimscroll.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/metismenu/metismenu.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/metismenu/metismenu.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/moment/moment.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/morris-chart/dashboard1-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/morris-chart/morris-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/morris-chart/morris.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/morris-chart/raphael-min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/nestable/jquery.nestable.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/nestable/nestable.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/owl-carousel/owl.carousel-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/owl-carousel/owl.carousel.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/peitychart/jquery.peity.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/peitychart/peitychart.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/portlets/portlets-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/portlets/portlets.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/preloader/pace.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rangeSlider/ion.rangeSlider.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rangeSlider/moment-with-locales.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rangeSlider/moment.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rangeSlider/rangeslider.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rating1/jRate.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rating1/jRate.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rickshaw/d3.layout.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rickshaw/d3.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rickshaw/rickshaw-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/rickshaw/rickshaw.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/scrollable/holder.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/scrollable/jquery-asScrollable.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/scrollable/jquery-asScrollbar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/scrollable/scrollable.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/select2/select2.full.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/sparklinechart/jquery.sparkline.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/sparklinechart/sparkline.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/sticky-kit-master/dist/sticky-kit.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/sweetalert/sweetalert.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/sweetalert/sweetalert.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/toastr/toastr.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/toastr/toastr.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.algeria.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.argentina.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.brazil.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.europe.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.france.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.germany.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.greece.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.iran.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.iraq.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.russia.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.tunisia.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.turkey.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.usa.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/country/jquery.vmap.world.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/jquery.vmap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/jquery.vmap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/jquery.vmap.sampledata.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/vector-map/vector.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/weather/jquery.simpleWeather.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/lib/weather/weather-init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/scripts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/ElaAdmin/js/sidebarmenu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/dashboard.blade.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/layouts/layout.blade.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/partials/header.blade.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/partials/nav.blade.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/public/css/skel.css" afterPath="$PROJECT_DIR$/public/css/skel.css" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/documents/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/documents/index.blade.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/payments/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/payments/create.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/payments/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/payments/edit.blade.php" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/payments/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/payments/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/" />
@@ -113,151 +849,135 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
+      <file leaf-file-name="layout.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home/layouts/layout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="89" lean-forward="false" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="89" />
+            <state relative-caret-position="1872">
+              <caret line="104" column="47" lean-forward="false" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
               <folding>
-                <element signature="e#2080#2103#0#HTML" expanded="true" />
-                <marker date="1524276484031" expanded="true" signature="9:31" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="42:50" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="170:190" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="357:366" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="606:633" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="864:877" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="1324:1339" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="1456:1465" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="1544:1555" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="1634:1649" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="1728:1740" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="1819:1843" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="1989:2028" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="2260:2296" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="2396:2410" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="2415:2439" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="3115:3123" ph="..." />
-                <marker date="1524276484031" expanded="true" signature="3254:3263" ph="..." />
+                <marker date="1524355418277" expanded="true" signature="457:488" ph="..." />
+                <marker date="1524355418277" expanded="true" signature="1876:1898" ph="..." />
+                <marker date="1524355418277" expanded="true" signature="2124:2143" ph="..." />
+                <marker date="1524355418277" expanded="true" signature="2957:2966" ph="..." />
+                <marker date="1524355418277" expanded="true" signature="4796:4805" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/category/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="92" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="92" />
-              <folding>
-                <marker date="1524276434206" expanded="true" signature="9:31" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="42:50" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="172:192" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="281:312" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="393:402" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="794:812" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="1193:1217" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="1335:1348" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="1427:1442" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="1521:1543" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="1675:1812" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="1859:1904" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="2083:2128" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="2704:2719" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="2955:2963" ph="..." />
-                <marker date="1524276434206" expanded="true" signature="3094:3103" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/payments/index.blade.php">
+      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/ElaAdmin/js/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="28" column="96" lean-forward="false" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="96" />
-              <folding>
-                <marker date="1524276483987" expanded="true" signature="9:31" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="44:52" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="169:199" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="373:382" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="580:611" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="781:797" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="1268:1289" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="1414:1426" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="1509:1529" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="1612:1674" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="1757:1819" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="1895:2029" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="2076:2119" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="2298:2341" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="2893:2908" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="3127:3135" ph="..." />
-                <marker date="1524276483987" expanded="true" signature="3266:3275" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dataTables.bootstrap.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="803" lean-forward="false" selection-start-line="0" selection-start-column="798" selection-end-line="0" selection-end-column="803" />
+              <caret line="26" column="11" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="26" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file leaf-file-name="nav.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home/partials/nav.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.confirm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/bootstrap/js/jquery.confirm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2862">
-              <caret line="171" column="8" lean-forward="false" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="25" />
+            <state relative-caret-position="288">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
-                <marker date="1524176320534" expanded="true" signature="3843:3850" ph="×" />
+                <marker date="1524355418221" expanded="true" signature="590:599" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.confirm.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/bootstrap/js/jquery.confirm.min.js">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/home/dashboard.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+              <folding>
+                <element signature="e#8506#8536#0#HTML" expanded="true" />
+                <element signature="e#8894#8924#0#HTML" expanded="true" />
+                <element signature="e#9284#9314#0#HTML" expanded="true" />
+                <element signature="e#9678#9708#0#HTML" expanded="true" />
+                <marker date="1524356927104" expanded="true" signature="9:30" ph="..." />
+                <marker date="1524356927104" expanded="true" signature="42:51" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="177" column="51" lean-forward="false" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="51" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1524171651189" expanded="true" signature="299:330" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="858:866" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="9803:9825" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="10224:10246" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="10251:10289" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="10344:10389" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="11671:11688" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="11749:11763" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="13035:13086" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="13850:13870" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="14120:14128" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="14248:14272" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="14345:14364" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="14427:14450" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="14524:14542" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="14607:14616" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="18840:18874" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="18889:18913" ph="..." />
+                <marker date="1524171651189" expanded="true" signature="18933:18942" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoriesController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php">
+      <file leaf-file-name="nav.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/nav.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1062">
-              <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
-              <folding />
+              <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+              <folding>
+                <marker date="1523813210711" expanded="true" signature="146:196" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="219:237" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="355:402" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="672:724" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="755:783" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="934:993" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="1025:1052" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="1240:1291" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="1569:1625" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="1656:1688" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="1841:1904" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="2154:2204" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="2475:2530" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="2561:2592" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="2745:2807" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="2838:2868" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="3021:3081" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="3112:3127" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="3312:3361" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="3634:3688" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="3719:3749" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="3899:3960" ph="..." />
+                <marker date="1523813210711" expanded="true" signature="3991:4020" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Category.php">
+      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home/partials/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="471">
+              <caret line="171" column="54" lean-forward="false" selection-start-line="171" selection-start-column="54" selection-end-line="171" selection-end-column="54" />
+              <folding>
+                <marker date="1524355375485" expanded="true" signature="10206:10223" ph="..." />
+                <marker date="1524355375485" expanded="true" signature="10276:10290" ph="..." />
+                <marker date="1524355375485" expanded="true" signature="10483:10492" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -277,6 +997,19 @@
       <find>crear</find>
       <find>databases</find>
       <find>input</find>
+      <find>editar</find>
+      <find>nav</find>
+      <find>img</find>
+      <find>src</find>
+      <find>5.jp</find>
+      <find>5.j</find>
+      <find>4.j</find>
+      <find>HOME</find>
+      <find>contetn</find>
+      <find>elaAd</find>
+      <find>partia</find>
+      <find>form</find>
+      <find>logout</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -291,21 +1024,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_03_26_155614_create_categories_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_03_26_155630_create_documents_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DocumentsTableSeeder.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/documents/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Payment.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_04_02_112321_create_payments_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/payments/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PaymentsController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/payments/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/payments/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Document.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/DocumentsController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
@@ -334,14 +1054,27 @@
         <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" />
         <option value="$PROJECT_DIR$/public/adminlte/bower_components/Spanish.json" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php" />
         <option value="$PROJECT_DIR$/app/Category.php" />
         <option value="$PROJECT_DIR$/public/adminlte/bower_components/bootstrap/js/jquery.confirm.js" />
         <option value="$PROJECT_DIR$/public/css/skel.css" />
         <option value="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/payments/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/documents/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/payments/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/payments/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/payments/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home/nav.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home/layout.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home/partials/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home/partials/nav.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home/layouts/layout.blade.php" />
+        <option value="$PROJECT_DIR$/public/ElaAdmin/js/scripts.js" />
+        <option value="$PROJECT_DIR$/resources/views/home/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -352,9 +1085,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -455,9 +1185,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="y" value="27" />
-    <option name="width" value="960" />
-    <option name="height" value="1053" />
+    <option name="x" value="623" />
+    <option name="y" value="195" />
+    <option name="width" value="940" />
+    <option name="height" value="796" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -477,7 +1208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -515,57 +1245,31 @@
             <path>
               <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="adminlte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ElaAdmin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="adminlte" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bower_components" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="adminlte" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bower_components" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="datatables.net-bs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="adminlte" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bower_components" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="datatables.net-bs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="adminlte" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bower_components" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="datatables.net-bs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dataTables.bootstrap.css" type="620a8d5e:NestingTreeNode" />
+              <item name="ElaAdmin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
@@ -586,7 +1290,7 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="category" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="documents" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
@@ -594,7 +1298,45 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="payments" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doccloud" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="doccloud" type="b2602c69:ProjectViewProjectNode" />
@@ -605,6 +1347,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -612,10 +1355,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/ElaAdmin" />
+      <recent name="$PROJECT_DIR$/resources/assets" />
       <recent name="$PROJECT_DIR$/public/adminlte/bower_components/bootstrap/js" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/resources/lang" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/category/partials/expandable" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/home/partials" />
+      <recent name="$PROJECT_DIR$/resources/views/home/layouts" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -668,37 +1417,51 @@
       <workItem from="1524073158419" duration="4329000" />
       <workItem from="1524086110169" duration="1028000" />
       <workItem from="1524170899145" duration="6824000" />
-      <workItem from="1524266503854" duration="9980000" />
+      <workItem from="1524266503854" duration="10757000" />
+      <workItem from="1524309095280" duration="7820000" />
+      <workItem from="1524336019203" duration="20000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98374000" />
+    <option name="totallyTimeSpent" value="119101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17604166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11881188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3308351" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2328125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11881188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914573" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2955032" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.63062096" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23697917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914573" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11881188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,147 +1475,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/images/if_cloudapp_252109.png" />
-    <entry file="file://$PROJECT_DIR$/public/images/if_document_1055071.png" />
-    <entry file="das://table:/a8fa3f98/87f60712-51aa-42f1-aecc-316afc7adca1/blog.photos" />
-    <entry file="das://table:/a8fa3f98/87f60712-51aa-42f1-aecc-316afc7adca1/doccloud.documents" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2232">
-          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Document.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/ViewerJS/example.local.css" />
-    <entry file="file://$PROJECT_DIR$/public/ViewerJS/pdf.js" />
-    <entry file="file://$PROJECT_DIR$/public/ViewerJS/index.html" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/DocumentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/documents/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/documents/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/documents/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/documents/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/estilos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/partials/category.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/partials/category-none.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/partials/tree.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/tree.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/category-partials/category-none.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -909,18 +1531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="49" column="37" lean-forward="false" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/Spanish.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,7 +1542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -936,14 +1549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1062">
           <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5400">
-          <caret line="56" column="39" lean-forward="false" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -954,13 +1559,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/845f54d85250aac9a494ed58bd3732eb78121fd0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="86" column="37" lean-forward="true" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/skel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3708">
+          <caret line="206" column="1" lean-forward="true" selection-start-line="206" selection-start-column="1" selection-end-line="206" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/documents/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="27" column="89" lean-forward="false" selection-start-line="27" selection-start-column="89" selection-end-line="27" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="89" lean-forward="false" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/payments/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="78" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/payments/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="803" lean-forward="false" selection-start-line="0" selection-start-column="798" selection-end-line="0" selection-end-column="803" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/bootstrap/js/jquery.confirm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2862">
           <caret line="171" column="8" lean-forward="false" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="25" />
-          <folding>
-            <marker date="1524176320534" expanded="true" signature="3843:3850" ph="×" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -969,145 +1641,372 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/framework/views/845f54d85250aac9a494ed58bd3732eb78121fd0.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="86" column="37" lean-forward="true" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/skel.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3708">
-          <caret line="206" column="1" lean-forward="true" selection-start-line="206" selection-start-column="1" selection-end-line="206" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="803" lean-forward="false" selection-start-line="0" selection-start-column="798" selection-end-line="0" selection-end-column="803" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/category/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/payments/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="26" column="92" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="92" />
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <marker date="1524276434206" expanded="true" signature="9:31" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="42:50" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="172:192" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="281:312" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="393:402" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="794:812" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="1193:1217" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="1335:1348" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="1427:1442" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="1521:1543" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="1675:1812" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="1859:1904" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="2083:2128" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="2704:2719" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="2955:2963" ph="..." />
-            <marker date="1524276434206" expanded="true" signature="3094:3103" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="9:31" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="42:50" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="167:198" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="288:318" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="482:491" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="645:675" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="853:935" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="977:1021" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="1226:1241" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="1284:1295" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="1333:1380" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="1410:1423" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="1512:1583" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="1644:1692" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="1902:1925" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="1968:1983" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="2021:2076" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="2106:2123" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="2212:2287" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="2348:2396" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="2606:2630" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="2673:2688" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="2726:2781" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="2811:2828" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="2917:2992" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="3053:3095" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="3246:3260" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="3339:3408" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="3446:3501" ph="..." />
+            <marker date="1524277204782" expanded="true" signature="3519:3534" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/payments/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/adminator/src/signin.html" />
+    <entry file="file://$PROJECT_DIR$/adminator/src/index.html" />
+    <entry file="file://$PROJECT_DIR$/public/build/signin.html" />
+    <entry file="file://$PROJECT_DIR$/public/adminlte/dist/css/AdminLTE.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/scripts/chat/index.js" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/index.html" />
+    <entry file="file://$PROJECT_DIR$/public/ElaAdmin/css/lib/c3/c3.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="49" column="37" lean-forward="false" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+          <folding>
+            <marker date="1524086783891" expanded="true" signature="190:221" ph="..." />
+            <marker date="1524086783891" expanded="true" signature="535:543" ph="..." />
+            <marker date="1524086783891" expanded="true" signature="1864:1895" ph="..." />
+            <marker date="1524086783891" expanded="true" signature="1920:1948" ph="..." />
+            <marker date="1524086783891" expanded="true" signature="1968:1976" ph="..." />
+            <marker date="1524086783891" expanded="true" signature="1986:1995" ph="..." />
+            <marker date="1524086783891" expanded="true" signature="4362:4371" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="532" column="91" lean-forward="false" selection-start-line="532" selection-start-column="91" selection-end-line="532" selection-end-column="91" />
+          <caret line="544" column="91" lean-forward="false" selection-start-line="544" selection-start-column="91" selection-end-line="544" selection-end-column="91" />
+          <caret line="544" column="109" lean-forward="false" selection-start-line="544" selection-start-column="105" selection-end-line="544" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1522166379973" expanded="true" signature="9:31" ph="..." />
+            <marker date="1522166379973" expanded="true" signature="43:52" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <marker date="1524350907153" expanded="true" signature="476:507" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="1862:1881" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="2136:2179" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="2204:2217" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="2303:2323" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="2443:2467" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="2804:2848" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="2874:2888" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="2963:2984" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="3108:3133" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="3483:3530" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="3625:3649" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="3773:3801" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="4160:4215" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="4319:4343" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="4467:4503" ph="..." />
+            <marker date="1524350907153" expanded="true" signature="5193:5207" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/documents/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1720">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523807138560" expanded="true" signature="9:31" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="43:51" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="182:202" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="277:309" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="481:490" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="540:585" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="618:632" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="637:658" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="834:876" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="1076:1106" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="1227:1295" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="1379:1427" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="1741:1785" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="1830:1905" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="1989:2037" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="2312:2336" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="2391:2406" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="2456:2535" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="2577:2594" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="2719:2794" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="3116:3131" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="3156:3182" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="3435:3480" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="3541:3555" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="3560:3584" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="4313:4338" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="4541:4549" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="4764:4773" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="5148:5163" ph="..." />
+            <marker date="1523807138560" expanded="true" signature="5357:5371" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/documents/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523061280969" expanded="true" signature="117:159" ph="..." />
+            <marker date="1523061280969" expanded="true" signature="188:202" ph="..." />
+            <marker date="1523061280969" expanded="true" signature="687:728" ph="..." />
+            <marker date="1523061280969" expanded="true" signature="849:862" ph="..." />
+            <marker date="1523061280969" expanded="true" signature="1010:1078" ph="..." />
+            <marker date="1523061280969" expanded="true" signature="1438:1447" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/documents/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523807176376" expanded="true" signature="9:31" ph="..." />
+            <marker date="1523807176376" expanded="true" signature="42:50" ph="..." />
+            <marker date="1523807176376" expanded="true" signature="71:86" ph="..." />
+            <marker date="1523807176376" expanded="true" signature="106:142" ph="..." />
+            <marker date="1523807176376" expanded="true" signature="214:234" ph="..." />
+            <marker date="1523807176376" expanded="true" signature="309:341" ph="..." />
+            <marker date="1523807176376" expanded="true" signature="506:515" ph="..." />
+            <marker date="1523807176376" expanded="true" signature="566:584" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1180">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1524351036638" expanded="true" signature="463:494" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="1847:1863" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="2107:2151" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="2177:2191" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="2315:2336" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="2456:2481" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="2790:2837" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="2968:2992" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="3112:3140" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="3415:3449" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="3623:3650" ph="..." />
+            <marker date="1524351036638" expanded="true" signature="4042:4059" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/nav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+          <folding>
+            <marker date="1523813210711" expanded="true" signature="146:196" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="219:237" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="355:402" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="672:724" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="755:783" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="934:993" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="1025:1052" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="1240:1291" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="1569:1625" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="1656:1688" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="1841:1904" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="2154:2204" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="2475:2530" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="2561:2592" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="2745:2807" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="2838:2868" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="3021:3081" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="3112:3127" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="3312:3361" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="3634:3688" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="3719:3749" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="3899:3960" ph="..." />
+            <marker date="1523813210711" expanded="true" signature="3991:4020" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="177" column="51" lean-forward="false" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="51" />
+          <folding>
+            <marker date="1524171651189" expanded="true" signature="299:330" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="858:866" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="9803:9825" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="10224:10246" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="10251:10289" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="10344:10389" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="11671:11688" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="11749:11763" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="13035:13086" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="13850:13870" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="14120:14128" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="14248:14272" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="14345:14364" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="14427:14450" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="14524:14542" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="14607:14616" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="18840:18874" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="18889:18913" ph="..." />
+            <marker date="1524171651189" expanded="true" signature="18933:18942" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/partials/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="171" column="54" lean-forward="false" selection-start-line="171" selection-start-column="54" selection-end-line="171" selection-end-column="54" />
+          <folding>
+            <marker date="1524355375485" expanded="true" signature="10206:10223" ph="..." />
+            <marker date="1524355375485" expanded="true" signature="10276:10290" ph="..." />
+            <marker date="1524355375485" expanded="true" signature="10483:10492" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/partials/nav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1524355418221" expanded="true" signature="590:599" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ElaAdmin/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="28" column="96" lean-forward="false" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="96" />
+          <caret line="26" column="11" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/layouts/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1872">
+          <caret line="104" column="47" lean-forward="false" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
           <folding>
-            <marker date="1524276483987" expanded="true" signature="9:31" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="44:52" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="169:199" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="373:382" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="580:611" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="781:797" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="1268:1289" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="1414:1426" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="1509:1529" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="1612:1674" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="1757:1819" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="1895:2029" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="2076:2119" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="2298:2341" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="2893:2908" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="3127:3135" ph="..." />
-            <marker date="1524276483987" expanded="true" signature="3266:3275" ph="..." />
+            <marker date="1524355418277" expanded="true" signature="457:488" ph="..." />
+            <marker date="1524355418277" expanded="true" signature="1876:1898" ph="..." />
+            <marker date="1524355418277" expanded="true" signature="2124:2143" ph="..." />
+            <marker date="1524355418277" expanded="true" signature="2957:2966" ph="..." />
+            <marker date="1524355418277" expanded="true" signature="4796:4805" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/documents/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/home/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="27" column="89" lean-forward="false" selection-start-line="27" selection-start-column="89" selection-end-line="27" selection-end-column="89" />
+        <state relative-caret-position="190">
+          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
           <folding>
-            <marker date="1524276483955" expanded="true" signature="9:31" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="43:51" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="173:193" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="367:376" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="757:774" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="1188:1211" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="1320:1333" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="1408:1429" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="1504:1519" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="1594:1616" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="1691:1756" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="1890:1937" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="2015:2029" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="2034:2058" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="2100:2144" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="2245:2285" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="2965:2973" ph="..." />
-            <marker date="1524276483955" expanded="true" signature="3104:3113" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="89" lean-forward="false" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="89" />
-          <folding>
-            <element signature="e#2080#2103#0#HTML" expanded="true" />
-            <marker date="1524276484031" expanded="true" signature="9:31" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="42:50" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="170:190" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="357:366" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="606:633" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="864:877" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="1324:1339" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="1456:1465" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="1544:1555" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="1634:1649" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="1728:1740" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="1819:1843" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="1989:2028" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="2260:2296" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="2396:2410" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="2415:2439" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="3115:3123" ph="..." />
-            <marker date="1524276484031" expanded="true" signature="3254:3263" ph="..." />
+            <element signature="e#8506#8536#0#HTML" expanded="true" />
+            <element signature="e#8894#8924#0#HTML" expanded="true" />
+            <element signature="e#9284#9314#0#HTML" expanded="true" />
+            <element signature="e#9678#9708#0#HTML" expanded="true" />
+            <marker date="1524356927104" expanded="true" signature="9:30" ph="..." />
+            <marker date="1524356927104" expanded="true" signature="42:51" ph="..." />
           </folding>
         </state>
       </provider>
