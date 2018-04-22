@@ -1,4 +1,3 @@
--Crear BBDD 
--Crear crud usuarios
--cread crud archivos
--crear crud categorias
+//FUTURO [Cuando este en el Hosting]
+-Para visualizar los .ppt se usa el embedido de google solucionar en admin/documents/show
+-

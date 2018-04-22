@@ -106,7 +106,7 @@
         var myDropzone = new Dropzone('.dropzone', {
             url: '/admin/documents/{{ $document->id }}/documents',
             paramName: 'document',
-            acceptedFiles: 'application/pdf,.odt,.ods,',
+            acceptedFiles: 'application/pdf,.odt,.ods,.ppt,',
             maxFilesize: 10,
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
