@@ -56,19 +56,21 @@
     <!-- Page wrapper  -->
     <div class="page-wrapper">
         <!-- Bread crumb -->
-        <div class="row page-titles">
-            <div class="col-md-5 align-self-center">
-                <h3 class="text-primary">Dashboard</h3> </div>
-            <div class="col-md-7 align-self-center">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
-                </ol>
-            </div>
-        </div>
+        @yield('migaspan')
         <!-- End Bread crumb -->
         <!-- Container fluid  -->
         <div class="container-fluid">
+            @if (session()->has('danger'))
+                <div class="alert alert-danger">
+                    {{ session('danger') }}
+                </div>
+            @endif
+
+            @if (session()->has('flash'))
+                <div class="alert alert-success">
+                    {{ session('flash') }}
+                </div>
+            @endif
 
             @yield('content')
 
@@ -91,6 +93,9 @@
 <!-- Bootstrap tether Core JavaScript -->
 <script src="/ElaAdmin/js/lib/bootstrap/js/popper.min.js"></script>
 <script src="/ElaAdmin/js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="/ElaAdmin/js/lib/form-validation/jquery.validate.min.js"></script>
+<script src="/ElaAdmin/js/lib/form-validation/jquery.validate.unobtrusive.min.js"></script>
+<script src="/ElaAdmin/js/lib/jquery.nicescroll/jquery.nicescroll.min.js"></script>
 <!-- slimscrollbar scrollbar JavaScript -->
 <script src="/ElaAdmin/js/jquery.slimscroll.js"></script>
 <!--Menu sidebar -->
@@ -98,7 +103,6 @@
 <!--stickey kit -->
 <script src="/ElaAdmin/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
 <!--Custom JavaScript -->
-
 
 
 <!-- Amchart -->

@@ -16,7 +16,7 @@
         <div class="box-body">
             <h1 align="center">Nombre: {{ $category->name }}</h1>
             <h3 align="center">Descripcion: {{ $category->description }}</h3>
-            @if(is_null($category->parent->id))
+            @if(is_null($category->parent))
                 <h3 align="center">Es categoria padre</h3>
             @else
                 <h3 align="center">Categoria padre: {{ $category->parent->name }}</h3>
