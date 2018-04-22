@@ -3,7 +3,7 @@
     <div class="navbar-header">
         <a class="navbar-brand" href="index.html">
             <!-- Logo icon -->
-            <b><h4>DocCLoud</h4></b><span><h6>Cloud</h6></span>
+            <b><h4>DocCLoud</h4></b>
             <!--End Logo icon -->
             <!-- Logo text -->
 
@@ -169,6 +169,5 @@
 </nav>
 
 @push('scripts')
-    <script src="/ElaAdmin/js/custom.min.js"></script>
 
 @endpush

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <title>Login {{ config('app.name', 'Laravel') }}e</title>
+    <title>Login {{ config('app.name', 'Laravel') }}</title>
     <!-- Bootstrap Core CSS -->
     <link href="/ElaAdmin/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->

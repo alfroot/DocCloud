@@ -38,6 +38,7 @@ Route::group([
         Route::post('documents/{document}/documents', 'DocumentsController@storedoc')->name('documentsave');
     });
 
+Route::resource('documents', 'DocumentsController');
 route::get('/doccloud', 'PagesController@doccloud')->name('doccloud.pages');
 route::get('/documents', 'PagesController@documents')->name('documents.pages');
 route::get('/categories', 'PagesController@categories')->name('categories.pages');
