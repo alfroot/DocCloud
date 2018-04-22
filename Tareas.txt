@@ -1,3 +1,10 @@
 //FUTURO [Cuando este en el Hosting]
--Para visualizar los .ppt se usa el embedido de google solucionar en admin/documents/show
--
+-Para visualizar los .ppt y pptx Y ALGUNAS EXTENSONES MAS QUE NO FUNCIONAN se usa el embedido de google solucionar en admin/documents/show
+
+
+//HACER CUANDO SEA [No olvidar]
+-Mostrar en barra navegacion Slugs urls documentos ADMIN
+-Comprobar la extension del archivo al subirla con la tabla en BBDD y guardar la extension (Aun no se hace aunque este relaccionada)
+
+
+

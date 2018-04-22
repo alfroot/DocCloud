@@ -52,7 +52,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
-                <label for="">Categoia</label>
+                <label for="">Categoria</label>
                 <select name="category_id" class="form-control select2">
                     <option value=" ">Ninguno</option>
                     @foreach($categories as $category)

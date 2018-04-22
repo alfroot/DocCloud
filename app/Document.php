@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Storage;
 
 class Document extends Model
 {
-    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'storage'];
+    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'extension_id', 'storage'];
 
 
     public static function boot()
@@ -33,4 +33,10 @@ class Document extends Model
     {
         return $this->hasMany(Payment::class);
     }
+
+    public function extension()
+    {
+        return $this->belongsTo(Extension::class);
+    }
+
 }

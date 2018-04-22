@@ -17,7 +17,7 @@
             <div class="align-center">
                 <br>
                 <a href="/admin/category/create"class="btn btn-primary" >
-                    Crear CategorÍa
+                    Crear Categoría
                 </a>
             </div>
         </div>

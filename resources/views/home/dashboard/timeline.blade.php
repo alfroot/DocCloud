@@ -7,10 +7,10 @@
                     <div><a href="#" class="link">Michael Qin</a> <span class="sl-date">5 minutes ago</span>
                         <p>A añadido documentos<a href="#"> Design weblayout</a></p>
                         <div class="row">
-                            <div class="col-lg-3 col-md-6 m-b-20"><img src="/ElaAdmin/images/typesdoc/doc-large.png" class="radius" width="150px" height="150px"/></div>
-                            <div class="col-lg-3 col-md-6 m-b-20"><img src="/ElaAdmin/images/typesdoc/pdf-large.png" class="radius" width="150px" height="150px" /></div>
-                            <div class="col-lg-3 col-md-6 m-b-20"><img src="/ElaAdmin/images/typesdoc/ppt-large.png" class="radius" width="150px" height="150px"/></div>
-                            <div class="col-lg-3 col-md-6 m-b-20"><img src="/ElaAdmin/images/typesdoc/xls-large.png" class="radius" width="150px" height="150px"/></div>
+                            <div class="col-lg-3 col-md-6 m-b-20"><img src="/ElaAdmin/images/typesdoc/ods.png" class="radius" width="150px" height="150px"/></div>
+                            <div class="col-lg-3 col-md-6 m-b-20"><img src="/ElaAdmin/images/typesdoc/pdf.png" class="radius" width="150px" height="150px" /></div>
+                            <div class="col-lg-3 col-md-6 m-b-20"><img src="/ElaAdmin/images/typesdoc/ppt.png" class="radius" width="150px" height="150px"/></div>
+                            <div class="col-lg-3 col-md-6 m-b-20"><img src="/ElaAdmin/images/typesdoc/xls.png" class="radius" width="150px" height="150px"/></div>
                         </div>
                         <div class="like-comm"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
                     </div>
@@ -22,7 +22,7 @@
                 <div class="sl-right">
                     <div> <a href="#" class="link">Michael Qin</a> <span class="sl-date">5 minutes ago</span>
                         <div class="m-t-20 row">
-                            <div class="col-md-3 col-xs-12"><img src="/ElaAdmin/images/typesdoc/odt-large.png" alt="user" class=" radius" width="150px" height="150px/></div>
+                            <div class="col-md-3 col-xs-12"><img src="/ElaAdmin/images/typesdoc/odt.png" alt="user" class=" radius" width="150px" height="150px/></div>
                                             <div class="col-md-9 col-xs-12">
                                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p> <a href="#" class="btn btn-success"> Design weblayout</a></div>
                         </div>

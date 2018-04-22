@@ -106,12 +106,23 @@
         var myDropzone = new Dropzone('.dropzone', {
             url: '/admin/documents/{{ $document->id }}/documents',
             paramName: 'document',
-            acceptedFiles: 'application/pdf,.odt,.ods,.ppt,',
+            acceptedFiles: 'application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.oasis.opendocument.spreadsheet,application/vnd.oasis.opendocument.text,application/msword,text/plain,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/vnd.ms-excel,',
             maxFilesize: 10,
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },
-            dictDefaultMessage: '<img src="/images/if_file_documents-09_854127.png" class="img-thumbnail"  width="50" height="50">' +
+            dictDefaultMessage:
+            '<div class="align-content-center">'+
+            '<img src="/ElaAdmin/images/typesdoc/doc.png" class="img-thumbnail" style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+            '<img src="/ElaAdmin/images/typesdoc/docx.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+            '<img src="/ElaAdmin/images/typesdoc/ods.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+            '<img src="/ElaAdmin/images/typesdoc/odt.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+            '<img src="/ElaAdmin/images/typesdoc/pdf.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+            '<img src="/ElaAdmin/images/typesdoc/ppt.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+            '<img src="/ElaAdmin/images/typesdoc/pptx.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+            '<img src="/ElaAdmin/images/typesdoc/txt.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+            '<img src="/ElaAdmin/images/typesdoc/xls.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+                '</div>' +
             '<br><br><p>Arrastra aquí tu documento</p>'
         });
         /*myDropzone.on('error', function(file, res) {

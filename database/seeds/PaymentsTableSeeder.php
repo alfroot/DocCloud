@@ -15,7 +15,7 @@ class PaymentsTableSeeder extends Seeder
         Payment::truncate();
         $payment = new Payment;
         $payment->user_id = 1;
-        $payment->document_id = '1';
+        $payment->document_id = 1;
         $payment->price='25';
         $payment->save();
     }

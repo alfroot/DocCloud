@@ -57,11 +57,13 @@ class DocumentsController extends Controller
 
     public function storedoc(Document $document)
     {
+
+
         $this->validate(request(), [
             'document' => 'required|File'
         ]);
 
-
+        $extension = $document;
 
 
         $document->update([
@@ -69,7 +71,7 @@ class DocumentsController extends Controller
 
         ]);
 
-
+        dd($extension);
 
 
     }
