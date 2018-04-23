@@ -4,7 +4,7 @@
 
 //HACER CUANDO SEA [No olvidar]
 -Mostrar en barra navegacion Slugs urls documentos ADMIN
--Comprobar la extension del archivo al subirla con la tabla en BBDD y guardar la extension (Aun no se hace aunque este relaccionada)
 
-
+-Eliminar metodos y rutas sobrantes (Limpieza final)
+-Llamada ajax categorias.
 

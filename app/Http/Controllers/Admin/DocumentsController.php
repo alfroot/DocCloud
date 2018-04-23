@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Document;
+use App\Extension;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Carbon;
@@ -17,6 +18,7 @@ class DocumentsController extends Controller
         if (auth()->user()->hasrole('SuperAdmin')) {
 
             $documents = Document::all();
+
 
             return view('admin.documents.index', compact('documents'));
 
@@ -58,21 +60,24 @@ class DocumentsController extends Controller
     public function storedoc(Document $document)
     {
 
-
         $this->validate(request(), [
-            'document' => 'required|File'
+            'document' => 'required|File|mimes:doc,docx,ods,odt,pdf,ppt,pptx,txt,xls|max:10000'
         ]);
-
-        $extension = $document;
 
 
         $document->update([
-            'storage'   =>  request()->file('document')->store('documents', 'public')
+            'storage'   =>  request()->file('document')->store('documents', 'public'),
 
         ]);
 
-        dd($extension);
+        $xt = explode('.',$document->storage);
+        $ext = $xt[1];
+        $extension = Extension::where('name','=', $ext)->get();
 
+
+        $document->update([
+            'extension_id'   => $extension[0]->id
+        ]);
 
     }
     public function show($id)
@@ -100,6 +105,8 @@ class DocumentsController extends Controller
                 'categories' => Category::all()
 
             ]);
+
+
 
         }else  {
             return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
