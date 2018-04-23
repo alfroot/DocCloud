@@ -8,3 +8,7 @@
 -Eliminar metodos y rutas sobrantes (Limpieza final)
 -Llamada ajax categorias.
 
+
+
+-Filtrar categorias aceptadas/no aceptadas parte admin (parte publica esta hecho)
+-Documentos parte publica

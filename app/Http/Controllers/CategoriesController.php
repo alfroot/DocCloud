@@ -9,7 +9,7 @@ class CategoriesController extends Controller
 {
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::all()->where('aceptada','=','si');
         return view('home.category.category', compact('categories'));
     }
 
