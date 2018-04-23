@@ -45,10 +45,13 @@
                     <td class="global_filter" id="global_filter">{{$document->name}}</td>
                     <td class="global_filter" id="global_filter">{{$document->description}}</td>
                     <td class="global_filter" id="global_filter">{{isset($document->category->name) ? $document->category->name : ''}}</td>
+                    @if(isset($document->extension->name))
                     <td class="global_filter" id="global_filter">{{$document->extension->name}}
                         <img src="/ElaAdmin/images/typesdoc/{{$document->extension->name}}.png" class="radius" width="20px" height="20px">
                     </td>
-
+                    @else
+                        <td class="global_filter" id="global_filter">No hay archivo</td>
+                    @endif
                     <td>
                         <div class="align-content-center">
                         <form action="{{route('admin.documents.destroy', $document->id)}}" method="POST" class="align-content-center">
