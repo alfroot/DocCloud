@@ -41,6 +41,8 @@ class CategoriesController extends Controller
             ]);
 
             $category = new Category($request->all());
+            $category->user_id = auth()->user()->id;
+            $category->aceptada = "no";
             $category->save();
 
             return redirect('/admin/category')->with('flash', 'La Categoria ha sido guardada');
@@ -92,6 +94,8 @@ class CategoriesController extends Controller
             $category->name = $request->name;
             $category->description = $request->description;
             $category->category_parent_id = $request->category_parent_id;
+            $category->user_id = auth()->user()->id;
+            $category->aceptada = "no";
             $category->save();
 
             return redirect('/admin/category')->with('flash', 'La Categoria ha sido actualizada');

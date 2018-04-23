@@ -17,12 +17,16 @@ class CategoriesTableSeeder extends Seeder
         $documento = new Category;
         $documento->name = 'Root';
         $documento->description = 'Root';
+        $documento->user_id= 1 ;
+        $documento->aceptada="si";
         $documento->save();
 
         $documento = new Category;
         $documento->name = 'Deportes';
         $documento->description = 'Categoria Deportiva';
         $documento->category_parent_id = 1;
+        $documento->user_id =1 ;
+        $documento->aceptada="si";
         $documento->save();
 
 
@@ -31,6 +35,8 @@ class CategoriesTableSeeder extends Seeder
         $documento->name = 'Politica';
         $documento->description = 'Categoria sobre Politica';
         $documento->category_parent_id = 1;
+        $documento->user_id=1;
+        $documento->aceptada="si";
         $documento->save();
 
         factory(Category::class,10)->create([ 'category_parent_id' => 2]);

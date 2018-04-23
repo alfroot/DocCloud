@@ -45,4 +45,6 @@ route::get('/categories', 'PagesController@categories')->name('categories.pages'
 
 Route::resource('users', 'UsersController');
 
+
 Route::get('/category', 'CategoriesController@index')->name('user.category.index');
+Route::post('/category/store', 'CategoriesController@store')->name('user.category.store');

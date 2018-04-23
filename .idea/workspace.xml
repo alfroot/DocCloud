@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38f2084d-5216-4700-b8a5-8cebb46608d4" name="Default" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/87f60712-51aa-42f1-aecc-316afc7adca1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/87f60712-51aa-42f1-aecc-316afc7adca1.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Tareas.txt" afterPath="$PROJECT_DIR$/Tareas.txt" />
@@ -30,6 +31,9 @@
       <change beforePath="$PROJECT_DIR$/resources/views/home/dashboard/timeline.blade.php" afterPath="$PROJECT_DIR$/resources/views/home/dashboard/timeline.blade.php" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/" />
@@ -189,6 +193,7 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/documents/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="214">
               <caret line="108" column="221" lean-forward="false" selection-start-line="108" selection-start-column="221" selection-end-line="108" selection-end-column="221" />
               <folding>
@@ -232,6 +237,10 @@
                 <marker date="1524434778880" expanded="true" signature="6919:6952" ph="..." />
                 <marker date="1524434778880" expanded="true" signature="7069:7102" ph="..." />
               </folding>
+=======
+            <state relative-caret-position="330">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -326,11 +335,11 @@
         <option value="$PROJECT_DIR$/resources/views/home/dashboard/settings.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/home/partials/nav.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" />
         <option value="$PROJECT_DIR$/resources/views/home/layouts/layout.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home/category/category.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home/dashboard/dashboard.blade.php" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/resources/views/home/dashboard/profile.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/home/dashboard/timeline.blade.php" />
@@ -352,6 +361,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/DocumentsController.php" />
         <option value="$PROJECT_DIR$/Tareas.txt" />
         <option value="$PROJECT_DIR$/database/seeds/DocumentsTableSeeder.php" />
+=======
+        <option value="$PROJECT_DIR$/resources/views/home/partials/nav.blade.php" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -488,8 +500,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+>>>>>>> Stashed changes
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -605,6 +620,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -665,6 +681,7 @@
       <workItem from="1523786663312" duration="7412000" />
       <workItem from="1523803515136" duration="7175000" />
       <workItem from="1523994710641" duration="4046000" />
+<<<<<<< Updated upstream
       <workItem from="1524073158419" duration="4329000" />
       <workItem from="1524086110169" duration="1028000" />
       <workItem from="1524170899145" duration="6824000" />
@@ -673,15 +690,29 @@
       <workItem from="1524336019203" duration="20000" />
       <workItem from="1524388388707" duration="13574000" />
       <workItem from="1524419664210" duration="17848000" />
+=======
+      <workItem from="1524073158419" duration="7425000" />
+      <workItem from="1524411517299" duration="1941000" />
+      <workItem from="1524413504708" duration="2580000" />
+      <workItem from="1524416115182" duration="942000" />
+      <workItem from="1524417819300" duration="4000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="151024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="27" width="1920" height="1053" extended-state="7" />
     <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="89105000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="52" y="-11" width="1315" height="780" extended-state="6" />
+>>>>>>> Stashed changes
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -704,6 +735,31 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+<<<<<<< Updated upstream
+=======
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32976446" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24828637" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914573" />
+      <window_info anchor="right" id="Database" order="3" weight="0.11881188" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.33033034" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+    </layout-to-restore>
+>>>>>>> Stashed changes
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1279,6 +1335,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DocumentsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1800">
           <caret line="108" column="79" lean-forward="false" selection-start-line="108" selection-start-column="79" selection-end-line="108" selection-end-column="79" />
           <folding />
@@ -1289,6 +1346,10 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+=======
+        <state relative-caret-position="330">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>

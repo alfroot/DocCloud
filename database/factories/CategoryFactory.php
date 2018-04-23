@@ -7,6 +7,8 @@ $factory->define(App\Category::class, function (Faker $faker) {
         'name' => $faker->word,
         'description' => $faker->text($maxNbChars = 150),
         'category_parent_id' => $faker->numberBetween($min = 1, $max = 40),
+        'user_id' => '1',
+        'aceptada'=>'si'
 
     ];
 
