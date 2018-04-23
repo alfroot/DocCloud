@@ -4,11 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-
+use App\Traits\DatesTranslator;
 class Document extends Model
 {
-    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'extension_id', 'storage'];
-
+    use DatesTranslator;
+    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'extension_id', 'storage', 'created_at' , ];
+    protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate'];
 
     public static function boot()
     {

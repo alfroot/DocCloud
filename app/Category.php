@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\DatesTranslator;
 
 class Category extends Model
 {
+    use  DatesTranslator;
+
     protected $fillable =['name', 'description', 'category_parent_id'];
 
     public function documents()

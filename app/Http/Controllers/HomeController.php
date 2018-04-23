@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Document;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -28,14 +29,17 @@ class HomeController extends Controller
 
             $user = auth()->user();
 
+            $documentstimeline = Document::orderBy('created_at','desc')->limit(5)->get();
 
-            return view('/home/dashboard/dashboard' , compact('user'));
+
+            return view('/home/dashboard/dashboard' , compact('user','documentstimeline'));
         }else  {
             return redirect('/admin')->with('danger', 'Debes estar logueado eso');
         }
 
 
     }
+
 
 
 }

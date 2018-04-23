@@ -8,7 +8,7 @@
 -Eliminar metodos y rutas sobrantes (Limpieza final)
 -Llamada ajax categorias.
 
-
+-Añadir foto usuario
 
 -Filtrar categorias aceptadas/no aceptadas parte admin (parte publica esta hecho)
 -Documentos parte publica

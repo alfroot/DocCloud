@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-md-6 col-xs-6"> <strong>Usuario Desde:</strong>
                     <br>
-                    <p class="text-muted">{{$user->created_at}}</p>
+                    <p class="text-muted">{{$user->created_at->diffForHumans()}}</p>
                 </div>
             </div>
         </div>
