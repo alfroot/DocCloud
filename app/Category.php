@@ -3,12 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Traits\DatesTranslator;
 
 class Category extends Model
 {
-    use  DatesTranslator;
-
     protected $fillable =['name', 'description', 'category_parent_id'];
 
     public function documents()
@@ -30,6 +27,11 @@ class Category extends Model
     public function children()
     {
         return $this->hasMany(Category::class, 'category_parent_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public static function boot()

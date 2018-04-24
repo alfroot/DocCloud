@@ -6,7 +6,7 @@
             @if(empty($category->category_parent_id))
                 <li>
                     {{ $category->name }}
-                @include('admin.category.partials.category', $category)
+                    @include('admin.category.partials.category', $category)
                 </li>
             @endif
         @endforeach

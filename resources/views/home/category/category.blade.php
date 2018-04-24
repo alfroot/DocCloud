@@ -20,7 +20,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-title">
-                    <h4>Basic Elements</h4>
+                    <h4>Proponer Categoria</h4>
 
                 </div>
                 <div class="card-body">

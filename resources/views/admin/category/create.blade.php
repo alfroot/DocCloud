@@ -49,6 +49,14 @@
                 </select>
                 {!! $errors->first('category_parent_id', '<span class="help-block">:message</span>') !!}
             </div>
+            <div class="form-group {{ $errors->has('aceptada') ? 'has-error' : '' }}">
+                <label for="">Aceptar</label>
+                <select name="aceptada" class="form-control select2">
+                    <option value="si">SI</option>
+                    <option value="no">NO</option>
+                </select>
+                {!! $errors->first('aceptada', '<span class="help-block">:message</span>') !!}
+            </div>
 
             {{ Form::bsSubmit('CREAR', ['class'=>'btn btn-primary']) }}
             {!! Form::close() !!}

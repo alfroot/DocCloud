@@ -30,4 +30,10 @@ class CategoriesController extends Controller
         return redirect('/category')->with('flash', 'La Categoria ha sido guardada');
 
     }
+
+    public function propuestas()
+    {
+        $categories = Category::all()->where('user_id','=',auth()->user()->id);
+        return view('home.category.propuestasCategory', compact('categories'));
+    }
 }
