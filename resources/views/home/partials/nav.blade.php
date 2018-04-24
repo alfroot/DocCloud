@@ -21,7 +21,7 @@
         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tags"></i><span class="hide-menu">Categorias </span></a>
             <ul aria-expanded="false" class="collapse" >
                 <li><a href="{{ route('user.category.index') }}"><i class="fa fa-pencil"></i> Proponer Categoria</a></li>
-                <li><a href="{{ route('user.category.propuestas') }}"><i class="fa fa-folder-o"></i>Categorias Propuestas</a></li>
+                <li><a href="{{ route('user.category.propose') }}"><i class="fa fa-folder-o"></i>Categorias Propuestas</a></li>
             </ul>
         </li>
     </ul>

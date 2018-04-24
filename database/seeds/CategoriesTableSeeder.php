@@ -18,7 +18,7 @@ class CategoriesTableSeeder extends Seeder
         $documento->name = 'Root';
         $documento->description = 'Root';
         $documento->user_id= 1 ;
-        $documento->aceptada="si";
+        $documento->accepted="1";
         $documento->save();
 
         $documento = new Category;
@@ -26,7 +26,7 @@ class CategoriesTableSeeder extends Seeder
         $documento->description = 'Categoria Deportiva';
         $documento->category_parent_id = 1;
         $documento->user_id =1 ;
-        $documento->aceptada="si";
+        $documento->accepted="1";
         $documento->save();
 
 
@@ -36,7 +36,7 @@ class CategoriesTableSeeder extends Seeder
         $documento->description = 'Categoria sobre Politica';
         $documento->category_parent_id = 1;
         $documento->user_id=1;
-        $documento->aceptada="si";
+        $documento->accepted="1";
         $documento->save();
 
         factory(Category::class,10)->create([ 'category_parent_id' => 2]);

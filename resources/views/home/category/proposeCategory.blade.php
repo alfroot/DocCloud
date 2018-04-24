@@ -40,7 +40,7 @@
                             <th scope="row">{{ $category->name }}</th>
                             <td>{{ $category->description }}</td>
                             <td>{{ $category->user->name }}</td>
-                            <td>{{ $category->aceptada}}</td>
+                            <td>{{ $category->accepted ? 'SI' : 'NO'}}</td>
                         </tr>
                         @endforeach
                         </tbody>

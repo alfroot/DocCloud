@@ -9,7 +9,7 @@ class CategoriesController extends Controller
 {
     public function index()
     {
-        $categories = Category::all()->where('aceptada','=','si');
+        $categories = Category::all()->where('accepted','=','1');
         return view('home.category.category', compact('categories'));
     }
 
@@ -24,16 +24,16 @@ class CategoriesController extends Controller
 
         $category = new Category($request->all());
         $category->user_id = auth()->user()->id;
-        $category->aceptada = "no";
+        $category->accepted = "0";
         $category->save();
 
         return redirect('/category')->with('flash', 'La Categoria ha sido guardada');
 
     }
 
-    public function propuestas()
+    public function propose()
     {
         $categories = Category::all()->where('user_id','=',auth()->user()->id);
-        return view('home.category.propuestasCategory', compact('categories'));
+        return view('home.category.proposeCategory', compact('categories'));
     }
 }

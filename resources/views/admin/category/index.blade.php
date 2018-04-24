@@ -84,7 +84,7 @@
                 </thead>
                 <tbody>
                 @foreach($categories as $category)
-                    @if($category->aceptada == "si")
+                    @if($category->accepted)
                     <tr id="filter_global">
                         <td class="global_filter " id="global_filter">{{$category->id}}</td>
                         <td class="global_filter" id="global_filter">{{$category->name}}</td>

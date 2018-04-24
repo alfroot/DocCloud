@@ -47,5 +47,5 @@ Route::resource('users', 'UsersController');
 
 
 Route::get('/category', 'CategoriesController@index')->name('user.category.index');
-Route::get('/category/propuestas', 'CategoriesController@propuestas')->name('user.category.propuestas');
+Route::get('/category/propose', 'CategoriesController@propose')->name('user.category.propose');
 Route::post('/category/store', 'CategoriesController@store')->name('user.category.store');

@@ -3,7 +3,7 @@
 @if (count($category['children']) > 0)
     <ul>
         @foreach($category['children'] as $category)
-            @if($category['aceptada'] == 'si')
+            @if($category['accepted'])
             <li>
                 {{$category['name']}}
                 @include('admin.category.partials.category', $category)

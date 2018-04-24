@@ -51,13 +51,13 @@
                 {!! $errors->first('category_parent_id', '<span class="help-block">:message</span>') !!}
             </div>
 
-            <div class="form-group {{ $errors->has('aceptada') ? 'has-error' : '' }}">
+            <div class="form-group {{ $errors->has('accepted') ? 'has-error' : '' }}">
                 <label for="">Aceptar</label>
-                <select name="aceptada" class="form-control select2">
-                    <option value="si" {{ old('aceptada', $category->aceptada) == 'si' ? 'selected' : '' }}>SI</option>
-                    <option value="no" {{ old('aceptada', $category->aceptada) == 'no' ? 'selected' : '' }}>NO</option>
+                <select name="accepted" class="form-control select2">
+                    <option value="1" {{ old('accepted', $category->accepted) == 'si' ? 'selected' : '' }}>SI</option>
+                    <option value="0" {{ old('accepted', $category->accepted) == 'no' ? 'selected' : '' }}>NO</option>
                 </select>
-                {!! $errors->first('aceptada', '<span class="help-block">:message</span>') !!}
+                {!! $errors->first('accepted', '<span class="help-block">:message</span>') !!}
             </div>
 
             {{ Form::bsSubmit('EDITAR', ['class'=>'btn btn-primary']) }}
