@@ -10,6 +10,7 @@
     </ol>
 @endsection
 @section('content')
+    @if(count($categoriesAp))
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Listado de Categorías pendintes de aprobar</h3>
@@ -59,7 +60,7 @@
             @endif
         </div>
     </div>
-
+    @endif
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Listado de CategorÍas</h3>

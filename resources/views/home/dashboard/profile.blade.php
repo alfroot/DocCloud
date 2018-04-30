@@ -5,8 +5,13 @@
                 <div class="card-two">
                     <header>
                         <div class="avatar">
-                            <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Allison Walker" />
+                            <img class="drift-demo-trigger" src="https://randomuser.me/api/portraits/women/21.jpg?w=400" data-zoom="https://randomuser.me/api/portraits/women/21.jpg?w=1200"  />
+
+
+
                         </div>
+                        <p>This is a simple description of the dog picture.</p>
+
                     </header>
                 </div>
             </div>
@@ -35,3 +40,14 @@
 
     </div>
 </div>
+
+@push('scripts')
+    <script src="/ElaAdmin/bower_components/drift/dist/Drift.js"></script>
+    <script>
+        new Drift(document.querySelector('img'), {
+            paneContainer: document.querySelector('p')
+        });
+    </script>
+
+
+@endpush

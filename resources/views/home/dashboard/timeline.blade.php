@@ -14,7 +14,13 @@
                                 <p>{{$document->description}}</p>
                             </div>
                          </div>
-                        <div class="like-comm"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
+                        <div class="like-comm">
+                            <p  class="link m-r-10">2 comment</p>
+                            {!! Form::open(['route' => ['like', $document->id]]) !!}
+                            <a href="" type="submit" id="link" class="link m-r-10"><i class="fa fa-thumbs-o-up"></i> {{count($document->likes)}}</a> </div>
+                            <input type="hidden" name="id" value="{{$document->id}}">
+                        {{ Form::bsSubmit('Editar', ['class'=>'btn btn-primary']) }}
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
@@ -28,3 +34,9 @@
         </div>
     </div>
 </div>
+
+@push('scripts')
+    <script>
+        $("#link").click(submit);
+    </script>
+@endpush

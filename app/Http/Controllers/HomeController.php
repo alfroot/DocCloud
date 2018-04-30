@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Document;
+use App\Like;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -25,21 +26,41 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (auth()->user()) {
-
             $user = auth()->user();
 
-            $documentstimeline = Document::orderBy('created_at','desc')->limit(5)->get();
+            $documentstimeline = Document::orderBy('created_at','desc')->limit(10)->get();
 
 
             return view('/home/dashboard/dashboard' , compact('user','documentstimeline'));
-        }else  {
-            return redirect('/admin')->with('danger', 'Debes estar logueado eso');
-        }
 
 
     }
 
+    public function like(Request $request)
+    {
+
+
+            $this->validate($request, [
+                'id' => 'required',
+
+            ]);
+
+            $match = Like::where('document_id', '==', $request->id)->where('user_id', '==', auth()->user()->id);
+
+            if (empty($match) ){
+                $like = new Like;
+                $like->user_id = auth()->user()->id;
+                $like->document_id = $request->id;
+                $like->value = 1;
+                $like->save();
+
+                return back();
+            }
+
+            return false;
+
+
+    }
 
 
 }

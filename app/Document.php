@@ -40,4 +40,9 @@ class Document extends Model
         return $this->belongsTo(Extension::class);
     }
 
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+
 }

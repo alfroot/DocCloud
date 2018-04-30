@@ -37,30 +37,98 @@
                 {!! $errors->first('description', '<span class="help-block">:message</span>') !!}
             </div>
 
-            <div class="form-group {{ $errors->has('category_parent_id') ? 'has-error' : '' }}">
-                <label for="">Categoría Padre</label>
-                <select name="category_parent_id" class="form-control select2">
-                    <option value=" ">Ninguna</option>
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}"
-                                {{ old('category_id') == $category->id ? 'selected' : '' }}
-                        >{{ $category->name }}</option>
-                    @endforeach
-                </select>
-                {!! $errors->first('category_parent_id', '<span class="help-block">:message</span>') !!}
+            <label for="">Buscador de categoría padre</label>
+            <input placeholder="Introduce la categoria" id="dad" class="form-group">
+
+
+
+            <div id="content" class="form-group col-md-12" style="display: none">
+                <div class="box box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Categoría padre   </h3>
+                    </div>
+                    <div class="box-body"  >
+                        <div id="showcat" class="row"></div>
+                        <select  id="childs" name="category_parent_id" class="form-control select2">
+                        </select>
+                    </div>
+                </div>
             </div>
+
+
             <div class="form-group {{ $errors->has('accepted') ? 'has-error' : '' }}">
                 <label for="">Aceptar</label>
                 <select name="accepted" class="form-control select2">
-                    <option value="1">SI</option>
-                    <option value="0">NO</option>
+                    <option value="1">Si</option>
+                    <option value="0">No</option>
                 </select>
                 {!! $errors->first('accepted', '<span class="help-block">:message</span>') !!}
             </div>
 
-            {{ Form::bsSubmit('CREAR', ['class'=>'btn btn-primary']) }}
+            {{ Form::bsSubmit('Crear', ['class'=>'btn btn-primary']) }}
             {!! Form::close() !!}
         </div>
     </div>
 
 @endsection
+
+@push('scripts')
+    <script>
+
+
+        $(document).ready(function(){
+
+            $("#dad").keyup(function(){
+
+                var dad = $("#dad").val();
+                $.ajax({
+                    type: 'POST',
+
+                    url: 'http://doccloud.dev/admin/category/getcats/',
+                    dataType: 'json',
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "name": dad
+
+                    },
+                    beforeSend: function() {
+                        //alert('Fetching....');
+                    },
+                    success: function(data) {
+
+                        return data;
+
+                    },
+                    error: function() {
+                        //alert('Error');
+                    },
+                    complete: function(data) {
+                        //alert('complete');
+
+
+                        var ul = $("#childs");
+
+                        $("#content").show();
+                        $("#showcat").empty();
+                        ul.empty();
+
+                        for (var j = 0; j  < data.responseJSON.length ; j++) {
+                            $("#showcat").append("<h6 class=\"col-lg-3 col-md-4 col-sm-6 col-xs-12\" type=\"radio\"> " + data.responseJSON[j].name + "</h6>");
+
+                            ul.append("<option id=\"more\" value=\""+data.responseJSON[j].id+"\"> " + data.responseJSON[j].name + "</option><br>");
+                        }
+
+
+
+                    }
+                });
+            });
+
+        });
+
+
+
+
+    </script>
+
+@endpush

@@ -12,34 +12,34 @@ class UsersController extends Controller
 
     public function index()
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
         $users = User::all();
 
         return view('admin.users.index', compact('users'));
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 
     public function create()
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             $roles = Role::all();
 
             return view('admin.users.create', compact('roles'));
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 
 
     public function store(Request $request)
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
 
             $this->validate($request, [
@@ -64,7 +64,7 @@ class UsersController extends Controller
             return redirect()->route('admin.users.index')->with('flash', 'Usuario Creado');
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
 
     }
@@ -73,21 +73,21 @@ class UsersController extends Controller
 
     public function edit($id)
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             $user = User::find($id);
             $roles = Role::all();
             return view('admin.users.edit', compact('user','roles'));
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 
 
     public function update(Request $request, $id)
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
 
             $this->validate($request, [
@@ -111,14 +111,14 @@ class UsersController extends Controller
             return redirect()->route('admin.users.index')->with('flash', 'Usuario Editado');
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 
 
     public function destroy($id)
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             $user = User::find($id);
             $user->delete();
@@ -126,7 +126,7 @@ class UsersController extends Controller
             return redirect()->route('admin.users.index')->with('flash', 'Usuario Borrado');
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 }

@@ -14,7 +14,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="/ElaAdmin/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-
+    <link href="/ElaAdmin/bower_components/drift/dist/drift-basic.css" rel="stylesheet">
+    <link href="/ElaAdmin/bower_components/drift/dist/drift-basic.min.css" rel="stylesheet">
     <link href="/ElaAdmin/css/lib/calendar2/semantic.ui.min.css" rel="stylesheet">
     <link href="/ElaAdmin/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
     <link href="/ElaAdmin/css/lib/owl.carousel.min.css" rel="stylesheet" />
@@ -89,6 +90,7 @@
 <!-- End Wrapper -->
 <!-- All Jquery -->
 <script src="/ElaAdmin/js/lib/jquery/jquery.min.js"></script>
+@stack('scripts')
 
 <!-- Bootstrap tether Core JavaScript -->
 <script src="/ElaAdmin/js/lib/bootstrap/js/popper.min.js"></script>
@@ -96,6 +98,7 @@
 <script src="/ElaAdmin/js/lib/form-validation/jquery.validate.min.js"></script>
 <script src="/ElaAdmin/js/lib/form-validation/jquery.validate.unobtrusive.min.js"></script>
 <script src="/ElaAdmin/js/lib/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+<script src="/ElaAdmin/bower_components/drift/dist/Drift.min.js"></script>
 <!-- slimscrollbar scrollbar JavaScript -->
 <script src="/ElaAdmin/js/jquery.slimscroll.js"></script>
 <!--Menu sidebar -->
@@ -130,7 +133,7 @@
 
 
 
-@stack('scripts')
+
 
 </body>
 

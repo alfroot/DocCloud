@@ -1,6 +1,6 @@
 //FUTURO [Cuando este en el Hosting]
 -Para visualizar los .ppt y pptx Y ALGUNAS EXTENSONES MAS QUE NO FUNCIONAN se usa el embedido de google solucionar en admin/documents/show
-
+-mostrar espacio almacenamiento hosting
 
 //HACER CUANDO SEA [No olvidar]
 -Mostrar en barra navegacion Slugs urls documentos ADMIN
@@ -12,3 +12,13 @@
 
 -Filtrar categorias aceptadas/no aceptadas parte admin (parte publica esta hecho)
 -Documentos parte publica
+
+
+
+-Avisar si desactiva javascript y no permitir funcionar
+
+-Añadir al arbol de categorias informacion, dinero de un categoria, mensajes, compras , tipos de archivos que contiene
+
+-Añadir campo a categorias publicas o pago
+
+

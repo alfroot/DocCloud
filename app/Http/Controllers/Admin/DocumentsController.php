@@ -15,7 +15,7 @@ class DocumentsController extends Controller
 
     public function index()
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             $documents = Document::all();
 
@@ -23,20 +23,15 @@ class DocumentsController extends Controller
             return view('admin.documents.index', compact('documents'));
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 
 
-    public function create()
-    {
-
-    }
-
 
     public function store(Request $request)
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             $user = Auth::id();
 
@@ -51,7 +46,7 @@ class DocumentsController extends Controller
             return redirect()->route('admin.documents.edit', $document);
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
 
 
@@ -59,6 +54,7 @@ class DocumentsController extends Controller
 
     public function storedoc(Document $document)
     {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
         $this->validate(request(), [
             'document' => 'required|File|mimes:doc,docx,ods,odt,pdf,ppt,pptx,txt,xls|max:10000'
@@ -78,11 +74,14 @@ class DocumentsController extends Controller
         $document->update([
             'extension_id'   => $extension[0]->id
         ]);
+        }else  {
+            return redirect('/home')->with('danger', 'No tienes permisos');
+        }
 
     }
     public function show($id)
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             $document = Document::find($id);
 
@@ -90,7 +89,7 @@ class DocumentsController extends Controller
             return view('admin.documents.show', compact('document'));
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 
@@ -98,7 +97,7 @@ class DocumentsController extends Controller
     public function edit(Document $document)
     {
 
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             return view('admin.documents.edit', [
                 'document'=> $document,
@@ -109,7 +108,7 @@ class DocumentsController extends Controller
 
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
 
     }
@@ -117,7 +116,7 @@ class DocumentsController extends Controller
 
     public function update(Request $request, Document $document)
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             $this->validate($request, [
                 'name' => 'required|min:3',
@@ -130,7 +129,7 @@ class DocumentsController extends Controller
             return redirect()->route('admin.documents.index')->with('flash', 'Realizado');
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
 
     }
@@ -138,7 +137,7 @@ class DocumentsController extends Controller
 
     public function destroy($id)
     {
-        if (auth()->user()->hasrole('SuperAdmin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             $document = Document::find($id);
             $document->delete();
@@ -146,7 +145,7 @@ class DocumentsController extends Controller
             return redirect()->route('admin.documents.index')->with('flash', 'Documento Borrado');
 
         }else  {
-            return redirect('/admin')->with('danger', 'Debes ser SuperAdmin para eso');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 }

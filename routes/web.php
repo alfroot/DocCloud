@@ -16,12 +16,8 @@ Route::get('/', function () {
     return view('pages/home', compact('documents'));
 });
 
-Auth::routes();
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('payment', 'PaymentsController');
+//Admin
 
 Route::group([
     'prefix'    =>  'admin',
@@ -31,12 +27,25 @@ Route::group([
 
         Route::get('/', 'AdminController@index')->name('dashboard');
         Route::get('category/tree', 'CategoriesController@showTree')->name('tree');
+        Route::post('category/getcatsper','CategoriesController@getCategoriesPersistence')->name('getcatsper');
+        Route::post('category/getcats','CategoriesController@getCategory')->name('getcats');
+
         Route::resource('category', 'CategoriesController', ['as' => 'admin']);
         Route::resource('users', 'UsersController',['except' => 'show', 'as' => 'admin']);
         Route::resource('documents', 'DocumentsController',[ 'as' => 'admin']);
         Route::resource('payment', 'PaymentsController', ['as' => 'admin']);
         Route::post('documents/{document}/documents', 'DocumentsController@storedoc')->name('documentsave');
+
     });
+
+
+//Public
+Auth::routes();
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home/{like}/like','HomeController@like')->name('like');
+Route::resource('payment', 'PaymentsController');
 
 Route::resource('documents', 'DocumentsController');
 route::get('/doccloud', 'PagesController@doccloud')->name('doccloud.pages');
