@@ -5,18 +5,19 @@ use Jenssegers\Date\Date;
 
 trait DatesTranslator
 {
-    public function getCreatedAttribute($created_at)
+    public function getCreatedAtAtribute($date)
     {
-        return new Date($created_at);
+
+        return new Date($date);
     }
 
-    public function getUpdatedAttribute($updated_at)
+    public function getUpdatedAtAtribute($date)
     {
-        return new Date($updated_at);
+        return new Date($date);
     }
 
-    public function getDeletedAttribute($deleted_at)
+    public function getDeletedAtAtribute($date)
     {
-        return new Date($deleted_at);
+        return new Date($date);
     }
 }

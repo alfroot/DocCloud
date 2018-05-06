@@ -90,7 +90,6 @@
 <!-- End Wrapper -->
 <!-- All Jquery -->
 <script src="/ElaAdmin/js/lib/jquery/jquery.min.js"></script>
-@stack('scripts')
 
 <!-- Bootstrap tether Core JavaScript -->
 <script src="/ElaAdmin/js/lib/bootstrap/js/popper.min.js"></script>
@@ -129,6 +128,11 @@
 <script src="/ElaAdmin/js/lib/owl-carousel/owl.carousel-init.js"></script>
 <!-- scripit init-->
 
+<!-- Form validation -->
+<script src="/ElaAdmin/js/lib/form-validation/jquery.validate.min.js"></script>
+<script src="/ElaAdmin/js/lib/form-validation/jquery.validate-init.js"></script>
+
+@stack('scripts')
 
 
 

@@ -47,9 +47,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home/{like}/like','HomeController@like')->name('like');
 Route::resource('payment', 'PaymentsController');
 
+Route::get('/documents/index', 'DocumentsController@index')->name('docindex');
 Route::resource('documents', 'DocumentsController');
 route::get('/doccloud', 'PagesController@doccloud')->name('doccloud.pages');
-route::get('/documents', 'PagesController@documents')->name('documents.pages');
+//route::get('/documents', 'PagesController@documents')->name('documents.pages');
 route::get('/categories', 'PagesController@categories')->name('categories.pages');
 
 Route::resource('users', 'UsersController');

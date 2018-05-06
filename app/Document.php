@@ -8,8 +8,10 @@ use App\Traits\DatesTranslator;
 class Document extends Model
 {
     use DatesTranslator;
-    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'extension_id', 'storage', 'created_at' , ];
-    protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate'];
+    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'extension_id', 'storage',  ];
+    //protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate'];
+
+
 
     public static function boot()
     {

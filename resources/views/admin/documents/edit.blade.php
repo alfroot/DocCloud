@@ -36,26 +36,47 @@
                                       placeholder="Escribe una descripción para el Documento">{{ old('description', $document->description) }}</textarea>
                             {!! $errors->first('description', '<span class="help-block">:message</span>') !!}
                         </div>
-                        <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
-                            <label for="">Categorías</label>
-                            <select name="category_id" class="form-control select2">
-                                <option value="">Selecciona una categoría</option>
-                                @foreach($categories as $category)
-                                    <option value="{{ $category->id }}"
-                                            {{ old('category_id', $document->category_id) == $category->id ? 'selected' : '' }}
-                                    >{{ $category->name }}</option>
-                                @endforeach
-                            </select>
-                            {!! $errors->first('category_id', '<span class="help-block">:message</span>') !!}
+                        <div class="box-header with-border">
+                            <h6 class="box-comment">Padre actual: </h6> <b>{{$document->category->name}}</b>
+
+                        </div>
+                        <br>
+
+                        <label for="">Buscador</label>
+                        <input placeholder="Introduce la categoria" id="dad" class="form-group">
+
+
+                        <br>
+
+
+                        <div id="content" class="form-group col-md-12" style="display: none">
+                            <div class="box box">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Categorías Sugeridas</h3>
+                                </div>
+                                <div class="box-body"  >
+                                    <div id="showcat" class="row"></div>
+                                    <select  id="childs" name="category_id" class="form-control select2">
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">Guardar Publicación</button>
                         </div>
+
+
+
                     </div>
+
                     </div>
+
+
                 </div>
+
+
             {!! Form::close() !!}
                 @if (!empty($document->storage))
                     <div class="row">
@@ -114,15 +135,15 @@
             },
             dictDefaultMessage:
             '<div class="align-content-center">'+
-            '<img src="/ElaAdmin/images/typesdoc/doc.png" class="img-thumbnail" style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
-            '<img src="/ElaAdmin/images/typesdoc/docx.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
-            '<img src="/ElaAdmin/images/typesdoc/ods.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
-            '<img src="/ElaAdmin/images/typesdoc/odt.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
-            '<img src="/ElaAdmin/images/typesdoc/pdf.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
-            '<img src="/ElaAdmin/images/typesdoc/ppt.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
-            '<img src="/ElaAdmin/images/typesdoc/pptx.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
-            '<img src="/ElaAdmin/images/typesdoc/txt.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
-            '<img src="/ElaAdmin/images/typesdoc/xls.png" class="img-thumbnail"  style="margin-right: 2% ; margin-top: 2%" width="50" height="50">' +
+            '<img src="/ElaAdmin/images/typesdoc/doc.png" class="" style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
+            '<img src="/ElaAdmin/images/typesdoc/docx.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
+            '<img src="/ElaAdmin/images/typesdoc/ods.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
+            '<img src="/ElaAdmin/images/typesdoc/odt.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
+            '<img src="/ElaAdmin/images/typesdoc/pdf.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
+            '<img src="/ElaAdmin/images/typesdoc/ppt.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
+            '<img src="/ElaAdmin/images/typesdoc/pptx.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
+            '<img src="/ElaAdmin/images/typesdoc/txt.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
+            '<img src="/ElaAdmin/images/typesdoc/xls.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
                 '</div>' +
             '<br><br><p>Arrastra aquí tu documento</p>'
         });
@@ -132,5 +153,61 @@
         });*/
         Dropzone.autoDiscover = false;
     </script>
+    <script>
 
+
+        $(document).ready(function(){
+
+            $("#dad").keyup(function(){
+
+                var dad = $("#dad").val();
+                $.ajax({
+                    type: 'POST',
+
+                    url: 'http://doccloud.dev/admin/category/getcats/',
+                    dataType: 'json',
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "name": dad
+
+                    },
+                    beforeSend: function() {
+                        //alert('Fetching....');
+                    },
+                    success: function(data) {
+
+                        return data;
+
+                    },
+                    error: function() {
+                        //alert('Error');
+                    },
+                    complete: function(data) {
+                        //alert('complete');
+
+
+                        var ul = $("#childs");
+
+                        $("#content").show();
+                        $("#showcat").empty();
+                        ul.empty();
+
+                        for (var j = 0; j  < data.responseJSON.length ; j++) {
+                            $("#showcat").append("<h6 class=\"col-lg-3 col-md-4 col-sm-6 col-xs-12\" type=\"radio\"> " + data.responseJSON[j].name + "</h6>");
+
+                            ul.append("<option id=\"more\"  value=\""+data.responseJSON[j].id+"\"> " + data.responseJSON[j].name + "</option><br>");
+                        }
+
+
+
+                    }
+                });
+            });
+
+        });
+
+
+
+
+    </script>
 @endpush

@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
             $user = auth()->user();
 
-            $documentstimeline = Document::orderBy('created_at','desc')->limit(10)->get();
+            $documentstimeline = Document::whereNotNull('storage')->orderBy('created_at','desc')->limit(10)->get();
 
 
             return view('/home/dashboard/dashboard' , compact('user','documentstimeline'));
@@ -45,19 +45,20 @@ class HomeController extends Controller
 
             ]);
 
-            $match = Like::where('document_id', '==', $request->id)->where('user_id', '==', auth()->user()->id);
+            $match = Like::where('document_id', '=', $request->id)->where('user_id', '=', auth()->user()->id)->count();
 
-            if (empty($match) ){
+
+            if($match == 0) {
                 $like = new Like;
                 $like->user_id = auth()->user()->id;
                 $like->document_id = $request->id;
                 $like->value = 1;
                 $like->save();
 
-                return back();
+                return redirect('/home');
             }
 
-            return false;
+            return redirect('/home');
 
 
     }

@@ -6,14 +6,13 @@
 -Mostrar en barra navegacion Slugs urls documentos ADMIN
 
 -Eliminar metodos y rutas sobrantes (Limpieza final)
--Llamada ajax categorias.
 
 -Añadir foto usuario
 
 -Filtrar categorias aceptadas/no aceptadas parte admin (parte publica esta hecho)
 -Documentos parte publica
 
-
+-Comprobar la integridad de las categorias a fondo [En teori funcionan bien]
 
 -Avisar si desactiva javascript y no permitir funcionar
 
@@ -22,3 +21,12 @@
 -Añadir campo a categorias publicas o pago
 
 
+-Al eliminar una categoria se borran sus hijas, hacer on delete cascade.
+-Para mantener la persistencia a prueba de bombas crear una funcion.
+
+-Recuperar contraseña
+
+-Comprobar formularios javascript
+
+-Realizar grafico de monetizacion de documentos dependiendo de la cantidad de documentos
+valdra diferente precio

@@ -8,14 +8,11 @@
     </ol>
 @endsection
 @section('content')
-    <div class="box box-default collapsed-box">
+    <div class="box box-default">
         <div class="box-header with-border">
             <h3 class="box-title">Árbol</h3>
 
-            <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                </button>
-            </div>
+
         </div>
         <div class="box-body">
             @if(count($categories))

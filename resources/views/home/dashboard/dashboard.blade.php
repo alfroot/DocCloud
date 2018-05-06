@@ -33,4 +33,19 @@
         </div>
 @endsection
 
+@push('scripts')
+    <script>
 
+
+        $(document).ready(function() {
+            @forEach($documentstimeline as $document)
+            $('#link{{$document->id}}').click(function() {
+                $('#formlike{{$document->id}}').submit();
+                return false;
+            });
+            @endforeach
+        });
+
+
+    </script>
+@endpush

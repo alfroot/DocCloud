@@ -37,4 +37,7 @@
             window.location.hash = '#create';
         });
     </script>
+
+
 @endpush
+

@@ -10,7 +10,7 @@
 
 
                         </div>
-                        <p>This is a simple description of the dog picture.</p>
+
 
                     </header>
                 </div>

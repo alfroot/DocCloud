@@ -57,7 +57,7 @@
 
             <div class="form-group">
                 <div class="col-sm-12">
-                    <button class="btn btn-success">Update Profile</button>
+                    <button class="btn btn-success">Actualizar Perfil</button>
                 </div>
             </div>
         {!! Form::close() !!}
