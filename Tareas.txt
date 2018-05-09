@@ -21,12 +21,14 @@
 -Añadir campo a categorias publicas o pago
 
 
--Al eliminar una categoria se borran sus hijas, hacer on delete cascade.
+-Al eliminar una categoria se borran sus hijas, hacer on delete cascade.[HECHO]
 -Para mantener la persistencia a prueba de bombas crear una funcion.
 
 -Recuperar contraseña
 
 -Comprobar formularios javascript
 
--Realizar grafico de monetizacion de documentos dependiendo de la cantidad de documentos
+-Realizar grafico de monetizacion de documentos dependiendo de la cantidad de documentos de una categoria
 valdra diferente precio
+
+-Mandar un token con el archivo para limitar el visionado de los documentos privados, no permitir acceso con otras sesiones etc.

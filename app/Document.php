@@ -18,6 +18,7 @@ class Document extends Model
         parent::boot();
         static::deleting(function ($documento) {
 
+            $documento->likes->each->delete();
             Storage::disk('public')->delete($documento->storage);
         });
     }

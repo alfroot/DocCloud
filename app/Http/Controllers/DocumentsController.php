@@ -6,6 +6,7 @@ use App\Document;
 use App\Extension;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Jenssegers\Date\Date;
 
 class DocumentsController extends Controller
@@ -93,6 +94,23 @@ class DocumentsController extends Controller
 
     }
 
+    public function downloadFile(Document $document)
+    {
+        $actualuser = Auth::id();
+
+
+
+        if( $actualuser === $document->user_id) {
+
+
+
+            return response()->download(public_path('/storage/'.$document->storage));
+
+
+        }else{
+            return back('/home')->with('danger', 'No tienes permisos');
+        }
+    }
 
     public function update(Request $request, Document $document)
     {
@@ -103,13 +121,31 @@ class DocumentsController extends Controller
 
         ]);
 
+        $request->request->add(['url' => str_slug($request->name)]);
+
         $document->update($request->all());
-        return redirect()->route('documents.index')->with('flash', 'Realizado');
+        return redirect()->route('docindex')->with('flash', 'Realizado');
     }
 
+    public function destroyFile($id)
+    {
+        $document = Document::find($id);
+        Storage::disk('public')->delete($document->storage);
+        $document->update([
+            'storage'   =>  null,
+            'extension_id' => null
+
+        ]);
+        return redirect()->route('documents.edit', $document)->with('flash', 'Documento Borrado');
+    }
 
     public function destroy($id)
     {
-        //
+        $document = Document::find($id);
+        $document->delete();
+
+        return redirect()->route('documents.index')->with('flash', 'Documento Borrado');
     }
+
+
 }

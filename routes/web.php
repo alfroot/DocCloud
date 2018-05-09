@@ -49,8 +49,12 @@ Route::resource('payment', 'PaymentsController');
 
 Route::get('/documents/index', 'DocumentsController@index')->name('docindex');
 Route::resource('documents', 'DocumentsController');
+Route::delete('documents/file/{document}/delete', 'DocumentsController@destroyFile')->name('destroyfile');
+
+
 route::get('/doccloud', 'PagesController@doccloud')->name('doccloud.pages');
-//route::get('/documents', 'PagesController@documents')->name('documents.pages');
+route::get('/documents', 'PagesController@documents')->name('documents.pages');
+Route::get('documents/download/{document}' , 'DocumentsController@downloadFile')->name('downloadFile');
 route::get('/categories', 'PagesController@categories')->name('categories.pages');
 
 Route::resource('users', 'UsersController');
@@ -59,3 +63,4 @@ Route::resource('users', 'UsersController');
 Route::get('/category', 'CategoriesController@index')->name('user.category.index');
 Route::get('/category/propose', 'CategoriesController@propose')->name('user.category.propose');
 Route::post('/category/store', 'CategoriesController@store')->name('user.category.store');
+Route::post('/category/getcats','CategoriesController@getCategory')->name('getcatspub');

@@ -6,14 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Like extends Model
 {
-    public static function boot()
-    {
-        parent::boot();
-        static::deleting(function ($like) {
-
-            Storage::disk('public')->delete($documento->storage);
-        });
-    }
 
     public function user()
     {

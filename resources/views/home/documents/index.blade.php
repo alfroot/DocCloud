@@ -32,6 +32,8 @@
                         <th>Categoria</th>
                         <th>Tipo</th>
                         <th>Fecha de creacion</th>
+                        <th>Editar</th>
+                        <th>Descargar</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -39,10 +41,12 @@
                     <tr>
 
                         <td>{{$document->name}}</td>
-                        <td>{{$document->description}}</td>
+                        <td>{{substr($document->description,0,100)}}@if(strlen($document->description) > 100)...@endif</td>
                         <td>{{isset($document->category->name) ? $document->category->name : ''}}</td>
                         <td><span class="badge badge-warning">{{isset($document->extension->name) ? $document->extension->name : ''}}</span></td>
                         <td>{{Jenssegers\Date\Date::make($document->created_at)->format(' d\ F Y H:i')}}</td>
+                        <td><a href="{{route('documents.edit', $document)}}"><img src="/images/if_edit_3218.png" alt=""></a></td>
+                        <td class="align-content-md-around"><a class="m-4" href="{{route('downloadFile', $document)}}"><img style="height: 40px; width: 45px;" src="/ElaAdmin/icons/down.svg"></a></td>
 
                     </tr>
                     @endforeach

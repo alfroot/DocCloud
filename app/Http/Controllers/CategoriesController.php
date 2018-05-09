@@ -36,4 +36,17 @@ class CategoriesController extends Controller
         $categories = Category::all()->where('user_id','=',auth()->user()->id);
         return view('home.category.proposeCategory', compact('categories'));
     }
+
+    public function getCategory(Request $name )
+    {
+
+            if (!empty($name->name)) {
+
+                $childs = Category::where('name','like', '%'.$name->name.'%')->get();
+
+
+                return  $childs->toJson();
+            };
+
+    }
 }
