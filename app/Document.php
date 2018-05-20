@@ -8,7 +8,7 @@ use App\Traits\DatesTranslator;
 class Document extends Model
 {
     use DatesTranslator;
-    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'extension_id', 'storage',  ];
+    protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'extension_id', 'storage', 'premium' ];
     //protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate'];
 
 
@@ -25,7 +25,7 @@ class Document extends Model
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class,'category_id');
     }
 
     public function user()

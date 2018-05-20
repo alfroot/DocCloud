@@ -7,6 +7,10 @@
                 <li><a href="/home"><i class="fa fa-home"></i> Home </a></li>
 
             </ul>
+            <ul aria-expanded="" class="collapse">
+                <li><a href="{{route('doc.in')}}"><i class="fa fa-home"></i> DocCloud </a></li>
+
+            </ul>
         </li>
 
         <li class="nav-label"></li>

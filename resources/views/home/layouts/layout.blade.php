@@ -14,6 +14,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="/ElaAdmin/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
+    @stack('styles')
     <link href="/ElaAdmin/bower_components/drift/dist/drift-basic.css" rel="stylesheet">
     <link href="/ElaAdmin/bower_components/drift/dist/drift-basic.min.css" rel="stylesheet">
     <link href="/ElaAdmin/css/lib/calendar2/semantic.ui.min.css" rel="stylesheet">
@@ -22,6 +23,7 @@
     <link href="/ElaAdmin/css/lib/owl.theme.default.min.css" rel="stylesheet" />
     <link href="/ElaAdmin/css/helper.css" rel="stylesheet">
     <link href="/ElaAdmin/css/style.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
     <!--[if lt IE 9]>

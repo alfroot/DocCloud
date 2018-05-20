@@ -55,13 +55,16 @@ class HomeController extends Controller
                 $like->value = 1;
                 $like->save();
 
-                return redirect('/home');
+                return redirect('/home#guide'.$request->id);
             }
 
-            return redirect('/home');
+        return redirect('/home#guide'.$request->id);
 
 
     }
+
+
+
 
 
 }

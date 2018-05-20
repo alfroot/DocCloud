@@ -2,6 +2,8 @@ $(document).ready(function() {
         $('#myTable').DataTable();
         $(document).ready(function() {
             var table = $('#example').DataTable({
+
+
                 "columnDefs": [{
                     "visible": false,
                     "targets": 2
@@ -10,10 +12,12 @@ $(document).ready(function() {
                     [2, 'asc']
                 ],
                 "displayLength": 25,
+
                 "drawCallback": function(settings) {
                     var api = this.api();
                     var rows = api.rows({
-                        page: 'current'
+                        page: 'current',
+
                     }).nodes();
                     var last = null;
                     api.column(2, {
@@ -41,5 +45,8 @@ $(document).ready(function() {
         dom: 'Bfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
+        ],
+        language: {
+            url: '/adminlte/bower_components/Spanish.json'
+        }
     });

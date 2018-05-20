@@ -79,10 +79,7 @@ class DocumentsController extends Controller
 
     }
 
-    public function show($id)
-    {
-        //
-    }
+
 
     public function edit(Document $document)
     {
@@ -99,13 +96,9 @@ class DocumentsController extends Controller
         $actualuser = Auth::id();
 
 
-
         if( $actualuser === $document->user_id) {
 
-
-
             return response()->download(public_path('/storage/'.$document->storage));
-
 
         }else{
             return back('/home')->with('danger', 'No tienes permisos');
@@ -117,8 +110,8 @@ class DocumentsController extends Controller
         $this->validate($request, [
             'name' => 'required|min:3',
             'description' => 'required|min:6',
-            'category_id' => 'required'
-
+            'category_id' => 'required',
+            'premium' => 'required',
         ]);
 
         $request->request->add(['url' => str_slug($request->name)]);
@@ -137,6 +130,13 @@ class DocumentsController extends Controller
 
         ]);
         return redirect()->route('documents.edit', $document)->with('flash', 'Documento Borrado');
+    }
+
+    public function show($id)
+    {
+        $document = Document::find($id);
+        return view('home.documents.show', compact('document'));
+
     }
 
     public function destroy($id)

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $fillable =['name', 'description', 'category_parent_id'];
+    protected $fillable =['name', 'description', 'category_parent_id', 'id'];
 
     public function documents()
     {
@@ -26,7 +26,7 @@ class Category extends Model
 
     public function children()
     {
-        return $this->hasMany(Category::class, 'category_parent_id');
+        return $this->hasMany(Category::class, 'category_parent_id','id');
     }
 
     public function user()
@@ -42,4 +42,6 @@ class Category extends Model
             $category->documents->each->delete();
         });
     }
+
+
 }

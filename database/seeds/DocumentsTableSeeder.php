@@ -23,6 +23,7 @@ class DocumentsTableSeeder extends Seeder
         $document->storage = 'documents/XEZH6RuvgXa3V3OWYMCTiEYMDrJq6vojlxSIFfhw.doc';
         $document->category_id = 3;
         $document->extension_id = 1;
+        $document->premium = false;
         $document->save();
 
         $document = new Document;
@@ -33,6 +34,7 @@ class DocumentsTableSeeder extends Seeder
         $document->storage = 'documents/U2TAsNUo0S29SET3YrhAplnVAatwejQ0c7Gv9q3I.docx';
         $document->category_id = 4;
         $document->extension_id = 2;
+        $document->premium = true;
         $document->save();
 
         $document = new Document;
@@ -43,6 +45,7 @@ class DocumentsTableSeeder extends Seeder
         $document->storage = 'documents/dJ33FjoEK4yF0Z1DXEBOxquXJ8JMDGrrWqbIsozK.ods';
         $document->category_id = 6;
         $document->extension_id = 3;
+        $document->premium = false;
         $document->save();
 
 
@@ -54,6 +57,7 @@ class DocumentsTableSeeder extends Seeder
         $document->storage = 'documents/VtPUhq4lNRCa1MPCMKZ1I9hUWApJkcAgRizto9HS.odt';
         $document->category_id = 5;
         $document->extension_id = 4;
+        $document->premium = true;
         $document->save();
 
 
@@ -65,6 +69,7 @@ class DocumentsTableSeeder extends Seeder
         $document->storage = 'documents/EkE53GVfQiQDReXgZzKVGrkgGsMLqT6Zemunh4p5.pdf';
         $document->category_id = 8;
         $document->extension_id = 5;
+        $document->premium = false;
         $document->save();
 
 
@@ -76,6 +81,7 @@ class DocumentsTableSeeder extends Seeder
         $document->storage = 'documents/NXW54C77SWDSHZ5Z6s8XoZQLEnH8E5BSJXOaK3eP.ppt';
         $document->category_id = 6;
         $document->extension_id = 6;
+        $document->premium = true;
         $document->save();
 
 
@@ -87,6 +93,7 @@ class DocumentsTableSeeder extends Seeder
         $document->storage = 'documents/PX6BjRkZAlfYuQUXKUtkbTMXfmDmZafcAMBbhsiN.pptx';
         $document->category_id = 11;
         $document->extension_id = 7;
+        $document->premium = true;
         $document->save();
 
 
@@ -98,6 +105,7 @@ class DocumentsTableSeeder extends Seeder
         $document->storage = 'documents/Tur0wQ1XkWvLVcYIQOX2hL5HOdqwBboBphtDbSNL.txt';
         $document->category_id = 7;
         $document->extension_id = 8;
+        $document->premium = false;
         $document->save();
 
 
@@ -109,6 +117,7 @@ class DocumentsTableSeeder extends Seeder
         $document->storage ='documents/xpRb0EqmOWz2jUlKdaopVDHUkYHHUpAGqk6CfSHx.xls';
         $document->category_id = 3;
         $document->extension_id = 9;
+        $document->premium = true;
         $document->save();
     }
 }

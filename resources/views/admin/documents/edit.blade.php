@@ -36,8 +36,9 @@
                                       placeholder="Escribe una descripción para el Documento">{{ old('description', $document->description) }}</textarea>
                             {!! $errors->first('description', '<span class="help-block">:message</span>') !!}
                         </div>
+
                         <div class="box-header with-border">
-                            <h6 class="box-comment">Padre actual: </h6> <b>{{$document->category->name}}</b>
+                            <h6 class="box-comment">Padre actual: </h6> <b>{{empty($document->category->name) ?  '' :  $document->category->name }}</b>
 
                         </div>
                         <br>

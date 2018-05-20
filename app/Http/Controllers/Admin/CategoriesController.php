@@ -19,28 +19,41 @@ class CategoriesController extends Controller
 
             $categoriesAp= Category::all()->where('accepted','=','0');
 
+
             return view('admin.category.index', compact('categories', 'categoriesAp'));
         }else{
             return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 
-    public function getCategoriesPersistence(Request $name )
+    public function getCategoriesPersistence(Request $name  )
     {
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
             if (!empty($name->name)) {
 
-           $childs = Category::where('name','like', '%'.$name->name.'%')->where('category_parent_id', '<', $name->id)->get();
+
+                $category = Category::find($name->id);
+
+                $childs = self::child_categories($category);
+
+                $notpermited = self::array_flatten($childs);
+
+                $permited = Category::whereNotIn('id', $notpermited)->where('id', '<>', $name->id)->where('name','like', '%'.$name->name.'%')->get();
+
+           return  $permited->toJson();
 
 
-            return  $childs->toJson();
+
             };
 
         }else{
             return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
+
+
+
 
     public function getCategory(Request $name )
     {
@@ -136,10 +149,48 @@ class CategoriesController extends Controller
             $category->accepted = $request->accepted;
             $category->save();
 
+
             return redirect('/admin/category')->with('flash', 'La Categoria ha sido actualizada');
         }else{
             return redirect('/home')->with('danger', 'No tienes permisos');
         }
+    }
+
+    public function array_flatten($array)
+    {
+        if (!is_array($array)) {
+            return false;
+        }
+        $result = array();
+        foreach ($array as $key => $value) {
+            if (is_array($value)) {
+                $result = array_merge($result, array_flatten($value));
+            } else {
+                $result[$key] = $value;
+            }
+        }
+        return $result;
+    }
+
+
+    public function child_categories($category)
+    {
+
+      $data= [];
+
+         if(!empty($category['children'])) {
+
+               foreach ($category['children'] as $children ) {
+
+                   $data[] = [
+                       'id' => $children->id,
+
+                       'children' => self::child_categories($children),
+                   ];
+               }
+         }
+
+    return $data;
     }
 
 

@@ -23,6 +23,7 @@ class CreateDocumentsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->unsignedInteger('extension_id')->nullable();
             $table->foreign('extension_id')->references('id')->on('extensions');
+            $table->boolean('premium')->nullable();
 
 
             $table->timestamps();

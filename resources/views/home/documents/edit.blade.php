@@ -16,75 +16,84 @@
                             <div class="horizontal-form-elements">
                                 <div class="form-horizontal">
                                      <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-12">
                             <div class="form-group">
 
                                 <label class="col-sm-4 control-label">Titulo</label>
-                                <div class="col-sm-10">
+                                <div class="col-sm-12">
                                     <input class="form-control input-rounded" name="name" value="{{ old('name', $document->name) }}" type="text"> {!! $errors->first('name', '<div class="alert alert-danger">:message</div>') !!}
 
                             </div>
                         </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="control-label">Descripción</label>
-                                <div class="col-sm-10">
+                                <div class="col-sm-12">
                                     <textarea name="description" id="editor"
                                               class="form-control"  style="resize: both; overflow: auto; height: 150px;"
                                               placeholder="Escribe una descripción para el Documento">{{ old('description', $document->description) }}</textarea>
                                     {!! $errors->first('description', '<div class="alert alert-danger">:message</div>') !!}
                                 </div>
+                                <br>
+
+                                <div id="content" class="col-sm-12 border">
+                                    <h6 class="box-title">Monetizar <img src="/images/if_money_36203.png" alt=""></h6>
+                                    <select name="premium">
+
+                                        <option value="1" {{ $document->premium == 1 ? 'selected' : '' }} >Si</option>
+                                        <option value="0"  {{ $document->premium == 0 ? 'selected' : '' }}>No</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                </div>
+                                <br>
+
+                                <div class="input-group">
+                                    <div class="col-sm-12">
+
+                                        @if(isset($document->category->name))
+                                            <div class="control-label pull-right">Categoria actual: <p class="color-primary">{{$document->category->name}}</p></div>
+                                        @endif
+                                        <div>
+                                        <label for="dad">Buscador de categorias</label>
+                                        <input placeholder="Introduce la categoria" id="dad" class="form-control input-rounded">
+                                        {!! $errors->first('category_id', '<div class="alert alert-danger">:message</div>') !!}
+                                        </div>
+                                    </div>
+                                    <br>
+
+
+                                    <div id="content" class="col-sm-12" style="display: none">
+                                        <div class="box box">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Categorías Sugeridas</h3>
+                                            </div>
+                                            <div class="box-body">
+                                                <div id="showcat" class="col" style="resize: both; overflow: auto; height: 150px;">
+
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <label for="select">Selecciona la categoria</label>
+                                                <select  id="childs" name="category_id" class="form-control select2">
+
+                                                    @if(isset($document->category))
+                                                        <option value="{{$document->category->id}}">{{$document->category->name}}</option>
+                                                    @endif
+                                                </select>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
+
                             </div>
 
                         </div>
-                                            <!-- /# column -->
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <div class="col-sm-10">
-                                                        @if(isset($document->category->name))
-                                                            <div class="col-sm-10">
-                                                                <h6 class="box-comment">Categoria actual: </h6> <b>{{$document->category->name}}</b>
-                                                            </div>
-                                                            <br><br>
-                                                        @endif
-                                                        <hr>
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>
 
-                                            <div class="input-group">
-                                                <div class="col-sm-10">
-                                                <label for="">Buscador de categorias</label>
-                                                <input placeholder="Introduce la categoria" id="dad" class="form-control input-rounded">
-                                                {!! $errors->first('category_id', '<div class="alert alert-danger">:message</div>') !!}
-                                                </div>
-                                                <br>
-                                                <div id="content" class="col-sm-10" style="display: none">
-                                                    <div class="box box">
-                                                        <div class="box-header with-border">
-                                                            <h3 class="box-title">Categorías Sugeridas</h3>
-                                                        </div>
-                                                        <div class="box-body">
-                                                            <div id="showcat" class="col" style="resize: both; overflow: auto; height: 150px;">
-
-                                                            </div>
-                                                            <br>
-                                                            <br>
-                                                            <label for="select">Selecciona la categoria</label>
-                                                            <select  id="childs" name="category_id" class="form-control select2">
-
-                                                                @if(isset($document->category))
-                                                                <option value="{{$document->category->id}}">{{$document->category->name}}</option>
-                                                                @endif
-                                                            </select>
-
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +109,7 @@
     </form>
     @if (!empty($document->storage))
 
-        <div class="col-md-6 pull-right">
+        <div class="col-md-12 pull-right">
 
             <div class="card p-30">
                 <div class="card-title"><h4>Sustituir documento</h4></div>
@@ -131,7 +140,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Dropzone</h4>
                             <h6 class="card-subtitle"></h6>
-                            <div class="form-goup col-md-4">
+                            <div class="form-goup col-md-12">
                                 <div class="dropzone"></div>
                             </div>
                         </div>
