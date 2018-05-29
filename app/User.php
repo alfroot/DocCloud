@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -19,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password',
     ];
+    protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -36,7 +38,7 @@ class User extends Authenticatable
 
     public function payments()
     {
-        return $this->hasMany(Payment::class);
+        return $this->hasMany(Pay::class);
     }
 
     public function newFromBuilder($attributes = [], $connection = null)

@@ -5,7 +5,7 @@
         @foreach ($categories as $category)
             @if(empty($category->category_parent_id))
                 <li>
-                    {{ $category->name }}
+                    DocCloud
                     @include('home.doccloud.partials.category', $category)
                 </li>
             @endif

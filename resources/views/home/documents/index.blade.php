@@ -22,7 +22,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Mis Documentos</h4>
                     <h6 class="card-subtitle">Puedes exportar esta a lista a los siguientes formatos:</h6>
-                    <a href="{{ url('subscribe/paypal') }}"><img src="/images/paypal-btn.png"></a>
+
                     <div class="table-responsive m-t-40">
                         <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>

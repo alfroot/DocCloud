@@ -719,8 +719,8 @@ class Builder
      * Add an "or where" clause to the query.
      *
      * @param  string|array|\Closure  $column
-     * @param  string|null  $operator
-     * @param  mixed   $value
+     * @param  mixed  $operator
+     * @param  mixed  $value
      * @return \Illuminate\Database\Query\Builder|static
      */
     public function orWhere($column, $operator = null, $value = null)
@@ -1078,10 +1078,10 @@ class Builder
      *
      * @param  string  $column
      * @param  string  $operator
-     * @param  string  $value
+     * @param  mixed $value
      * @return \Illuminate\Database\Query\Builder|static
      */
-    public function orWhereDate($column, $operator, $value)
+    public function orWhereDate($column, $operator, $value = null)
     {
         list($value, $operator) = $this->prepareValueAndOperator(
             $value, $operator, func_num_args() == 2
@@ -1289,7 +1289,7 @@ class Builder
 
             $this->wheres[] = compact('type', 'query', 'boolean');
 
-            $this->addBinding($query->getBindings(), 'where');
+            $this->addBinding($query->getRawBindings()['where'], 'where');
         }
 
         return $this;
@@ -2384,7 +2384,7 @@ class Builder
      * Increment a column's value by a given amount.
      *
      * @param  string  $column
-     * @param  int     $amount
+     * @param  float|int  $amount
      * @param  array   $extra
      * @return int
      */
@@ -2405,7 +2405,7 @@ class Builder
      * Decrement a column's value by a given amount.
      *
      * @param  string  $column
-     * @param  int     $amount
+     * @param  float|int  $amount
      * @param  array   $extra
      * @return int
      */

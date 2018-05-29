@@ -53,7 +53,7 @@ class DocumentsController extends Controller
 
     public function storedoc(Document $document)
     {
-        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
+        if (auth()->user()->hasrole('SuperAdmin','Admin','User')) {
 
             $this->validate(request(), [
                 'document' => 'required|File|mimes:doc,docx,ods,odt,pdf,ppt,pptx,txt,xls|max:10000'
@@ -107,17 +107,35 @@ class DocumentsController extends Controller
 
     public function update(Request $request, Document $document)
     {
-        $this->validate($request, [
-            'name' => 'required|min:3',
-            'description' => 'required|min:6',
-            'category_id' => 'required',
-            'premium' => 'required',
-        ]);
 
-        $request->request->add(['url' => str_slug($request->name)]);
+        if($document->category_id){
 
-        $document->update($request->all());
-        return redirect()->route('docindex')->with('flash', 'Realizado');
+            $this->validate($request, [
+                'name' => 'required|min:3',
+                'description' => 'required|min:6',
+                'premium' => 'required',
+            ]);
+
+
+            $request->request->add(['url' => str_slug($request->name)]);
+            $document->update($request->only('name','description','premium'));
+            return redirect()->route('docindex')->with('flash', 'Realizado');
+
+        }else{
+
+            $this->validate($request, [
+                'name' => 'required|min:3',
+                'description' => 'required|min:6',
+                'category_id' => 'required',
+                'premium' => 'required',
+            ]);
+
+            $request->request->add(['url' => str_slug($request->name)]);
+            $document->update($request->all());
+            return redirect()->route('docindex')->with('flash', 'Realizado');
+
+        }
+
     }
 
     public function destroyFile($id)

@@ -26,7 +26,7 @@
                             </div>
                         </div>
                             <div class="col-lg-12">
-                            <div class="form-group">
+                                <div class="form-group">
                                 <label class="control-label">Descripción</label>
                                 <div class="col-sm-12">
                                     <textarea name="description" id="editor"
@@ -47,49 +47,7 @@
                                     <br>
                                 </div>
                                 <br>
-
-                                <div class="input-group">
-                                    <div class="col-sm-12">
-
-                                        @if(isset($document->category->name))
-                                            <div class="control-label pull-right">Categoria actual: <p class="color-primary">{{$document->category->name}}</p></div>
-                                        @endif
-                                        <div>
-                                        <label for="dad">Buscador de categorias</label>
-                                        <input placeholder="Introduce la categoria" id="dad" class="form-control input-rounded">
-                                        {!! $errors->first('category_id', '<div class="alert alert-danger">:message</div>') !!}
-                                        </div>
-                                    </div>
-                                    <br>
-
-
-                                    <div id="content" class="col-sm-12" style="display: none">
-                                        <div class="box box">
-                                            <div class="box-header with-border">
-                                                <h3 class="box-title">Categorías Sugeridas</h3>
-                                            </div>
-                                            <div class="box-body">
-                                                <div id="showcat" class="col" style="resize: both; overflow: auto; height: 150px;">
-
-                                                </div>
-                                                <br>
-                                                <br>
-                                                <label for="select">Selecciona la categoria</label>
-                                                <select  id="childs" name="category_id" class="form-control select2">
-
-                                                    @if(isset($document->category))
-                                                        <option value="{{$document->category->id}}">{{$document->category->name}}</option>
-                                                    @endif
-                                                </select>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
+                             </div>
                             </div>
 
                         </div>
@@ -99,6 +57,56 @@
                             </div>
                         </div>
                       <br>
+                      @if(empty($document->category_id))
+
+                          <div class="input-group">
+                              <div class="col-sm-12">
+                                  <div>
+                                      <label for="dad">Buscador de categorias</label>
+                                      <input placeholder="Introduce la categoria" id="dad" class="form-control input-rounded">
+                                      {!! $errors->first('category_id', '<div class="alert alert-danger">:message</div>') !!}
+                                  </div>
+                              </div>
+                              <br>
+                          </div>
+                      <div id="contentt" class="col-sm-12" style="display: none">
+                          <div class="box box">
+                              <div class="box-header with-border">
+                                  <h3 class="box-title">Categorías Sugeridas</h3>
+                              </div>
+                              <div class="box-body">
+                                  <div id="showcat" class="col" style="resize: both; overflow: auto; height: 150px;">
+
+                                  </div>
+                                  <br>
+                                  <br>
+                                  <label for="select">Selecciona la categoria</label>
+                                  <select  id="childs" name="category_id" class="form-control select2">
+
+                                      @if(isset($document->category))
+                                          <option value="{{$document->category->id}}">{{$document->category->name}}</option>
+                                      @endif
+                                  </select>
+
+
+                              </div>
+                          </div>
+                      </div>
+                      @else
+                          <div class="col-sm-12">
+                              <div class="">
+                                  <div class="control-label pull-right">Categoria actual: <p class="color-primary">{{$document->category->name}}</p></div>
+
+                              </div>
+                          </div>
+                          <div class="col-sm-12">
+                              <div class="">
+                                  <div class=""><i class="fa fa-info"></i> Debido a que el documento esta monetizado no puedes editar la categoria padre,
+                                  contacta con el administrador para mas sugerencias.</div>
+
+                              </div>
+                          </div>
+                      @endif
                       <hr>
                       <div class="form-group">
                           <button type="submit" class="btn btn-primary btn-block">Guardar Publicación</button>
@@ -106,9 +114,10 @@
                     </div>
             </div>
 
+        </div>
     </form>
     @if (!empty($document->storage))
-
+        <div class="row">
         <div class="col-md-12 pull-right">
 
             <div class="card p-30">
@@ -130,6 +139,7 @@
 
                 </div>
             </div>
+        </div>
         </div>
     @endif
         </div>
@@ -166,7 +176,7 @@
     <script>
 
         var myDropzone = new Dropzone('.dropzone', {
-            url: '/admin/documents/{{ $document->id }}/documents',
+            url: '/documents/{{ $document->id }}/documents',
             paramName: 'document',
             acceptedFiles: 'application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.oasis.opendocument.spreadsheet,application/vnd.oasis.opendocument.text,application/msword,text/plain,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/vnd.ms-excel,',
             maxFilesize: 10,
@@ -226,7 +236,7 @@
 
                         var ul = $("#childs");
 
-                        $("#content").show();
+                        $("#contentt").show();
                         $("#showcat").empty();
                         ul.empty();
 

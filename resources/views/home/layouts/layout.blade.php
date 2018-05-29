@@ -70,7 +70,7 @@
             @endif
 
             @if (session()->has('flash'))
-                <div class="alert alert-success">
+                <div class="alert alert-dark">
                     {{ session('flash') }}
                 </div>
             @endif

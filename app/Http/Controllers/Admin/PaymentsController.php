@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Document;
-use App\Payment;
+use App\Pay;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,7 +16,7 @@ class PaymentsController extends Controller
     public function index()
     {
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
-        $payments = Payment::all();
+        $payments = Pay::all();
         return view('admin.payments.index', compact('payments'));
         }else{
             return redirect('/home')->with('danger', 'No tienes permisos');
@@ -45,7 +45,7 @@ class PaymentsController extends Controller
                 'price' => 'numeric'
             ]);
 
-            $payment = new Payment($request->all());
+            $payment = new Pay($request->all());
             $payment->save();
 
             return redirect('/admin/payment')->with('flash', 'La Compra ha sido guardada');
@@ -58,7 +58,7 @@ class PaymentsController extends Controller
     public function show($id)
     {
         if (auth()->user()->hasrole('SuperAdmin','Admin')){
-            $payment = Payment::find($id);
+            $payment = Pay::find($id);
             return view('admin.payments.show', compact('payment'));
         }else{
             return redirect('/home')->with('danger', 'No tienes permisos');
@@ -69,7 +69,7 @@ class PaymentsController extends Controller
     public function edit($id)
     {
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
-            $payment = Payment::find($id);
+            $payment = Pay::find($id);
             $users = User::all();
             $categories = Category::all();
             $documents = Document::all();
@@ -83,7 +83,7 @@ class PaymentsController extends Controller
     public function update(Request $request, $id)
     {
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
-            $payment = Payment::find($id);
+            $payment = Pay::find($id);
             $this->validate($request, [
                 'user_id' => 'required',
                 'price' => 'numeric'
@@ -105,7 +105,7 @@ class PaymentsController extends Controller
     public function destroy($id)
     {
         if(auth()->user()->hasrole('SuperAdmin','Admin')) {
-            $payment = Payment::find($id);
+            $payment = Pay::find($id);
             $payment->delete();
             return redirect()->back()->with('flash', 'Compra Borrada');
         }else{

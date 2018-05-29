@@ -42,10 +42,9 @@ class CategoriesController extends Controller
 
             if (!empty($name->name)) {
 
-                $childs = Category::where('name','like', '%'.$name->name.'%')->get();
+                $category = Category::where('name','like', '%'.$name->name.'%')->get();
 
-
-                return  $childs->toJson();
+                return  $category->toJson();
             };
 
     }

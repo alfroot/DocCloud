@@ -8,7 +8,12 @@
 
             </ul>
             <ul aria-expanded="" class="collapse">
-                <li><a href="{{route('doc.in')}}"><i class="fa fa-home"></i> DocCloud </a></li>
+                <li><a href="{{route('doc.in')}}"><i class="fa fa-sitemap"></i> Árbol </a></li>
+
+            </ul>
+
+            <ul aria-expanded="" class="collapse">
+                <li><a href="{{route('indexsearch')}}"><i class="fa fa-search"></i> Encuentra </a></li>
 
             </ul>
         </li>

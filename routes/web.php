@@ -50,7 +50,7 @@ Route::resource('payment', 'PaymentsController');
 Route::get('/documents/index', 'DocumentsController@index')->name('docindex');
 Route::resource('documents', 'DocumentsController');
 Route::delete('documents/file/{document}/delete', 'DocumentsController@destroyFile')->name('destroyfile');
-
+Route::post('documents/{document}/documents', 'DocumentsController@storedoc')->name('documentsavepublic');
 
 route::get('/doccloud', 'PagesController@doccloud')->name('doccloud.pages');
 route::get('/documents', 'PagesController@documents')->name('documents.pages');
@@ -67,9 +67,15 @@ Route::post('/category/store', 'CategoriesController@store')->name('user.categor
 Route::post('/category/getcats','CategoriesController@getCategory')->name('getcatspub');
 
 //Paypal
-Route::get('create_paypal_plan', 'PayPalController@create_plan');
+Route::get('/paypalstatus/{document}', 'PayPalController@getPaymentStatus')->name('payment.status');
+Route::get('/shop/paypal/{document}', 'PayPalController@postPayment')->name('paypalproduct');
 Route::get('/subscribe/paypal', 'PayPalController@paypalRedirect')->name('paypal.redirect');
 Route::get('/subscribe/paypal/return', 'PayPalController@paypalReturn')->name('paypal.return');
 
 //DocCLoud
 Route::get('/doc/', 'DocCloudController@index')->name('doc.in');
+Route::get('/show/document/{document}','DocCloudController@show')->name('showdoc');
+
+//Searcher
+Route::get('/search/index', 'SearchController@index')->name('indexsearch');
+Route::post('/search/users','SearchController@getUsers')->name('getusers');
