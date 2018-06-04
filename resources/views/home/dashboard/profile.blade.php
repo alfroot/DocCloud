@@ -1,18 +1,29 @@
 <div class="tab-pane" id="profile" role="tabpanel">
     <div class="card-body">
         <div class="row">
+
             <div class="col-md-6">
                 <div class="card-two">
                     <header>
+
+
                         <div class="avatar">
-                            <img class="drift-demo-trigger" src="https://randomuser.me/api/portraits/women/21.jpg?w=400" data-zoom="https://randomuser.me/api/portraits/women/21.jpg?w=1200"  />
-
-
-
+                            <img class="drift-demo-trigger" src="/storage/{{$user->profilephoto}}"  />
                         </div>
 
 
                     </header>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title center">Foto</h4>
+                            <h6 class="card-subtitle"></h6>
+                            <div class="form-goup col-md-12">
+                                <div class="dropzone"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -36,18 +47,15 @@
             </div>
         </div>
         <hr>
+        <div class="row">
 
+        </div>
 
     </div>
 </div>
 
 @push('scripts')
-    <script src="/ElaAdmin/bower_components/drift/dist/Drift.js"></script>
-    <script>
-        new Drift(document.querySelector('img'), {
-            paneContainer: document.querySelector('p')
-        });
-    </script>
+
 
 
 @endpush

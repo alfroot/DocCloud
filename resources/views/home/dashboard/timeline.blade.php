@@ -8,20 +8,47 @@
                     <div><a href="#" id="guide{{$document->id}}" class="link">{{$document->user->name}}</a> <span class="sl-date">{{ $document->created_at->diffForHumans() }}</span>
                         <p>Añadió un archivo de tipo {{$document->extension->description}} en<a href="#" style="color: #0b3e6f;"> {{$document->category->name}}</a></p>
                         <div class="row">
-                            <div class="col-lg-3 col-md-6 m-b-20">
-                                <img src="/ElaAdmin/images/typesdoc/{{$document->extension->name}}.png" class="radius" width="50px" height="50px"/>
-                                <h4 class="">{{$document->name}}</h4>
-                                <p>{{$document->description}}</p>
+                            <div class="col-lg-12 col-md-6 m-b-20">
+                                  <h4><b>Título: </b>{{$document->name}}
+                                      @if($document->tags)
+
+                                      <div class="pull-right">
+                                          <h4>Etiquetas: </h4>
+                                      @foreach($document->tags as $tag)
+                                          <span class="badge badge-warning">#{{$tag->name}}</span>
+                                      @endforeach
+                                      </div>
+
+                                      @endif
+                                  </h4>
+                                <p><b>Descripción: </b> {{$document->description}}</p>
+
+
+                            </div>
+                            <div class="col-lg-12">
+                                <img class="pull-right" src="/ElaAdmin/images/typesdoc/{{$document->extension->name}}.png" class="radius" width="50px" height="50px"/>
+
                             </div>
                          </div>
-                        <div class="like-comm">
-                            <form action="{{ route('like', $document->id) }}" method="POST" id="formlike{{$document->id}}">
-                                {{ csrf_field() }}
-                            <a href="#" id="link{{$document->id}}" ><i class="fa fa-thumbs-o-up"></i> {{count($document->likes)}}</a>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-6 m-b-20">
+                                <div class="like-comm">
+                                    <form action="{{ route('like', $document->id) }}" method="POST" id="formlike{{$document->id}}">
+                                        {{ csrf_field() }}
+                                        <a href="#" id="link{{$document->id}}" ><i class="fa fa-thumbs-o-up"></i> {{count($document->likes)}}</a>
 
-                            <input type="hidden" name="id" value="{{$document->id}}">
+                                        <input type="hidden" name="id" value="{{$document->id}}">
 
-                            </form>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-8">
+
+
+
+
+                            </div>
                         </div>
                     </div>
                 </div>

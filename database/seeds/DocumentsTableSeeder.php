@@ -25,6 +25,7 @@ class DocumentsTableSeeder extends Seeder
         $document->extension_id = 1;
         $document->premium = false;
         $document->save();
+        $document->tags()->attach(['1','4']);
 
         $document = new Document;
         $document->user_id = 1;
@@ -36,6 +37,7 @@ class DocumentsTableSeeder extends Seeder
         $document->extension_id = 2;
         $document->premium = true;
         $document->save();
+        $document->tags()->attach(['2','3']);
 
         $document = new Document;
         $document->user_id = 1;
@@ -47,6 +49,7 @@ class DocumentsTableSeeder extends Seeder
         $document->extension_id = 3;
         $document->premium = false;
         $document->save();
+        $document->tags()->attach(['3','2']);
 
 
         $document = new Document;
@@ -59,6 +62,7 @@ class DocumentsTableSeeder extends Seeder
         $document->extension_id = 4;
         $document->premium = true;
         $document->save();
+        $document->tags()->attach(['4','1']);
 
 
         $document = new Document;
@@ -71,6 +75,7 @@ class DocumentsTableSeeder extends Seeder
         $document->extension_id = 5;
         $document->premium = false;
         $document->save();
+        $document->tags()->attach(['5','5']);
 
 
         $document = new Document;
@@ -83,6 +88,7 @@ class DocumentsTableSeeder extends Seeder
         $document->extension_id = 6;
         $document->premium = true;
         $document->save();
+        $document->tags()->attach(['6','2']);
 
 
         $document = new Document;
@@ -95,6 +101,7 @@ class DocumentsTableSeeder extends Seeder
         $document->extension_id = 7;
         $document->premium = true;
         $document->save();
+        $document->tags()->attach(['7','3']);
 
 
         $document = new Document;
@@ -107,6 +114,7 @@ class DocumentsTableSeeder extends Seeder
         $document->extension_id = 8;
         $document->premium = false;
         $document->save();
+        $document->tags()->attach(['8','1']);
 
 
         $document = new Document;
@@ -119,5 +127,9 @@ class DocumentsTableSeeder extends Seeder
         $document->extension_id = 9;
         $document->premium = true;
         $document->save();
+        $document->tags()->attach(['9','4']);
+
+
+        factory(Document::class,10)->create()-;
     }
 }

@@ -74,8 +74,14 @@ Route::get('/subscribe/paypal/return', 'PayPalController@paypalReturn')->name('p
 
 //DocCLoud
 Route::get('/doc/', 'DocCloudController@index')->name('doc.in');
-Route::get('/show/document/{document}','DocCloudController@show')->name('showdoc');
+Route::get('/show/document/{document}','DocCloudController@showOrPay')->name('showdoc');
 
 //Searcher
 Route::get('/search/index', 'SearchController@index')->name('indexsearch');
 Route::post('/search/users','SearchController@getUsers')->name('getusers');
+Route::post('/search/documents','SearchController@getDocuments')->name('getdocuments');
+Route::post('/search/categories','SearchController@getCategories')->name('getcategories');
+
+//Profile Photo
+Route::post('settings/{user}/photo', 'UsersController@storeProfileUser')->name('profilephoto');
+

@@ -118,6 +118,7 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
+    'faker_locale' => 'es_ES',
 
     'providers' => [
 

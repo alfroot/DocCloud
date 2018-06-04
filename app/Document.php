@@ -10,7 +10,7 @@ class Document extends Model
     use DatesTranslator;
     protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'extension_id', 'storage', 'premium' ];
     //protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate'];
-
+    protected $hidden = ['storage'];
 
 
     public static function boot()
@@ -43,9 +43,22 @@ class Document extends Model
         return $this->belongsTo(Extension::class);
     }
 
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class,'document_tags');
+    }
+
     public function likes()
     {
         return $this->hasMany(Like::class);
+    }
+
+    public function syncTags($tags)
+    {
+        $tagIds = collect($tags)->map(function ($tag){
+            return Tag::find($tag) ? $tag : Tag::create(['name' => $tag])->id;
+        });
+        return $this->tags()->sync($tagIds);
     }
 
 }

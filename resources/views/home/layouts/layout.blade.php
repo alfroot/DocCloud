@@ -84,7 +84,7 @@
         </div>
         <!-- End Container fluid  -->
         <!-- footer -->
-        <footer class="footer"> © 2018 All rights reserved. Template designed by <a href="https://colorlib.com">Colorlib</a></footer>
+        {{--<footer class="footer"> © 2018 All rights reserved. Template designed by <a href="https://colorlib.com">Colorlib</a></footer>--}}
         <!-- End footer -->
     </div>
     <!-- End Page wrapper  -->
@@ -99,7 +99,7 @@
 <script src="/ElaAdmin/js/lib/form-validation/jquery.validate.min.js"></script>
 <script src="/ElaAdmin/js/lib/form-validation/jquery.validate.unobtrusive.min.js"></script>
 <script src="/ElaAdmin/js/lib/jquery.nicescroll/jquery.nicescroll.min.js"></script>
-<script src="/ElaAdmin/bower_components/drift/dist/Drift.min.js"></script>
+{{--//<script src="/ElaAdmin/bower_components/drift/dist/Drift.min.js"></script>--}}
 <!-- slimscrollbar scrollbar JavaScript -->
 <script src="/ElaAdmin/js/jquery.slimscroll.js"></script>
 <!--Menu sidebar -->
@@ -116,7 +116,7 @@
 <script src="/ElaAdmin/js/lib/morris-chart/dashboard1-init.js"></script>
 
 
-<script src="/ElaAdmin/js/lib/calendar-2/moment.latest.min.js"></script>
+{{--<script src="/ElaAdmin/js/lib/calendar-2/moment.latest.min.js"></script>
 <!-- scripit init-->
 <script src="/ElaAdmin/js/lib/calendar-2/semantic.ui.min.js"></script>
 <!-- scripit init-->
@@ -127,13 +127,54 @@
 <script src="/ElaAdmin/js/lib/calendar-2/pignose.init.js"></script>
 
 <script src="/ElaAdmin/js/lib/owl-carousel/owl.carousel.min.js"></script>
-<script src="/ElaAdmin/js/lib/owl-carousel/owl.carousel-init.js"></script>
+<script src="/ElaAdmin/js/lib/owl-carousel/owl.carousel-init.js"></script>--}}
 <!-- scripit init-->
 
 <!-- Form validation -->
 <script src="/ElaAdmin/js/lib/form-validation/jquery.validate.min.js"></script>
 <script src="/ElaAdmin/js/lib/form-validation/jquery.validate-init.js"></script>
+<script>
+    $(document).ready(function(){
 
+        $("#user").keyup(function(){
+
+            var user = $("#user").val();
+            $.ajax({
+                type: 'POST',
+
+                url: 'http://doccloud.dev/search/users/',
+                dataType: 'json',
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    "users": user
+
+                },
+                beforeSend: function() {
+
+                },
+                success: function(data) {
+
+                    return data;
+
+                },
+                error: function() {
+
+                },
+                complete: function(data) {
+                  $("#content").show();
+                  var ul = $("#userresult");
+                      ul.append("<img alt=\"...\" src=\"/storage/"+ data.responseJSON +"\" class=\"media-object\">");
+
+
+
+
+
+
+            });
+        });
+
+    });
+</script>
 @stack('scripts')
 
 

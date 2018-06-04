@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Document;
 use App\Extension;
+use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -84,7 +85,8 @@ class DocumentsController extends Controller
     public function edit(Document $document)
     {
         return view('home.documents.edit', [
-            'document'=> $document
+            'document'=> $document,
+            'tags' => Tag::all()
 
 
         ]);
@@ -116,7 +118,7 @@ class DocumentsController extends Controller
                 'premium' => 'required',
             ]);
 
-
+            $document->syncTags($request->tags);
             $request->request->add(['url' => str_slug($request->name)]);
             $document->update($request->only('name','description','premium'));
             return redirect()->route('docindex')->with('flash', 'Realizado');

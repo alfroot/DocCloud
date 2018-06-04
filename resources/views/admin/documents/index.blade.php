@@ -34,6 +34,7 @@
                 <th>Descripcion</th>
                 <th>Categoria</th>
                 <th>Extensión</th>
+                <th>Etiquetas</th>
                 <th>Acciones</th>
             </tr>
             </thead>
@@ -52,6 +53,10 @@
                     @else
                         <td class="global_filter" id="global_filter">No hay archivo</td>
                     @endif
+                    <td>@foreach($document->tags as $tag)
+                            <span class="badge badge-warning">#{{$tag->name}}</span>
+                        @endforeach
+                    </td>
                     <td>
                         <div class="align-content-center">
                         <form action="{{route('admin.documents.destroy', $document->id)}}" method="POST" class="align-content-center">

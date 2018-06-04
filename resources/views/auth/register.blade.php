@@ -39,7 +39,8 @@
                 <div class="col-lg-4">
                     <div class="login-content card">
                         <div class="login-form">
-                            <h4>Register</h4>
+                            <h4><img class="maegin-auto" style="width: 200px; height: 200px; " src="/images/doccloud.png"></h4>
+                            <h4>Registro</h4>
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="form-group">

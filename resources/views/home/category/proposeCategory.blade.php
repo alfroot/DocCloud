@@ -25,7 +25,7 @@
                 </div>
                 <div class="card-body">
                     @if(count($categories))
-                    <table class="table">
+                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                         <tr>
                             <th scope="col">Nombre</th>
@@ -53,3 +53,17 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+
+    <script src="/ElaAdmin/js/lib/datatables/datatables.min.js"></script>
+    <script src="/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="/ElaAdmin/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="/ElaAdmin/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="/ElaAdmin/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <script src="/ElaAdmin/js/lib/datatables/datatables-init.js"></script>
+
+@endpush

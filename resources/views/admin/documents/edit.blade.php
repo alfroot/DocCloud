@@ -17,7 +17,7 @@
 
     <div class="row">
 
-        <form action="{{ route('admin.documents.update' ,$document ) }}" method="POST">
+        <form action="{{ route('admin.documents.update' ,$document  ) }}" method="POST">
             {{ csrf_field() }} {{ method_field('PUT') }}
             <div class="col-md-8">
                 <div class="box box-primary">
@@ -44,10 +44,10 @@
                         <br>
 
                         <label for="">Buscador</label>
-                        <input placeholder="Introduce la categoria" id="dad" class="form-group">
-
+                        <input  placeholder="Introduce la categoria" id="dad" class="form-group">
 
                         <br>
+                        {!! $errors->first('category_id', '<span class="help-block" style="color: red">El campo categoria es obligatorio</span>') !!}
 
 
                         <div id="content" class="form-group col-md-12" style="display: none">
@@ -58,7 +58,11 @@
                                 <div class="box-body"  >
                                     <div id="showcat" class="row"></div>
                                     <select  id="childs" name="category_id" class="form-control select2">
+                                       @if($document->category)
+                                        <option value="{{ old('name', $document->category->id) }}">{{$document->category->name}}</option>
+                                        @endif
                                     </select>
+
                                 </div>
                             </div>
                         </div>
@@ -77,6 +81,26 @@
 
                 </div>
 
+
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group {{ $errors->has('tags') ? 'has-error' : '' }}">
+                            <label>Etiquetas</label>
+                            <select name="tags[]" id=""
+                                    class="form-control select2" multiple="multiple"
+                                    data-placeholder="Selecciona una o más etiquetas"
+                                    style="width: 100%;">
+                                @foreach($tags as $tag)
+                                    <option {{ collect(old('tags', $document->tags->pluck('id')))->contains($tag->id) ? 'selected' : '' }}
+                                            value="{{ $tag->id }}">{{ $tag->name }}</option>
+                                @endforeach
+                            </select>
+                            {!! $errors->first('tags', '<span class="help-block">:message</span>') !!}
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {!! Form::close() !!}
                 @if (!empty($document->storage))
@@ -117,6 +141,7 @@
 @push('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/dropzone.css">
     <link rel="stylesheet" href="/adminlte/bower_components/select2/dist/css/select2.min.css">
+
 @endpush
 
 @push('scripts')
@@ -124,6 +149,13 @@
     <script src="/adminlte/bower_components/ckeditor/ckeditor.js"></script>
     <script src="/adminlte/bower_components/select2/dist/js/select2.full.min.js"></script>
     <script>
+        CKEDITOR.filter.disallow;
+
+        CKEDITOR
+        $('.select2').select2({
+            tags: true,
+
+        })
 
         var myDropzone = new Dropzone('.dropzone', {
             url: '/admin/documents/{{ $document->id }}/documents',

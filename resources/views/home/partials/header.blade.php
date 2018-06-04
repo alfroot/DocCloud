@@ -2,8 +2,10 @@
     <!-- Logo -->
     <div class="navbar-header">
         <a class="navbar-brand" href="index.html">
+            <img class="margin-l-20" style="width: 40px; height: 40px;" src="/images/doccloud.png">
             <!-- Logo icon -->
-            <b><h4>DocCLoud</h4></b>
+            <b><h4>DCLD</h4></b>
+
             <!--End Logo icon -->
             <!-- Logo text -->
 
@@ -150,7 +152,7 @@
             <!-- End Messages -->
             <!-- Profile -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/ElaAdmin/images/users/5.jpg" alt="user" class="profile-pic" /></a>
+                <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="" alt="user" class="profile-pic" /></a>
                 <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                     <ul class="dropdown-user">
                         <li><a href="#"><i class="ti-user"></i> Profile</a></li>

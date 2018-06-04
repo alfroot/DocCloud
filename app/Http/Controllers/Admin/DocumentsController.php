@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Category;
 use App\Document;
 use App\Extension;
+use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Carbon;
@@ -101,7 +102,8 @@ class DocumentsController extends Controller
 
             return view('admin.documents.edit', [
                 'document'=> $document,
-                'categories' => Category::all()
+               // 'categories' => Category::all(),
+                'tags' => Tag::all()
 
             ]);
 
@@ -124,7 +126,7 @@ class DocumentsController extends Controller
                 'category_id' => 'required'
 
                  ]);
-
+            $document->syncTags($request->tags);
             $document->update($request->all());
             return redirect()->route('admin.documents.index')->with('flash', 'Realizado');
 

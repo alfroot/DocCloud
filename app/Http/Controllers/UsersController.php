@@ -34,5 +34,30 @@ class UsersController extends Controller
         }else  {
             return redirect('/home#settings')->with('danger', 'No puedes hacer esa acción');
         }
+
+
+    }
+
+    public function storeProfileUser(User $user)
+    {
+        if (auth()->user()->hasrole('SuperAdmin','Admin','User')) {
+
+            $this->validate(request(), [
+                'user' => 'required|File|mimes:jpg,jpeg,png|max:10000'
+            ]);
+
+
+            $user->update([
+                'profilephoto'   =>  request()->file('user')->store('profiles', 'public'),
+
+            ]);
+
+            $user->save();
+
+
+        }else  {
+            return redirect('/home')->with('danger', 'No tienes permisos');
+        }
+
     }
 }

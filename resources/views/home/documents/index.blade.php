@@ -3,11 +3,12 @@
 @section('migaspan')
     <div class="row page-titles">
         <div class="col-md-5 align-self-center">
-            <h3 class="text-primary">Dashboard</h3> </div>
+            <h3 class="text-primary">Documentos</h3> </div>
         <div class="col-md-7 align-self-center">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
+                <li class="breadcrumb-item"><a href="/documents/index">Documentos</a></li>
+                <li class="breadcrumb-item active">Ver Documento</li>
             </ol>
         </div>
     </div>
@@ -19,11 +20,11 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
+                <div class="card-title">
+                    <h4>Mis Documentos</h4>
+                </div>
                 <div class="card-body">
-                    <h4 class="card-title">Mis Documentos</h4>
-                    <h6 class="card-subtitle">Puedes exportar esta a lista a los siguientes formatos:</h6>
 
-                    <div class="table-responsive m-t-40">
                         <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                     <tr>
@@ -31,6 +32,7 @@
                         <th>Titulo</th>
                         <th>Descripcion</th>
                         <th>Categoria</th>
+                        <th>Etiquetas</th>
                         <th>Tipo</th>
                         <th>Fecha de creacion</th>
                         <th>Editar</th>
@@ -42,12 +44,16 @@
                     <tr>
 
                         <td><a href="{{route('showFile', $document->id)}}">{{$document->name}}</a></td>
-                        <td>{{substr($document->description,0,100)}}@if(strlen($document->description) > 100)...@endif</td>
+                        <td>{{substr($document->description,0,60)}}@if(strlen($document->description) > 100)...@endif</td>
                         <td>{{isset($document->category->name) ? $document->category->name : ''}}</td>
+                        <td>@foreach($document->tags as $tag)
+                                <span class="badge badge-dark">#{{$tag->name}}</span>
+                            @endforeach</td>
                         <td><span class="badge badge-warning">{{isset($document->extension->name) ? $document->extension->name : ''}}</span></td>
+
                         <td>{{Jenssegers\Date\Date::make($document->created_at)->format(' d\ F Y H:i')}}</td>
                         <td><a href="{{route('documents.edit', $document)}}"><img src="/images/if_edit_3218.png" style="margin: 25%;"></a></td>
-                        <td class="align-content-md-around"><a class="" href="{{route('downloadFile', $document)}}"><img style="height: 37px; width: 37px; margin: 15%; margin-right: 33%;" src="/ElaAdmin/icons/down.svg"></a></td>
+                        <td class="align-content-md-around"><a class="" href="{{route('downloadFile', $document)}}"><img style="height: 37px; width: 37px; margin: 15%; margin-right: 33%;" src="/ElaAdmin/icons/down.ico"></a></td>
 
                     </tr>
                     @endforeach
@@ -55,7 +61,7 @@
 
                     </tbody>
                         </table>
-                    </div>
+
                 </div>
             </div>
 @endsection

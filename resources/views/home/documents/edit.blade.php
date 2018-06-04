@@ -1,5 +1,19 @@
 @extends('home.layouts.layout')
 
+@section('migaspan')
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-primary">Documentos</h3> </div>
+        <div class="col-md-7 align-self-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                <li class="breadcrumb-item"><a href="/documents/index">Documentos</a></li>
+                <li class="breadcrumb-item active">Editar</li>
+            </ol>
+        </div>
+    </div>
+@endsection
+
 
 
 
@@ -36,7 +50,25 @@
                                 </div>
                                 <br>
 
-                                <div id="content" class="col-sm-12 border">
+                                    <div class="col-sm-12 ">
+
+                                                <div class="form-group {{ $errors->has('tags') ? 'has-error' : '' }}">
+                                                    <label>Etiquetas</label>
+                                                    <select name="tags[]" id=""
+                                                            class="form-control select2" multiple="multiple"
+                                                            data-placeholder="Selecciona una o más etiquetas"
+                                                            style="width: 100%;">
+                                                        @foreach($tags as $tag)
+                                                            <option {{ collect(old('tags', $document->tags->pluck('id')))->contains($tag->id) ? 'selected' : '' }}
+                                                                    value="{{ $tag->id }}">{{ $tag->name }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                    {!! $errors->first('tags', '<span class="help-block">:message</span>') !!}
+
+                                        </div>
+                                    </div>
+
+                                <div id="content" class="col-sm-12 ">
                                     <h6 class="box-title">Monetizar <img src="/images/if_money_36203.png" alt=""></h6>
                                     <select name="premium">
 
@@ -174,6 +206,14 @@
     <script src="/adminlte/bower_components/ckeditor/ckeditor.js"></script>
     <script src="/adminlte/bower_components/select2/dist/js/select2.full.min.js"></script>
     <script>
+        CKEDITOR.filter.disallow;
+
+        CKEDITOR
+        $('.select2').select2({
+            tags: true,
+
+        })
+
 
         var myDropzone = new Dropzone('.dropzone', {
             url: '/documents/{{ $document->id }}/documents',
