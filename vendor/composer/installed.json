@@ -4780,5 +4780,156 @@
             "profiler",
             "webprofiler"
         ]
+    },
+    {
+        "name": "balping/json-raw-encoder",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/balping/json-raw-encoder.git",
+            "reference": "c404b7fc0e04ddf5d298e53105c5fc306f523195"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/balping/json-raw-encoder/zipball/c404b7fc0e04ddf5d298e53105c5fc306f523195",
+            "reference": "c404b7fc0e04ddf5d298e53105c5fc306f523195",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.1"
+        },
+        "time": "2018-05-04T15:38:02+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Balping\\JsonRaw\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0-only"
+        ],
+        "authors": [
+            {
+                "name": "Balázs Dura-Kovács"
+            }
+        ],
+        "description": "Encode arrays to json with raw JS objects (eg. callbacks) in them",
+        "keywords": [
+            "callback",
+            "encode",
+            "json"
+        ]
+    },
+    {
+        "name": "consoletvs/charts",
+        "version": "6.2.0",
+        "version_normalized": "6.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ConsoleTVs/Charts.git",
+            "reference": "635e9ee22e90cb75a97df7ed225b4fefe821daea"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ConsoleTVs/Charts/zipball/635e9ee22e90cb75a97df7ed225b4fefe821daea",
+            "reference": "635e9ee22e90cb75a97df7ed225b4fefe821daea",
+            "shasum": ""
+        },
+        "require": {
+            "balping/json-raw-encoder": "^1.0",
+            "illuminate/support": "5.*",
+            "php": ">=7.0"
+        },
+        "time": "2018-05-04T17:40:36+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "ConsoleTVs\\Charts\\ChartsServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ConsoleTVs\\Charts\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Èrik Campobadal Forés",
+                "email": "soc@erik.cat"
+            }
+        ],
+        "description": "The laravel charting package"
+    },
+    {
+        "name": "laracasts/utilities",
+        "version": "3.0",
+        "version_normalized": "3.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laracasts/PHP-Vars-To-Js-Transformer.git",
+            "reference": "298fb3c6f29901a4550c4f98b57c05f368341d04"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laracasts/PHP-Vars-To-Js-Transformer/zipball/298fb3c6f29901a4550c4f98b57c05f368341d04",
+            "reference": "298fb3c6f29901a4550c4f98b57c05f368341d04",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~5.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpspec/phpspec": "~2.0"
+        },
+        "time": "2017-09-01T17:25:57+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Laracasts\\Utilities\\JavaScript\\JavaScriptServiceProvider"
+                ],
+                "aliases": {
+                    "JavaScript": "Laracasts\\Utilities\\JavaScript\\JavaScriptFacade"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/helpers.php"
+            ],
+            "psr-4": {
+                "Laracasts\\Utilities\\JavaScript\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeffrey Way",
+                "email": "jeffrey@laracasts.com"
+            }
+        ],
+        "description": "Transform your PHP to JavaScript",
+        "keywords": [
+            "javascript",
+            "laravel"
+        ]
     }
 ]

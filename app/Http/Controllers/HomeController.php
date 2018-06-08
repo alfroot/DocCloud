@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
             $user = auth()->user();
 
-            $documentstimeline = Document::whereNotNull('storage')->orderBy('created_at','desc')->limit(10)->get();
+            $documentstimeline = Document::whereNotNull('storage')->orderBy('created_at','asc')->paginate();
 
 
             return view('/home/dashboard/dashboard' , compact('user','documentstimeline'));
@@ -52,7 +52,7 @@ class HomeController extends Controller
                 $like = new Like;
                 $like->user_id = auth()->user()->id;
                 $like->document_id = $request->id;
-                $like->value = 1;
+
                 $like->save();
 
                 return redirect('/home#guide'.$request->id);

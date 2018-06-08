@@ -8,7 +8,7 @@
 
 
                         <div class="avatar">
-                            <img class="drift-demo-trigger" src="/storage/{{$user->profilephoto}}"  />
+                            <img class="" src="/storage/{{$user->profilephoto}}"  />
                         </div>
 
 

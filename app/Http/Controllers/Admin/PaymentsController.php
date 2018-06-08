@@ -8,6 +8,9 @@ use App\Pay;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use JavaScript;
+use function MongoDB\BSON\toJSON;
 
 class PaymentsController extends Controller
 {
@@ -17,7 +20,11 @@ class PaymentsController extends Controller
     {
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
         $payments = Pay::all();
-        return view('admin.payments.index', compact('payments'));
+
+
+
+
+        return view('admin.payments.index', compact('payments','purchasesmonth'));
         }else{
             return redirect('/home')->with('danger', 'No tienes permisos');
         }
@@ -111,5 +118,17 @@ class PaymentsController extends Controller
         }else{
             return redirect('/home')->with('danger', 'No tienes permisos');
         }
+    }
+
+    public function Chartpays()
+    {
+        $purchasesmonth =  DB::select( DB::raw("select round(SUM(amount),2) as total, MONTHNAME(created_at) AS mes ,YEAR(created_at) AS year FROM pays group by MONTH(created_at) ORDER BY(created_at)"));
+
+
+
+        return $purchasesmonth;
+
+
+
     }
 }

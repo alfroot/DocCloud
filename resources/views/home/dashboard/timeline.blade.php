@@ -3,9 +3,9 @@
         <div class="profiletimeline">
             @foreach($documentstimeline as $document)
             <div class="sl-item">
-                <div class="sl-left"> <img src="/ElaAdmin/images/users/avatar-1.jpg" alt="user" class="img-circle" /> </div>
+                <div class="sl-left "> <img  src="/storage/{{$document->user->profilephoto}}" alt="user" class="img-responsive img-circle" /> </div>
                 <div class="sl-right">
-                    <div><a href="#" id="guide{{$document->id}}" class="link">{{$document->user->name}}</a> <span class="sl-date">{{ $document->created_at->diffForHumans() }}</span>
+                    <div><a href="#" id="guide{{$document->id}}" class="link">{{$document->user->name}} {{$document->user->lastname}}</a> <span class="sl-date">{{ $document->created_at->diffForHumans() }}</span>
                         <p>Añadió un archivo de tipo {{$document->extension->description}} en<a href="#" style="color: #0b3e6f;"> {{$document->category->name}}</a></p>
                         <div class="row">
                             <div class="col-lg-12 col-md-6 m-b-20">
@@ -56,6 +56,7 @@
             <hr>
             @endforeach
 
+            <div class="aling-center">{{$documentstimeline->render()}}</div>
 
 
 

@@ -21,7 +21,7 @@ class CreatePaysTable extends Migration
             $table->foreign('document_id')->references('id')->on('documents');
             $table->unsignedInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->float('price');
+            $table->float('amount');
             $table->timestamps();
         });
     }
