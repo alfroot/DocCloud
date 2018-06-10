@@ -86,7 +86,7 @@
             </span>
         </a>
         <ul class="treeview-menu">
-            <li {{ request()->is('admin/payment') ? 'class=active' : '' }}>
+            <li {{ request()->is('admin/payment/index') ? 'class=active' : '' }}>
                 <a href="{{ route('admin.payment.index') }}">
                     <i class="fa fa-eye"></i>
                     Ver todas las compras
@@ -99,6 +99,40 @@
                 </a>
 
             </li>
+        </ul>
+    </li>
+
+    <li class="treeview {{ request()->is('admin/charts*') ? 'active' : '' }}">
+        <a href=""><i class="fa fa-area-chart"></i> <span>Gráficos</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li {{ request()->is('admin/charts') ? 'class=active' : '' }}>
+                <a href="{{ route('chartindex') }}">
+                    <i class="fa fa-eye"></i>
+                    Inicio
+                </a>
+            </li>
+
+        </ul>
+    </li>
+
+    <li class="treeview {{ request()->is('admin/support*') ? 'active' : '' }}">
+        <a href=""><i class="fa fa-send-o"></i> <span>E-mail</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li {{ request()->is('admin/support/index') ? 'class=active' : '' }}>
+                <a href="{{ route('support') }}">
+                    <i class="fa fa-eye"></i>
+                    Inicio
+                </a>
+            </li>
+
         </ul>
     </li>
 </ul>

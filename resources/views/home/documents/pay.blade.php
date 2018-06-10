@@ -93,7 +93,7 @@
                                         <p class="itemtext">{{$document->extension->description}}</p>
                                     </td>
                                     <td class="tableitem">
-                                        <p class="itemtext">5€</p>
+                                        <p class="itemtext">{{$document->price}} €</p>
                                     </td>
 
                                 </tr>
@@ -107,7 +107,7 @@
                                         <h2>Total</h2>
                                     </td>
                                     <td class="payment">
-                                        <h2>5€</h2>
+                                        <h2>{{$document->price}} €</h2>
                                     </td>
                                 </tr>
 

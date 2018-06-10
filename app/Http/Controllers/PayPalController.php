@@ -7,6 +7,7 @@ use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 
 // Used to process plans
+use Illuminate\Support\Facades\DB;
 use PayPal\Api\Currency;
 use PayPal\Api\Patch;
 use PayPal\Api\PatchRequest;
@@ -27,6 +28,7 @@ use PayPal\Api\Transaction;
 use App\Order;
 use App\OrderItem;
 use Illuminate\Support\Facades\Input;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 class PaypalController extends Controller
 {
@@ -130,18 +132,18 @@ class PaypalController extends Controller
                 ->setCurrency($currency)
                 ->setDescription($document->description)
                 ->setQuantity(1)
-                ->setPrice(5);
+                ->setPrice($document->price);
             $items[] = $item;
-            $subtotal += 5;
+
 
         $item_list = new ItemList();
         $item_list->setItems($items);
         $details = new Details();
-        $details->setSubtotal($subtotal);
-        $total = $subtotal + 0;
+        $details->setSubtotal($document->price);
+
         $amount = new Amount();
         $amount->setCurrency($currency)
-            ->setTotal($total)
+            ->setTotal($document->price)
             ->setDetails($details);
         $transaction = new Transaction();
         $transaction->setAmount($amount)
@@ -218,6 +220,17 @@ class PaypalController extends Controller
             // Enviar correo a admin
             // Redireccionar
             $this->saveOrderDoc($document);
+            $documentele = Document::find($document->id);
+            $balance =  DB::select( DB::raw("select round((SUM(amount)/100),2) * 30 as doc, round((SUM(amount)/100),2) * 70 as users , round(SUM(amount),2) as total from pays"));
+
+            $text = 'El usuario <b>'.auth()->user()->name .' '. auth()->user()->lastname .'</b> ha comprado el documento '.$documentele->name.'(id:'.$documentele->id.') por un total: '.$document->price. '€ '
+                . '<b>'.PHP_EOL.'Saldo Total : '.$balance[0]->total.' € </b>'.PHP_EOL.'<b>Saldo de los Usuarios : </b>'.$balance[0]->users.' €'.PHP_EOL.'<b>Saldo de DocCloud : </b>'.$balance[0]->doc.' €';
+
+            Telegram::sendMessage([
+                'chat_id' => env('TELEGRAM_CHANNEL_ID', '-1001208921290'),
+                'parse_mode' => 'HTML',
+                'text' => $text
+            ]);
 //            \Session::forget('cart');
             return \Redirect::route('home')
                 ->with('flash', 'Compra realizada de forma correcta');
@@ -231,8 +244,10 @@ class PaypalController extends Controller
         $payment = new Pay();
         $payment->user_id = auth()->user()->id;
         $payment->document_id = $document->id;
-        $payment->price = 5;
+        $payment->amount = $document->price;
         $payment->save();
     }
+
+
 
 }

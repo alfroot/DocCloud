@@ -93,7 +93,7 @@ class UsersController extends Controller
             $this->validate($request, [
                 'name' => 'required|min:3',
                 'lastname' => 'required|min:3',
-                'password'=>'required|min:5',
+
                 'email' => 'required|email',
                 'role'  => 'required'
             ]);
@@ -104,7 +104,14 @@ class UsersController extends Controller
             $usuario->name = $request->name;
             $usuario->lastname = $request->lastname;
             $usuario->email = $request->email;
-            $usuario->password = bcrypt($request->password);
+            if($request->password) {
+                $this->validate($request, [
+
+                    'password'=>'min:5',
+
+                ]);
+                $usuario->password = bcrypt($request->password);
+            }
 
             $usuario->save();
             $usuario->syncRoles($rol);

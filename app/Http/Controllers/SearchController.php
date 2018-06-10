@@ -22,7 +22,6 @@ class SearchController extends Controller
         if(!empty($users->users)) {
 
 
-
             $usrs = User::where('name',  'like', '%' . $users->users . '%')->orWhere('lastname',  'like', '%' . $users->users . '%')->limit(15)->get();
             return new JsonResponse($usrs);
         }

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 class DocumentsController extends Controller
 {
@@ -18,10 +19,11 @@ class DocumentsController extends Controller
     {
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
-            $documents = Document::all();
-
-
+           $documents = Document::all();
             return view('admin.documents.index', compact('documents'));
+
+
+
 
         }else  {
             return redirect('/home')->with('danger', 'No tienes permisos');
@@ -123,11 +125,28 @@ class DocumentsController extends Controller
             $this->validate($request, [
                 'name' => 'required|min:3',
                 'description' => 'required|min:6',
-                'category_id' => 'required'
+                'category_id' => 'required',
+                'premium' => 'required'
 
                  ]);
             $document->syncTags($request->tags);
+
+                if($request->premium != 1){
+                    $request->price = null;
+                    $document->price = $request->price;
+                    $document->save();
+
+                }else {
+
+                    $request->price = round(floatval($request->price),2);
+                    $document->price = $request->price;
+                    $document->save();
+                }
+
             $document->update($request->all());
+
+
+
             return redirect()->route('admin.documents.index')->with('flash', 'Realizado');
 
         }else  {

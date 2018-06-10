@@ -37,10 +37,13 @@
                             {!! $errors->first('description', '<span class="help-block">:message</span>') !!}
                         </div>
 
+
+
                         <div class="box-header with-border">
                             <h6 class="box-comment">Padre actual: </h6> <b>{{empty($document->category->name) ?  '' :  $document->category->name }}</b>
 
                         </div>
+
                         <br>
 
                         <label for="">Buscador</label>
@@ -102,6 +105,24 @@
                 </div>
             </div>
 
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-body">
+                <label id="in" class="box-title">Monetizar <img src="/images/if_money_36203.png" alt=""></label>
+                        <div id="in2">
+                            <label>Precio Actual: {{$document->price}}</label><br>
+                        </div>
+                <select name="premium">
+
+                    <option id="si" value="1" {{ $document->premium == 1 ? 'selected' : '' }} >Si</option>
+                    <option id="no" value="0"  {{ $document->premium == 0 ? 'selected' : '' }}>No</option>
+                </select>
+                <br>
+                <br>
+            </div>
+                </div>
+            </div>
+
             {!! Form::close() !!}
                 @if (!empty($document->storage))
                     <div class="row">
@@ -127,6 +148,7 @@
                     <div class="form-goup col-md-4">
                         <div class="dropzone"></div>
                     </div>
+                <input type="text" name="price">
                 @endif
             </div>
 
@@ -153,9 +175,20 @@
 
         CKEDITOR
         $('.select2').select2({
-            tags: true,
+            tags: true
 
-        })
+        });
+
+
+
+        $('#si').click(function() {
+            $('#in2').empty();
+            $('#in2').append('<label>Precio Actual: {{$document->price}}</label><br><input type="text" name="price" placeholder="Inserta Nuevo Precio">');
+        });
+
+        $('#no').click(function() {
+            $('#in2').empty();
+        });
 
         var myDropzone = new Dropzone('.dropzone', {
             url: '/admin/documents/{{ $document->id }}/documents',

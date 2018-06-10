@@ -47,9 +47,9 @@
                     <td class="global_filter" id="global_filter">{{$document->description}}</td>
                     <td class="global_filter" id="global_filter">{{isset($document->category->name) ? $document->category->name : ''}}</td>
                     @if(isset($document->extension->name))
-                    <td class="global_filter" id="global_filter">{{$document->extension->name}}
-                        <img src="/ElaAdmin/images/typesdoc/{{$document->extension->name}}.png" class="radius" width="20px" height="20px">
-                    </td>
+                        <td class="global_filter" id="global_filter">{{$document->extension->name}}
+                            <img src="/ElaAdmin/images/typesdoc/{{$document->extension->name}}.png" class="radius" width="20px" height="20px">
+                        </td>
                     @else
                         <td class="global_filter" id="global_filter">No hay archivo</td>
                     @endif
@@ -59,16 +59,16 @@
                     </td>
                     <td>
                         <div class="align-content-center">
-                        <form action="{{route('admin.documents.destroy', $document->id)}}" method="POST" class="align-content-center">
-                            {{ csrf_field() }} {{ method_field('DELETE') }}
-                            <a href="{{route('admin.documents.show', $document->id)}}"  class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
-                        <a href="{{route('admin.documents.edit', $document)}}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
-                            <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar el documento?"
-                                    data-confirm-button="Eliminar"
-                                    data-cancel-button="Whoops no">
-                                <i class="fa fa-times"></i>
-                            </button>
-                        </form>
+                            <form action="{{route('admin.documents.destroy', $document->id)}}" method="POST" class="align-content-center">
+                                {{ csrf_field() }} {{ method_field('DELETE') }}
+                                <a href="{{route('admin.documents.show', $document->id)}}"  class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
+                                <a href="{{route('admin.documents.edit', $document)}}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
+                                <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar el documento?"
+                                        data-confirm-button="Eliminar"
+                                        data-cancel-button="Whoops no">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </form>
                         </div>
                     </td>
                 </tr>
@@ -113,18 +113,19 @@
 
         $(document).ready(function() {
             $('#documents-table').DataTable({
+
                 'paging'      : true,
-                'lengthChange': false,
+                "pageLength": 10,
                 'searching'   : true,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false,
 
+
                 language: {
                     url: '/adminlte/bower_components/Spanish.json'
                 }
             });
-            $('#documents-table').DataTable();
 
             $('input.global_filter').on( 'keyup click', function () {
                 filterGlobal();

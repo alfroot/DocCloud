@@ -6,11 +6,12 @@ use App\Category;
 use App\Document;
 use App\Pay;
 use App\User;
-use Illuminate\Http\Request;
+
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use JavaScript;
-use function MongoDB\BSON\toJSON;
+use Telegram\Bot\Laravel\Facades\Telegram;
+
 
 class PaymentsController extends Controller
 {
@@ -19,17 +20,41 @@ class PaymentsController extends Controller
     public function index()
     {
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
-        $payments = Pay::all();
 
+            $payments = Pay::paginate(10);
 
-
-
-        return view('admin.payments.index', compact('payments','purchasesmonth'));
+            return view('/admin/payments/index', compact('payments'));
         }else{
             return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 
+    public function searchPays(Request $request)
+    {
+        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
+            $this->validate($request, [
+                'search' => 'required',
+                'termn' => 'numeric',
+            ]);
+
+            if($request->termn == 1){
+                $paymentsearch = Pay::where('id','=',$request->search)->paginate();
+            }else if($request->termn == 2){
+
+                $users =  DB::select( DB::raw("select id from users where name like '%$request->search%'"));
+                $in = array_column($users, 'id');
+
+                $paymentsearch = Pay::whereIn('user_id',$in)->limit(2000)->get();
+
+
+            }
+
+
+            return view('/admin/payments/index', compact('paymentsearch'));
+        }else{
+            return redirect('/home')->with('danger', 'No tienes permisos');
+        }
+    }
 
     public function create()
     {
@@ -49,11 +74,14 @@ class PaymentsController extends Controller
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
             $this->validate($request, [
                 'user_id' => 'required',
-                'price' => 'numeric'
+                'amount' => 'numeric'
             ]);
 
             $payment = new Pay($request->all());
+            $payment->amount = $request->amount;
             $payment->save();
+
+
 
             return redirect('/admin/payment')->with('flash', 'La Compra ha sido guardada');
         }else{
@@ -93,13 +121,13 @@ class PaymentsController extends Controller
             $payment = Pay::find($id);
             $this->validate($request, [
                 'user_id' => 'required',
-                'price' => 'numeric'
+                'amount' => 'numeric'
             ]);
 
             $payment->user_id = $request->user_id;
             $payment->document_id = $request->document_id;
             $payment->category_id = $request->category_id;
-            $payment->price = $request->price;
+            $payment->amount = $request->amount;
             $payment->save();
 
             return redirect('/admin/payment')->with('flash', 'La Compra ha sido editada');
@@ -120,15 +148,5 @@ class PaymentsController extends Controller
         }
     }
 
-    public function Chartpays()
-    {
-        $purchasesmonth =  DB::select( DB::raw("select round(SUM(amount),2) as total, MONTHNAME(created_at) AS mes ,YEAR(created_at) AS year FROM pays group by MONTH(created_at) ORDER BY(created_at)"));
 
-
-
-        return $purchasesmonth;
-
-
-
-    }
 }

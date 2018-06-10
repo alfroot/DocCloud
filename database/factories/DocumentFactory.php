@@ -5,7 +5,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Document::class, function (Faker $faker) {
 
-    $name = $faker->text($nbWords = 7, $variableNbWords = true);
+    $name = $faker->text($maxNbChars = 20);
 
           $doc[1] = 'documents/XEZH6RuvgXa3V3OWYMCTiEYMDrJq6vojlxSIFfhw.doc';
           $doc[2]= 'documents/U2TAsNUo0S29SET3YrhAplnVAatwejQ0c7Gv9q3I.docx';

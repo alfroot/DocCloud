@@ -34,8 +34,20 @@ Route::group([
         Route::resource('users', 'UsersController',['except' => 'show', 'as' => 'admin']);
         Route::resource('documents', 'DocumentsController',[ 'as' => 'admin']);
         Route::resource('payment', 'PaymentsController', ['as' => 'admin']);
+        Route::post('/payment/search/', 'PaymentsController@searchPays')->name('paysearch');
         Route::post('documents/{document}/documents', 'DocumentsController@storedoc')->name('documentsave');
-        Route::get('/payments/chart', 'PaymentsController@chartpays')->name('chartpay');
+        //charts
+        Route::get('/charts/pays', 'ChartsController@chartpays')->name('chartpay');
+        Route::get('/charts/doccat', 'ChartsController@chartDocCat')->name('charcat');
+        Route::get('/charts/users', 'ChartsController@chartUsers')->name('charusr');
+        Route::get('/charts/totals', 'ChartsController@totals')->name('totals');
+
+        //Messages
+        Route::get('/messages/index', 'MessagesController@index')->name('support');
+        Route::get('/messages/out', 'MessagesController@out')->name('outmsg');
+        Route::get('/messages/new', 'MessagesController@create')->name('newmsg');
+        Route::get('/messages/read/{message}', 'MessagesController@read')->name('readmsg');
+        Route::get('/charts/', 'ChartsController@index')->name('chartindex');
 
     });
 

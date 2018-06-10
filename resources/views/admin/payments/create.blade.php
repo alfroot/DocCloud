@@ -64,12 +64,12 @@
                 {!! $errors->first('category_id', '<span class="help-block">:message</span>') !!}
             </div>
 
-            <div class="form-group {{ $errors->has('price') ? 'has-error' : '' }}">
+            <div class="form-group {{ $errors->has('amount') ? 'has-error' : '' }}">
                 <label for="">Precio</label>
-                <input type="text" name="price" class="form-control"
-                       value="{{ old('price') }}"
+                <input type="text" name="amount" class="form-control"
+                       value="{{ old('amount') }}"
                        placeholder="Escribe el precio">
-                {!! $errors->first('price', '<span class="help-block">:message</span>') !!}
+                {!! $errors->first('amount', '<span class="help-block">:message</span>') !!}
             </div>
 
             {{ Form::bsSubmit('Crear', ['class'=>'btn btn-primary']) }}

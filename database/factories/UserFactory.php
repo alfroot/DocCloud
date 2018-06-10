@@ -16,7 +16,7 @@ use Faker\Generator as Faker;
 $factory->define(App\User::class, function (Faker $faker) {
 
 
-
+    $date = $faker->dateTimeBetween($startDate = '-1 years', $endDate = 'now');
     return [
 
         'name' => $faker->firstName,
@@ -24,6 +24,8 @@ $factory->define(App\User::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => bcrypt('123456'), // secret
         'profilephoto' => 'profiles/'.$faker->unique()->numberBetween(1,189).'.jpg',
+        'created_at' => $date,
+        'updated_at' => $date,
         'remember_token' => str_random(10)
 
     ];
