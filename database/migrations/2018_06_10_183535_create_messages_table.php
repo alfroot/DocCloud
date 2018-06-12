@@ -19,7 +19,7 @@ class CreateMessagesTable extends Migration
             $table->foreign('from')->references('id')->on('users');
             $table->unsignedInteger('to');
             $table->foreign('to')->references('id')->on('users');
-            $table->text('content');
+            $table->text('body');
             $table->text('subject');
             $table->boolean('read');
             $table->unsignedInteger('response')->nullable();

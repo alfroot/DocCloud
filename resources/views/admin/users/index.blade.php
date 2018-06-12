@@ -84,7 +84,7 @@
     <script>
         $(".confirm").confirm();
     </script>
-    <<script>
+    <script>
                 function filterGlobal () {
 
                     $('#users-table').DataTable().search(

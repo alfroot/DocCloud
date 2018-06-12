@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 
 use App\Message;
 use App\User;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -15,19 +16,19 @@ class MessagesController extends Controller
     public function index()
     {
         $user = Auth::id();
-        $messages = Message::where('to','=',$user)->orderBy('created_at','desc')->get();
+        $messages = Message::where('to','=',$user)->orderBy('created_at','desc')->paginate(10);
         $nonread = DB::select( DB::raw("select count(*) as total from messages m where m.to = $user and m.read = 0"));
 
-        return view('admin.emails.index',compact('messages','nonread'));
+        return view('home.emails.index',compact('messages','nonread'));
 
     }
 
     public function out()
     {
         $user = Auth::id();
-        $messages = Message::where('from','=',$user)->orderBy('created_at','desc')->get();
+        $messages = Message::where('from','=',$user)->orderBy('created_at','desc')->paginate(10);
         $nonread = DB::select( DB::raw("select count(*) as total from messages m where m.to = $user and m.read = 0"));
-        return view('admin.emails.out',compact('messages','nonread'));
+        return view('home.emails.out',compact('messages','nonread'));
     }
 
     public function read($idmsg ,$idfrom)
@@ -45,7 +46,7 @@ class MessagesController extends Controller
 
         if($msg->to === $user | $msg->from === $user ) {
             $guide = $msg->id;
-            return view('admin/emails/read',compact('mes','guide'));
+            return view('home/emails/read',compact('mes','guide'));
         }
     }
 
@@ -54,7 +55,7 @@ class MessagesController extends Controller
     {
         $users = User::all();
 
-        return view('admin.emails.new', compact('users'));
+        return view('home.emails.new', compact('users'));
     }
 
 
@@ -80,18 +81,18 @@ class MessagesController extends Controller
         $newmessage->save();
 
 
-        return redirect('/admin/messages/index')->with('flash', 'E-mail Enviado');
+        return redirect('/home/messages/index')->with('flash', 'E-mail Enviado');
     }
 
     public function readed(Request $id)
     {
-            $email = Message::find($id->id);
-            $user = Auth::id();
-            if($user === $email->to){
+        $email = Message::find($id->id);
+        $user = Auth::id();
+        if($user === $email->to){
 
-                $email->read = true;
-                $email->save();
-            }
+            $email->read = true;
+            $email->save();
+        }
 
     }
 }

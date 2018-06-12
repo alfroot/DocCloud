@@ -119,14 +119,14 @@
         </ul>
     </li>
 
-    <li class="treeview {{ request()->is('admin/support*') ? 'active' : '' }}">
-        <a href=""><i class="fa fa-send-o"></i> <span>E-mail</span>
+    <li class="treeview {{ request()->is('admin/messages*') ? 'active' : '' }}">
+        <a href=""><i class="fa  fa-envelope"></i> <span>E-mail</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
         </a>
         <ul class="treeview-menu">
-            <li {{ request()->is('admin/support/index') ? 'class=active' : '' }}>
+            <li {{ request()->is('admin/messages/index') ? 'class=active' : '' }}>
                 <a href="{{ route('support') }}">
                     <i class="fa fa-eye"></i>
                     Inicio

@@ -34,6 +34,16 @@
                 <li><a href="{{ route('user.category.propose') }}"><i class="fa fa-folder-o"></i> Categorias Propuestas</a></li>
             </ul>
         </li>
+
+        <li class="nav-label"></li>
+        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope""></i><span class="hide-menu">E-mail </span></a>
+            <ul aria-expanded="false" class="collapse" >
+
+                <li><a href="{{ route('supportpublic') }}"><i class="fa fa-folder-o"></i>Ver</a></li>
+            </ul>
+        </li>
+
+
     </ul>
 </nav>
 

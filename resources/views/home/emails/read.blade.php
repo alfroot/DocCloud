@@ -1,4 +1,4 @@
-@extends('admin.layouts.layout')
+@extends('home.layouts.layout')
 
 
 @section('header')
@@ -7,7 +7,7 @@
         <small>E-mail</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.payment.index') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li><a href=""><i class="fa fa-dashboard"></i> Inicio</a></li>
         <li class="active"><a href=""><i class="fa fa-credit-card"></i>Compras</a></li>
     </ol>
 @endsection
@@ -18,10 +18,12 @@
         <div class="aling-center">{{$mes->render()}}</div>
         <div class="content margin-r-5">
         @foreach($mes as $msg)
-<div class="row" id="{{$msg->id}}">
-<div class="col-md-8 {{$msg->from === Auth::user()->id ? 'pull-left'  : 'pull-right' }}">
+        <div class="row">
+        <div class="card" id="{{$msg->id}}">
+            <div class="card-body">
+        <div class="col-md-8">
 
-    <div class="box {{$msg->from === Auth::user()->id ? 'box-primary'  : 'box-danger' }}">
+            <div class=" {{$msg->from === Auth::user()->id ? 'box-primary'  : 'box-danger' }}">
         <div class="box-header with-border ">
 
 
@@ -55,9 +57,9 @@
             <div class="pull-left">
                 @if(isset($msg))
                     @if($msg->from === Auth::user()->id)
-                        <a href="{{route('outmsg')}}" class="btn btn-default"><i class="fa fa-reply"></i> Volver a Enviados</a>
+                        <a href="{{route('outmsgpublic')}}" class="btn btn-default"><i class="fa fa-reply"></i> Volver a Enviados</a>
                     @else
-                        <a href="{{route('support')}}" class="btn btn-default"><i class="fa fa-reply"></i> Volver a Bandeja de entrada</a>
+                        <a href="{{route('supportpublic')}}" class="btn btn-default"><i class="fa fa-reply"></i> Volver a Bandeja de entrada</a>
                     @endif
                 @endif
             </div>
@@ -66,9 +68,11 @@
         <!-- /.box-footer -->
     </div>
     <!-- /. box -->
-</div>
-</div>
-    @endforeach
+            </div>
+            </div>
+        </div>
+        </div>
+        @endforeach
         </div>
 
     @endif

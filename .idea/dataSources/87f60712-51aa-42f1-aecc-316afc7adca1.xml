@@ -2011,7 +2011,7 @@ role_id</ColNames>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="455" parent="307" name="content">
+    <column id="455" parent="307" name="body">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>

@@ -1,4 +1,4 @@
-@extends('admin.layouts.layout')
+@extends('home.layouts.layout')
 
 
 @section('header')
@@ -7,7 +7,7 @@
         <small>Salida</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.payment.index') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li><a href=""><i class="fa fa-dashboard"></i> Inicio</a></li>
         <li class="active"><a href=""><i class="fa fa-credit-card"></i>Compras</a></li>
     </ol>
 @endsection
@@ -29,9 +29,9 @@
                     </div>
                     <div class="box-body no-padding">
                         <ul class="nav nav-pills nav-stacked">
-                            <li class="{{ request()->is('admin/messages/index') ? 'active' : '' }}"><a href="{{route('support')}}"><i class="fa fa-inbox"></i> Inbox
+                            <li class="{{ request()->is('admin/messages/index') ? 'active' : '' }}"><a href="{{route('supportpublic')}}"><i class="fa fa-inbox"></i> Inbox
                                     <span class="label label-primary pull-right">12</span></a></li>
-                            <li class="{{ request()->is('admin/messages/out') ? 'active' : '' }}"><a href="{{route('outmsg')}}"><i class="fa fa-envelope-o "></i> Sent</a></li>
+                            <li class="{{ request()->is('admin/messages/out') ? 'active' : '' }}"><a href="{{route('outmsgpublic')}}"><i class="fa fa-envelope-o "></i> Sent</a></li>
 
                         </ul>
                     </div>
@@ -49,7 +49,7 @@
                     </div>
                     <!-- /.box-header -->
 
-                        {!! Form::open(['action' => ['Admin\MessagesController@store'], 'method' => 'POST']) !!}
+                        {!! Form::open(['action' => ['MessagesController@store'], 'method' => 'POST']) !!}
 
                     <div class="box-body">
                         <div class="form-group">

@@ -45,9 +45,13 @@ Route::group([
         //Messages
         Route::get('/messages/index', 'MessagesController@index')->name('support');
         Route::get('/messages/out', 'MessagesController@out')->name('outmsg');
-        Route::get('/messages/new', 'MessagesController@create')->name('newmsg');
-        Route::get('/messages/read/{message}', 'MessagesController@read')->name('readmsg');
+        Route::get('/messages/new', 'MessagesController@create')->name('createmsg');
+        Route::get('/messages/read/{message}/{from}', 'MessagesController@read')->name('readmsg');
         Route::get('/charts/', 'ChartsController@index')->name('chartindex');
+
+        Route::Post('/messages/post/', 'MessagesController@store')->name('newmsg');
+        Route::post('/messages/readed', 'MessagesController@readed')->name('readed');
+
 
     });
 
@@ -98,3 +102,12 @@ Route::post('/search/categories','SearchController@getCategories')->name('getcat
 //Profile Photo
 Route::post('settings/{user}/photo', 'UsersController@storeProfileUser')->name('profilephoto');
 
+//Public messages
+Route::get('/messages/index', 'MessagesController@index')->name('supportpublic');
+Route::get('/messages/out', 'MessagesController@out')->name('outmsgpublic');
+Route::get('/messages/new', 'MessagesController@create')->name('createmsgpublic');
+Route::get('/messages/read/{message}/{from}', 'MessagesController@read')->name('readmsgpublic');
+
+
+Route::Post('/messages/post/', 'MessagesController@store')->name('newmsgpublic');
+Route::post('/messages/readed', 'MessagesController@readed')->name('readedpublic');
