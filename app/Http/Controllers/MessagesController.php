@@ -52,8 +52,8 @@ class MessagesController extends Controller
 
     public function create()
 
-    {
-        $users = User::all();
+    {   $users = User::where('id', '!=', Auth::id())->get();
+
 
         return view('home.emails.new', compact('users'));
     }
@@ -81,17 +81,26 @@ class MessagesController extends Controller
         $newmessage->save();
 
 
-        return redirect('/home/messages/index')->with('flash', 'E-mail Enviado');
+        return redirect('/messages/index')->with('flash', 'E-mail Enviado');
     }
 
     public function readed(Request $id)
     {
         $email = Message::find($id->id);
         $user = Auth::id();
+
+
+        $idto = $email->from;
+        $messages =  DB::select( DB::raw("select id from messages as m where  m.to in ($idto,$user) and m.from in($idto,$user) and m.to = $user "));
+        $ids = array();
+        foreach($messages as $idmsg){
+            $ids[] = $idmsg->id;
+        }
         if($user === $email->to){
 
-            $email->read = true;
-            $email->save();
+            Message::whereIn('id', $ids)->update(['read' => 1]);
+//
+            return $ids;
         }
 
     }

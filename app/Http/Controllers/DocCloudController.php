@@ -8,6 +8,7 @@ use App\Pay;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DocCloudController extends Controller
 {
@@ -43,5 +44,25 @@ class DocCloudController extends Controller
             return view('home.documents.show', compact('document'));
         }
     }
+
+    public function getinfoheader()
+    {
+        $iduser = Auth::id();
+
+        $user = User::find($iduser);
+        $nonread = DB::select( DB::raw("select count(*) as total from messages as m where m.to = $user->id and m.read = 0"));
+
+        $info=array();
+        $photo = $user->profilephoto;
+        $noread = $nonread[0]->total;
+
+        $info[]=$photo;
+        $info[]=$noread;
+
+        return  $info;
+
+    }
+
+
 
 }

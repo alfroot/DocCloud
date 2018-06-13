@@ -59,7 +59,7 @@ Route::group([
 //Public
 Auth::routes();
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-
+Route::get('/home/profile', 'HomeController@settings')->name('settings');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home/{like}/like','HomeController@like')->name('like');
 Route::resource('payment', 'PaymentsController');
@@ -111,3 +111,6 @@ Route::get('/messages/read/{message}/{from}', 'MessagesController@read')->name('
 
 Route::Post('/messages/post/', 'MessagesController@store')->name('newmsgpublic');
 Route::post('/messages/readed', 'MessagesController@readed')->name('readedpublic');
+
+//Navbar infor
+Route::get('/header/info', 'DocCloudController@getinfoheader')->name('getinfoheader');

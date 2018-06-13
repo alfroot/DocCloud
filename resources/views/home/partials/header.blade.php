@@ -50,6 +50,7 @@
             <!-- Search -->
             <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-search"></i></a>
                 <form class="app-search">
+
                     <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
             </li>
             <!-- Comment -->
@@ -152,14 +153,15 @@
             <!-- End Messages -->
             <!-- Profile -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="" alt="user" class="profile-pic" /></a>
+
+                <a  id="profilee" class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                 <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                     <ul class="dropdown-user">
-                        <li><a href="#"><i class="ti-user"></i> Profile</a></li>
+                        <li><a href="{{route('settings')}}"><i class="ti-user"></i> Profile</a></li>
                         <li><a href="#"><i class="ti-wallet"></i> Balance</a></li>
                         <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
                         <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
-                        <li><a  ohref="#" onclick="document.getElementById('formlogout').submit()" ><form id="formlogout" action="{{ route('logout') }}" method="POST">
+                        <li><a  href="#" onclick="document.getElementById('formlogout').submit()" ><form id="formlogout" action="{{ route('logout') }}" method="POST">
                                 {{ csrf_field() }}
 
                             </form><i class="fa fa-power-off"></i> Logout</a></li>

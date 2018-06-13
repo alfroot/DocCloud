@@ -59,7 +59,7 @@
                                     data-placeholder="To:"
                                     style="width: 100%;">
                                 @foreach($users as $user)
-                                    <option value="{{ $user->id }}" >{{ $user->name }} {{ $user->id }}</option>
+                                    <option value="{{ $user->id }}" >{{ $user->name }} {{ $user->lastname }} {{ $user->id }}</option>
                                 @endforeach
                             </select>
                             {!! $errors->first('user', '<span class="help-block">:message</span>') !!}

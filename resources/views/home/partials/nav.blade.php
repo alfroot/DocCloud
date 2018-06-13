@@ -5,16 +5,8 @@
         <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard </span></a>
             <ul aria-expanded="" class="collapse">
                 <li><a href="/home"><i class="fa fa-home"></i> Home </a></li>
-
-            </ul>
-            <ul aria-expanded="" class="collapse">
                 <li><a href="{{route('doc.in')}}"><i class="fa fa-sitemap"></i> Árbol </a></li>
-
-            </ul>
-
-            <ul aria-expanded="" class="collapse">
                 <li><a href="{{route('indexsearch')}}"><i class="fa fa-search"></i> Encuentra </a></li>
-
             </ul>
         </li>
 
@@ -36,10 +28,12 @@
         </li>
 
         <li class="nav-label"></li>
-        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope""></i><span class="hide-menu">E-mail </span></a>
+        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">E-mail </span></a>
             <ul aria-expanded="false" class="collapse" >
 
-                <li><a href="{{ route('supportpublic') }}"><i class="fa fa-folder-o"></i>Ver</a></li>
+                <li><a href="{{ route('supportpublic') }}"><i class="mdi mdi-inbox font-25"></i>&nbsp;Bandeja de entrada</a></li>
+                <li><a href="{{ route('outmsgpublic') }}"><i class="mdi mdi-send font-25"></i>&nbsp;Bandeja de salida</a></li>
+                <li><a href="{{ route('createmsgpublic') }}"><i class="fa  fa-edit"></i>&nbsp;Nuevo</a></li>
             </ul>
         </li>
 

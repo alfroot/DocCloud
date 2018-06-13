@@ -64,7 +64,10 @@ class HomeController extends Controller
     }
 
 
-
+    public function settings()
+    {
+        return redirect('/home#settings');
+    }
 
 
 }

@@ -175,6 +175,46 @@
 
     });
 </script>
+<script>
+    $(document).ready(function(){
+
+        $('body').animate({
+            scrollTop:  290
+        }, 2000);
+    });
+    $(document).ready(function(){
+
+        $.ajax({
+            type: 'GET',
+            url: 'http://doccloud.dev/header/info',
+            dataType: 'json',
+            data: {
+                "_token": "{{ csrf_token() }}",
+
+
+            },
+            beforeSend: function() {
+                //alert('Fetching....');
+            },
+            success: function(data) {
+
+                return data;
+
+            },
+            error: function() {
+                //alert('Error');
+            },
+            complete: function(data) {
+
+                $('#profilee').append("<img alt=\"...\" src=\"/storage/"+ data.responseJSON[0] +"\" class=\"rounded-circle\" style=\"width: 45px; height: 45px;\">");
+
+
+
+
+            }
+        });
+    });
+</script>
 @stack('scripts')
 
 
