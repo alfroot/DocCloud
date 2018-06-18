@@ -25,7 +25,7 @@
         <div class="box-header with-border ">
 
 
-            <h3 class="box-title"><i class="{{$msg->from === Auth::user()->id ? 'fa fa-arrow-right'  : 'fa fa-arrow-left' }}"></i></h3>
+            <h3 class="box-title"><img  src="/storage/{{$msg->user->profilephoto}}" class="img-circle pull-right" style="width: 50px; height: 50px;"><i class="{{$msg->from === Auth::user()->id ? 'fa fa-arrow-right'  : 'fa fa-arrow-left' }}"></i></h3>
 
         </div>
         <!-- /.box-header -->

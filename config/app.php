@@ -165,7 +165,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\FormServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
+       Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 

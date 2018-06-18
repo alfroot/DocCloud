@@ -24,7 +24,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-        @if(count($documents))
+        @if(count($documents) && isset($documents))
         <table id="documents-table" class="table table-hover table-bordered table-striped">
             <thead>
             <tr>
@@ -34,6 +34,7 @@
                 <th>Descripcion</th>
                 <th>Categoria</th>
                 <th>Extensión</th>
+                <th>Modalidad</th>
                 <th>Etiquetas</th>
                 <th>Acciones</th>
             </tr>
@@ -42,9 +43,9 @@
             @foreach($documents as $document)
                 <tr id="filter_global">
                     <td class="global_filter" id="global_filter">{{$document->id}}</td>
-                    <td class="global_filter" id="global_filter">{{$document->user->name}}</td>
-                    <td class="global_filter" id="global_filter">{{$document->name}}</td>
-                    <td class="global_filter" id="global_filter">{{$document->description}}</td>
+                    <td class="global_filter" id="global_filter">{{isset($document->user->name) ? $document->user->name : '' }}</td>
+                    <td class="global_filter" id="global_filter">{{isset($document->name) ? $document->name : '' }}</td>
+                    <td class="global_filter" id="global_filter">{{isset($document->description) ? $document->description : '' }}</td>
                     <td class="global_filter" id="global_filter">{{isset($document->category->name) ? $document->category->name : ''}}</td>
                     @if(isset($document->extension->name))
                         <td class="global_filter" id="global_filter">{{$document->extension->name}}
@@ -53,6 +54,13 @@
                     @else
                         <td class="global_filter" id="global_filter">No hay archivo</td>
                     @endif
+                    <td>
+                        @if($document->premium === 0)
+                            <p>Público</p>
+                         @else
+                        <p>Premium</p>
+                            @endif
+                    </td>
                     <td>@foreach($document->tags as $tag)
                             <span class="badge badge-warning">#{{$tag->name}}</span>
                         @endforeach

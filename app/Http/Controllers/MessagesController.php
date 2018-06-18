@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\DB;
 
 class MessagesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $user = Auth::id();
@@ -99,9 +104,19 @@ class MessagesController extends Controller
         if($user === $email->to){
 
             Message::whereIn('id', $ids)->update(['read' => 1]);
-//
+
             return $ids;
         }
+
+    }
+
+    public function getNews()
+    {
+        $user = Auth::id();
+
+        $mesages = Message::with('user')->where('to','=',$user)->where('read','=','0')->orderBy('created_at','desc')->get();
+
+        return $mesages->toJson();
 
     }
 }

@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\DB;
 
 class MessagesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $user = Auth::id();

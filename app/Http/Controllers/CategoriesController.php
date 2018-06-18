@@ -6,7 +6,13 @@ use App\Category;
 use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
+
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $categories = Category::all()->where('accepted','=','1');
@@ -27,7 +33,7 @@ class CategoriesController extends Controller
         $category->accepted = "0";
         $category->save();
 
-        return redirect('/category')->with('flash', 'La Categoria ha sido guardada');
+        return redirect('/category')->with('flash', 'La categoria ha sido propuesta, podrás ver si ha sido aceptada en el apartado de categorias propuestas.');
 
     }
 

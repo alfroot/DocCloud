@@ -26,10 +26,19 @@ class UsersTableSeeder extends Seeder
         $user->name = 'Alfonso';
         $user->lastname = 'Pozo';
         $user->email = 'alfonso@gmail.com';
-        $user->password = bcrypt('01020304');
+        $user->password = bcrypt('doccloud18');
         $user->profilephoto = 'profiles/41.jpg';
         $user->save();
         $user->assignRole($SuperAdminRole);
+
+        $user = new User;
+        $user->name = 'DocCloud';
+        $user->lastname = 'Co.';
+        $user->email = 'doccloud@gmail.com';
+        $user->password = bcrypt('doccloud18');
+        $user->profilephoto = 'profiles/doc.png';
+        $user->save();
+        $user->assignRole($AdminRole);
 
 
         factory(User::class,4)->create()->each->assignRole($AdminRole);

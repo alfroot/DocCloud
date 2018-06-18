@@ -9,10 +9,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Bootstrap Core CSS -->
+
     <link href="/ElaAdmin/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     @stack('styles')
     <link href="/ElaAdmin/bower_components/drift/dist/drift-basic.css" rel="stylesheet">
@@ -70,7 +72,7 @@
             @endif
 
             @if (session()->has('flash'))
-                <div class="alert alert-dark">
+                <div class="alert alert-primary">
                     {{ session('flash') }}
                 </div>
             @endif
@@ -115,78 +117,18 @@
 <script src="/ElaAdmin/js/lib/morris-chart/morris.js"></script>
 <script src="/ElaAdmin/js/lib/morris-chart/dashboard1-init.js"></script>
 
-
-{{--<script src="/ElaAdmin/js/lib/calendar-2/moment.latest.min.js"></script>
-<!-- scripit init-->
-<script src="/ElaAdmin/js/lib/calendar-2/semantic.ui.min.js"></script>
-<!-- scripit init-->
-<script src="/ElaAdmin/js/lib/calendar-2/prism.min.js"></script>
-<!-- scripit init-->
-<script src="/ElaAdmin/js/lib/calendar-2/pignose.calendar.min.js"></script>
-<!-- scripit init-->
-<script src="/ElaAdmin/js/lib/calendar-2/pignose.init.js"></script>
-
-<script src="/ElaAdmin/js/lib/owl-carousel/owl.carousel.min.js"></script>
-<script src="/ElaAdmin/js/lib/owl-carousel/owl.carousel-init.js"></script>--}}
-<!-- scripit init-->
-
-<!-- Form validation -->
 <script src="/ElaAdmin/js/lib/form-validation/jquery.validate.min.js"></script>
 <script src="/ElaAdmin/js/lib/form-validation/jquery.validate-init.js"></script>
+
+
+
 <script>
-    $(document).ready(function(){
 
-        $("#user").keyup(function(){
-
-            var user = $("#user").val();
-            $.ajax({
-                type: 'POST',
-
-                url: 'http://doccloud.dev/search/users/',
-                dataType: 'json',
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "users": user
-
-                },
-                beforeSend: function() {
-
-                },
-                success: function(data) {
-
-                    return data;
-
-                },
-                error: function() {
-
-                },
-                complete: function(data) {
-                  $("#content").show();
-                  var ul = $("#userresult");
-                      ul.append("<img alt=\"...\" src=\"/storage/"+ data.responseJSON +"\" class=\"media-object\">");
-
-
-
-
-
-
-            });
-        });
-
-    });
-</script>
-<script>
-    $(document).ready(function(){
-
-        $('body').animate({
-            scrollTop:  290
-        }, 2000);
-    });
     $(document).ready(function(){
 
         $.ajax({
             type: 'GET',
-            url: 'http://doccloud.dev/header/info',
+            url: '/header/info',
             dataType: 'json',
             data: {
                 "_token": "{{ csrf_token() }}",
@@ -209,7 +151,101 @@
                 $('#profilee').append("<img alt=\"...\" src=\"/storage/"+ data.responseJSON[0] +"\" class=\"rounded-circle\" style=\"width: 45px; height: 45px;\">");
 
 
+            }
+        });
+    });
+</script>
 
+<script>
+
+    $(document).ready(function(){
+
+        $.ajax({
+            type: 'GET',
+            url: '/header/info/message',
+            dataType: 'json',
+            data: {
+                "_token": "{{ csrf_token() }}",
+
+
+            },
+            beforeSend: function() {
+                //alert('Fetching....');
+            },
+            success: function(data) {
+
+                return data;
+
+            },
+            error: function() {
+                //alert('Error');
+            },
+            complete: function(data) {
+
+               if(data.responseJSON.length != 0 ){
+                   $("#alert").show();
+                }
+
+                $('#viewall').append("<a class=\"nav-link text-center\" href=\"/messages/index\"> <strong>Ir a bandeja de entrada</strong> <i class=\"fa fa-angle-right\"></i> </a>");
+                $('#textinfo').append("Tienes "+data.responseJSON.length + " mensajes sin leer");
+
+                for (var j = 0; j  < data.responseJSON.length ; j++) {
+
+                    $("#messages").append("<a href=\"/messages/read/"+ data.responseJSON[j].id + '/' + data.responseJSON[j].from + "\"> \n" +
+                        "                                    <div class=\"user-img\"> <img src=\"/storage/"+ data.responseJSON[j].user.profilephoto + "\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status online pull-right\"></span> </div>\n" +
+                        "                                    <div class=\"mail-contnet\">\n" +
+                        "                                        <h5>"+ data.responseJSON[j].user.name +' '+ data.responseJSON[j].user.lastname +"</h5> <span class=\"mail-desc\">"+ data.responseJSON[j].subject + "</span> <span class=\"time\">"+ data.responseJSON[j].user.name + "</span>\n" +
+                        "                                    </div>\n" +
+                        "                                </a>");
+                }
+
+            }
+        });
+    });
+
+    $('#clicka').click(function(){
+
+        $.ajax({
+            type: 'GET',
+            url: '/header/info/message',
+            dataType: 'json',
+            data: {
+                "_token": "{{ csrf_token() }}",
+
+
+            },
+            beforeSend: function() {
+                //alert('Fetching....');
+            },
+            success: function(data) {
+
+                return data;
+
+            },
+            error: function() {
+                //alert('Error');
+            },
+            complete: function(data) {
+                $('#viewall').empty();
+                $('#textinfo').empty();
+                $("#messages").empty();
+
+                if(data.responseJSON.length != 0 ){
+                    $("#alert").show();
+                }
+
+                $('#viewall').append("<a class=\"nav-link text-center\" href=\"/messages/index\"> <strong>Ir a bandeja de entrada</strong> <i class=\"fa fa-angle-right\"></i> </a>");
+                $('#textinfo').append("Tienes "+data.responseJSON.length + " mensajes sin leer");
+
+                for (var j = 0; j  < data.responseJSON.length ; j++) {
+
+                    $("#messages").append("<a href=\"/messages/read/"+ data.responseJSON[j].id + '/' + data.responseJSON[j].from + "\"> \n" +
+                        "                                    <div class=\"user-img\"> <img src=\"/storage/"+ data.responseJSON[j].user.profilephoto + "\" alt=\"user\" class=\"img-circle\"> <span class=\"profile-status online pull-right\"></span> </div>\n" +
+                        "                                    <div class=\"mail-contnet\">\n" +
+                        "                                        <h5>"+ data.responseJSON[j].user.name +' '+ data.responseJSON[j].user.lastname +"</h5> <span class=\"mail-desc\">"+ data.responseJSON[j].subject + "</span> <span class=\"time\">"+ data.responseJSON[j].user.name + "</span>\n" +
+                        "                                    </div>\n" +
+                        "                                </a>");
+                }
 
             }
         });

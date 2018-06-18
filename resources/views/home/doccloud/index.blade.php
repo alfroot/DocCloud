@@ -20,12 +20,14 @@
                 <div class="card-body">
 
 
-            @if(count($categories))
-                @foreach($categories as $category)
-
-                @endforeach
+            @if(isset($categories))
+                @include('home.doccloud.partials.tree', [$categories,$cat1])
             @endif
-            @include('home.doccloud.partials.tree', $category)
+
+                @if(isset($all))
+                    @include('home.doccloud.partials.treeall', $all)
+                @endif
+
         </div>
     </div>
         </div>

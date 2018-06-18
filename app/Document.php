@@ -5,21 +5,23 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use App\Traits\DatesTranslator;
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Document extends Model
 {
-    use DatesTranslator;
+    use DatesTranslator ,SoftDeletes;
     protected $fillable = ['name', 'description', 'url', 'category_id', 'user_id', 'extension_id', 'storage', 'premium' ];
     //protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate'];
     protected $hidden = ['storage'];
+    protected $dates = ['deleted_at'];
 
 
     public static function boot()
     {
         parent::boot();
-        static::deleting(function ($documento) {
-
-            $documento->likes->each->delete();
-            Storage::disk('public')->delete($documento->storage);
+        static::deleting(function ($document) {
+            $document->tags()->detach();
+            $document->likes->each->delete();
+            Storage::disk('public')->delete($document->storage);
         });
     }
 

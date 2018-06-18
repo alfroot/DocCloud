@@ -5,7 +5,7 @@
         <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard </span></a>
             <ul aria-expanded="" class="collapse">
                 <li><a href="/home"><i class="fa fa-home"></i> Home </a></li>
-                <li><a href="{{route('doc.in')}}"><i class="fa fa-sitemap"></i> Árbol </a></li>
+                <li><a href="{{route('treepub',0)}}"><i class="fa fa-sitemap"></i> Árbol </a></li>
                 <li><a href="{{route('indexsearch')}}"><i class="fa fa-search"></i> Encuentra </a></li>
             </ul>
         </li>
@@ -35,6 +35,11 @@
                 <li><a href="{{ route('outmsgpublic') }}"><i class="mdi mdi-send font-25"></i>&nbsp;Bandeja de salida</a></li>
                 <li><a href="{{ route('createmsgpublic') }}"><i class="fa  fa-edit"></i>&nbsp;Nuevo</a></li>
             </ul>
+        </li>
+
+        <li class="nav-label"></li>
+        <li> <a class="has-arrow  " href="{{ route('moneyindex') }}" aria-expanded="false"><i class="fa fa-credit-card"></i><span class="hide-menu">Monedero </span></a>
+
         </li>
 
 

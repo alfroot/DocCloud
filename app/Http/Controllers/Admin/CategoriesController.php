@@ -9,6 +9,11 @@ use App\Http\Controllers\Controller;
 class CategoriesController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
 
@@ -32,18 +37,12 @@ class CategoriesController extends Controller
 
             if (!empty($name->name)) {
 
-
                 $category = Category::find($name->id);
-
                 $childs = self::child_categories($category);
-
                 $notpermited = self::array_flatten($childs);
-
                 $permited = Category::whereNotIn('id', $notpermited)->where('id', '<>', $name->id)->where('name','like', '%'.$name->name.'%')->get();
 
            return  $permited->toJson();
-
-
 
             };
 
@@ -196,17 +195,21 @@ class CategoriesController extends Controller
 
     public function destroy($id)
     {
-        if(auth()->user()->hasrole('SuperAdmin','Admin')) {
+        if (auth()->user()->hasrole('SuperAdmin', 'Admin')) {
             $category = Category::find($id);
 
-            if($category->id === 1){
-                return redirect()->back()->with('danger', 'La categoria raiz no es borrable');
+            if ($category->id === 1) {
+                return redirect('/admin/category')->with('danger', 'La categoria raiz no es borrable');
             }
-            $category->delete();
 
-            return redirect()->back()->with('flash', 'Categoria Borrada');
+
+
+
+
+            $category->delete();
+            return redirect('/admin/category')->with('danger', 'Categoria Borrada');
         }else{
-            return redirect('/home')->with('danger', 'No tienes permisos');
+            return redirect('/admin/category')->with('danger', 'No tienes permisos');
         }
 
     }

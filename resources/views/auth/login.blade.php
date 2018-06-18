@@ -16,36 +16,41 @@
     <!-- Custom CSS -->
     <link href="/ElaAdmin/css/helper.css" rel="stylesheet">
     <link href="/ElaAdmin/css/style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="/ElaAdmin/css/background.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
-    <!--[if lt IE 9]>
+
     <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
-<body class="fix-header fix-sidebar">
-<!-- Preloader - style you can find in spinners.css -->
+<body class="bg"><!-- Preloader - style you can find in spinners.css -->
 <div class="preloader">
+
     <svg class="circular" viewBox="25 25 50 50">
         <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
 </div>
+
 <!-- Main wrapper  -->
+<div class="wallpaper-ad"> </div>
 <div id="main-wrapper">
 
-    <div class="unix-login">
-        <div class="container-fluid">
+    <div class="unix-login ">
+        <div class="container h-auto">
+
             <div class="row justify-content-center">
-                <div class="col-lg-4">
-                    <div class="login-content card">
+                <div class="col-lg-6">
+                    <div class="login-conten justify-content-center card">
                         <div class="login-form">
-                           <h4><img class="maegin-auto" style="width: 200px; height: 200px; " src="/images/doccloud.png"></h4>
+                           <h4><img src="/ElaAdmin/images/doccloudblack.png" style="width: 100px; height: 100px;"></h4>
                             <h4>Login</h4>
                             <form method="POST" action="{{ route('login') }}">
 
                              @csrf
                                 <div class="form-group">
-                                    <label>E-mail</label>
+                                    <label></label>
                                     <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus placeholder="Email">
                                 </div>
                                     @if ($errors->has('email'))
@@ -55,7 +60,7 @@
                                 @endif
 
                                 <div class="form-group">
-                                    <label>Contraseña</label>
+                                    <label></label>
                                     <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Password">
                                 </div>
 
@@ -74,7 +79,7 @@
                                     </label>
 
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Sign in</button>
+                                <button type="submit" class="btn btn-dark btn-flat m-b-30 m-t-30">Sign in</button>
                                 <div class="register-link m-t-15 text-center">
                                     <p>¿Aún no tienes cuenta? <a href="{{route('register')}}"> Regístrate</a></p>
                                 </div>
@@ -101,7 +106,3 @@
 <script src="/ElaAdmin/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
 <!--Custom JavaScript -->
 <script src="/ElaAdmin/js/custom.min.js"></script>
-
-</body>
-
-</html>

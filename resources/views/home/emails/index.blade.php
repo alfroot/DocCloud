@@ -1,14 +1,17 @@
 @extends('home.layouts.layout')
 
-@section('header')
-    <h1>
-        Bandeja
-        <small>Entrada</small>
-    </h1>
-    <ol class="breadcrumb">
-        <li><a href=""><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active"><a href=""><i class="fa fa-credit-card"></i>Compras</a></li>
-    </ol>
+
+@section('migaspan')
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-primary">Bandeja de entrada</h3> </div>
+        <div class="col-md-7 align-self-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/messages/index">E-mail</a></li>
+                <li class="breadcrumb-item active">Bandeja de entrada</li>
+            </ol>
+        </div>
+    </div>
 @endsection
 @section('content')
 

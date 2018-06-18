@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function update(Request $request, $id)
     {
 
@@ -40,7 +45,7 @@ class UsersController extends Controller
 
     public function storeProfileUser(User $user)
     {
-        if (auth()->user()->hasrole('SuperAdmin','Admin','User')) {
+
 
             $this->validate(request(), [
                 'user' => 'required|File|mimes:jpg,jpeg,png|max:10000'
@@ -55,9 +60,7 @@ class UsersController extends Controller
             $user->save();
 
 
-        }else  {
-            return redirect('/home')->with('danger', 'No tienes permisos');
-        }
+
 
     }
 }

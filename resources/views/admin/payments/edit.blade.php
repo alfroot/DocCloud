@@ -51,18 +51,7 @@
                 {!! $errors->first('document_id', '<span class="help-block">:message</span>') !!}
             </div>
 
-            <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
-                <label for="">Categoria</label>
-                <select name="category_id" class="form-control select2">
-                    <option value=" ">Ninguno</option>
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}"
-                                {{ old('category_id', $payment->category_id) == $category->id ? 'selected' : '' }}
-                        >{{ $category->name }}</option>
-                    @endforeach
-                </select>
-                {!! $errors->first('category_id', '<span class="help-block">:message</span>') !!}
-            </div>
+
 
             <div class="form-group {{ $errors->has('amount') ? 'has-error' : '' }}">
                 <label for="">Precio</label>

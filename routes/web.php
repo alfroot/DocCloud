@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    $documents = \App\Document::all();
-    return view('pages/home', compact('documents'));
+
+    return view('intro/home');
 });
 
 
@@ -61,19 +61,26 @@ Auth::routes();
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home/profile', 'HomeController@settings')->name('settings');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/cat/{idcat}', 'HomeController@filterCat')->name('filterCat');
+Route::get('/home/tag/{idtag}', 'HomeController@filterTag')->name('filterTag');
+Route::get('/home/user/{iduser}', 'HomeController@filterUser')->name('filterUser');
+Route::get('/home/ext/{idext}', 'HomeController@filterExt')->name('filterExt');
+
+
 Route::post('/home/{like}/like','HomeController@like')->name('like');
-Route::resource('payment', 'PaymentsController');
+//Route::resource('payment', 'PaymentsController');
 
 Route::get('/documents/index', 'DocumentsController@index')->name('docindex');
 Route::resource('documents', 'DocumentsController');
 Route::delete('documents/file/{document}/delete', 'DocumentsController@destroyFile')->name('destroyfile');
 Route::post('documents/{document}/documents', 'DocumentsController@storedoc')->name('documentsavepublic');
-
-route::get('/doccloud', 'PagesController@doccloud')->name('doccloud.pages');
-route::get('/documents', 'PagesController@documents')->name('documents.pages');
+//intro
+route::get('/doccloud', 'PagesController@intro')->name('doccloud.pages');
+//download
 Route::get('documents/download/{document}' , 'DocumentsController@downloadFile')->name('downloadFile');
+//mostrar documento
 Route::get('documents/show/{document}' , 'DocumentsController@show')->name('showFile');
-route::get('/categories', 'PagesController@categories')->name('categories.pages');
+
 
 Route::resource('users', 'UsersController');
 
@@ -85,13 +92,15 @@ Route::post('/category/getcats','CategoriesController@getCategory')->name('getca
 
 //Paypal
 Route::get('/paypalstatus/{document}', 'PayPalController@getPaymentStatus')->name('payment.status');
-Route::get('/shop/paypal/{document}', 'PayPalController@postPayment')->name('paypalproduct');
+Route::get('/paypalstatus2/{category}/{total}', 'PayPalController@getPaymentStatus2')->name('payment.status2');
+Route::get('/shop/paypal/{document}', 'PayPalController@postPaymentDoc')->name('paypalproduct');
+Route::get('/shop/paypal/{category}/{total}/', 'PayPalController@postPaymentCat')->name('paypalcat');
 Route::get('/subscribe/paypal', 'PayPalController@paypalRedirect')->name('paypal.redirect');
 Route::get('/subscribe/paypal/return', 'PayPalController@paypalReturn')->name('paypal.return');
 
 //DocCLoud
-Route::get('/doc/', 'DocCloudController@index')->name('doc.in');
-Route::get('/show/document/{document}','DocCloudController@showOrPay')->name('showdoc');
+Route::get('/tree/{idcat}', 'DocCloudController@tree')->name('treepub');
+Route::get('/show/document/{docu}/{category}/{salecategory}','DocCloudController@showOrPay')->name('showdoc');
 
 //Searcher
 Route::get('/search/index', 'SearchController@index')->name('indexsearch');
@@ -114,3 +123,9 @@ Route::post('/messages/readed', 'MessagesController@readed')->name('readedpublic
 
 //Navbar infor
 Route::get('/header/info', 'DocCloudController@getinfoheader')->name('getinfoheader');
+Route::get('/header/info/message', 'MessagesController@getNews')->name('getNews');
+
+//Money
+Route::get('/money/index', 'MoneyController@index')->name('moneyindex');
+Route::get('/money/totals', 'MoneyController@totals')->name('totalsmoney');
+Route::get('/money/total', 'MoneyController@totalrevenue')->name('totalslife');

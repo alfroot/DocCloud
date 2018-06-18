@@ -50,3 +50,13 @@ $(document).ready(function() {
             url: '/adminlte/bower_components/Spanish.json'
         }
     });
+
+$('#example24').DataTable({
+    dom: 'Bfrtip',
+    buttons: [
+        'copy', 'csv', 'excel', 'pdf', 'print'
+    ],
+    language: {
+        url: '/adminlte/bower_components/Spanish.json'
+    }
+});

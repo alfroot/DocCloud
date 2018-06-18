@@ -131,7 +131,7 @@
                 $.ajax({
                     type: 'POST',
 
-                    url: 'http://doccloud.dev/search/users/',
+                    url: '/search/users/',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",
@@ -168,10 +168,10 @@
                             for (var j = 0; j  < data.responseJSON.length  ; j++) {
                                 ul.append("<div class=\"media\">" +
                                     "                        <div class=\"media-left\">" +
-                                    "                            <a href=\"#\"><img alt=\"...\" src=\"/storage/"+ data.responseJSON[j].profilephoto +"\" class=\"media-object\"></a>" +
+                                    "                            <img alt=\"...\" src=\"/storage/"+ data.responseJSON[j].profilephoto +"\" class=\"media-object\">" +
                                     "                        </div>" +
                                     "                        <div class=\"media-body\">" +
-                                    "                            <h4 class=\"media-heading\">"+ data.responseJSON[j].name +' '+ data.responseJSON[j].lastname +"</h4>" +
+                                    "                            <a href=\"/home/user/"+ data.responseJSON[j].id +"\"><h4 class=\"media-heading\">"+ data.responseJSON[j].name +' '+ data.responseJSON[j].lastname +"</h4></a>" +
                                     "                            " +
                                     "                        </div>" +
                                     "                    </div>")
@@ -194,7 +194,7 @@
                 $.ajax({
                     type: 'POST',
 
-                    url: 'http://doccloud.dev/search/documents/',
+                    url: '/search/documents/',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",
@@ -269,7 +269,7 @@
                 $.ajax({
                     type: 'POST',
 
-                    url: 'http://doccloud.dev/search/categories/',
+                    url: '/search/categories/',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",
@@ -302,11 +302,8 @@
 
                             for (var j = 0; j < data.responseJSON.length; j++) {
                                 ul.append("<div class=\"media\">" +
-                                    "                        <div class=\"media-left\">" +
-                                    "                            <a href=\"#\"></a>" +
-                                    "                        </div>" +
                                     "                        <div class=\"media-body\">" +
-                                    "                            <h4 class=\"media-heading\">" + data.responseJSON[j].name + "</h4>" +
+                                    "                            <a href=\"/tree/" + data.responseJSON[j].id + "\"><h4 class=\"media-heading\">" + data.responseJSON[j].name + "</h4></a>" +
                                     "                            <p>" + data.responseJSON[j].description.substr(0,50) +'..'+ "</p>" +
                                     "                        </div>" +
                                     "                    </div>")

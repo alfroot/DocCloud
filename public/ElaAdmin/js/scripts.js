@@ -35,9 +35,9 @@ $(function() {
 
 
 
-        $(".search-box a, .search-box .app-search .srh-btn").on("click", function() {
-            $(".app-search").slideToggle(200);
-        }),
+        // $(".search-box a, .search-box .app-search .srh-btn").on("click", function() {
+        //     $(".app-search").slideToggle(200);
+        // }),
 
 
 

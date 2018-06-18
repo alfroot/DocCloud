@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Document;
 use App\Extension;
 use App\Tag;
+use App\User;
+use http\Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -15,15 +17,24 @@ class DocumentsController extends Controller
     public function __construct()
     {
         setlocale(LC_TIME, 'Spanish');
+        $this->middleware('auth');
     }
+
 
     public function index()
     {
-        $documents = Document::all()->where('user_id','=', Auth::id());
+        $documents = Document::all()->where('user_id', '=', Auth::id());
+
+        $user = User::find(Auth::id());
+
+        $docpays = array();
+        foreach ($user->payments as $pay){
+            $docpays[] = $pay->document_id;
+        }
+        $documentspay = Document::whereIn('id', $docpays)->get();
 
 
-
-        return view('home.documents.index',compact('documents'));
+        return view('home.documents.index',compact('documents','documentspay'));
     }
 
 
@@ -54,7 +65,7 @@ class DocumentsController extends Controller
 
     public function storedoc(Document $document)
     {
-        if (auth()->user()->hasrole('SuperAdmin','Admin','User')) {
+        if (Auth::id() === $document->user_id){
 
             $this->validate(request(), [
                 'document' => 'required|File|mimes:doc,docx,ods,odt,pdf,ppt,pptx,txt,xls|max:10000'
@@ -75,7 +86,7 @@ class DocumentsController extends Controller
                 'extension_id'   => $extension[0]->id
             ]);
         }else  {
-            return redirect('/home')->with('danger', 'No tienes permisos');
+            return redirect('/home')->with('danger', 'Whopppps¡');
         }
 
     }
@@ -84,12 +95,18 @@ class DocumentsController extends Controller
 
     public function edit(Document $document)
     {
-        return view('home.documents.edit', [
-            'document'=> $document,
-            'tags' => Tag::all()
+
+        if (Auth::id() === $document->user_id){
+
+            return view('home.documents.edit', [
+                'document' => $document,
+                'tags' => Tag::all()
 
 
-        ]);
+            ]);
+        }else{
+            return redirect('/home')->with('danger', 'Whopppps¡');
+        }
 
     }
 
@@ -161,10 +178,17 @@ class DocumentsController extends Controller
 
     public function destroy($id)
     {
-        $document = Document::find($id);
-        $document->delete();
 
-        return redirect()->route('documents.index')->with('flash', 'Documento Borrado');
+        $document = Document::find($id);
+        if($document->premium === 1){
+
+            return redirect()->route('documents.index')->with('danger', 'No puedes borrar un documento monetizado');
+        }else{
+
+            $document->delete();
+            return redirect()->route('documents.index')->with('danger', 'Documento borrado');
+        }
+
     }
 
 

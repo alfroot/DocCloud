@@ -21,7 +21,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-title">
-                    <h4>Mis Documentos</h4>
+                    <h4>Compartidos</h4>
                 </div>
                 <div class="card-body">
 
@@ -40,6 +40,7 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @if(isset($documents))
                     @foreach($documents as $document)
                     <tr>
 
@@ -57,13 +58,60 @@
 
                     </tr>
                     @endforeach
-
-
+                    @endif
                     </tbody>
                         </table>
 
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-title">
+                            <h4>Comprados</h4>
+                        </div>
+                        <div class="card-body">
+
+                            <table id="example24" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+                                <tr>
+
+                                    <th>Titulo</th>
+                                    <th>Descripcion</th>
+                                    <th>Categoria</th>
+                                    <th>Etiquetas</th>
+                                    <th>Tipo</th>
+                                    <th>Fecha de creacion</th>
+                                    <th>Descargar</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @if(isset($documentspay))
+                                    @foreach($documentspay as $document)
+                                        <tr>
+
+                                            <td><a href="{{route('showFile', $document->id)}}">{{$document->name}}</a></td>
+                                            <td>{{substr($document->description,0,60)}}@if(strlen($document->description) > 100)...@endif</td>
+                                            <td>{{isset($document->category->name) ? $document->category->name : ''}}</td>
+                                            <td>@foreach($document->tags as $tag)
+                                                    <span class="badge badge-dark">#{{$tag->name}}</span>
+                                                @endforeach</td>
+                                            <td><span class="badge badge-warning">{{isset($document->extension->name) ? $document->extension->name : ''}}</span></td>
+
+                                            <td>{{Jenssegers\Date\Date::make($document->created_at)->format(' d\ F Y H:i')}}</td>
+
+                                            <td class="align-content-md-around"><a class="" href="{{route('downloadFile', $document)}}"><img style="height: 37px; width: 37px; margin: 15%; margin-right: 33%;" src="/ElaAdmin/icons/down.ico"></a></td>
+
+                                        </tr>
+                                    @endforeach
+                                @endif
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
 @endsection
 
 @push('scripts')
@@ -77,6 +125,8 @@
     <script src="/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
     <script src="/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
     <script src="/ElaAdmin/js/lib/datatables/datatables-init.js"></script>
+
+
 
 @endpush
 

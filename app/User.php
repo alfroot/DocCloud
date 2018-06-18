@@ -7,28 +7,47 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Traits\DatesTranslator;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class User extends Authenticatable
 {
-    use Notifiable, HasRoles, DatesTranslator;
+    use Notifiable, HasRoles, DatesTranslator, SoftDeletes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+
     protected $fillable = [
-        'name', 'email', 'password', 'profilephoto',
+        'name','lastname', 'email', 'password', 'profilephoto',
     ];
-    protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate'];
+    protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate','deleted_at'];
 
 
+    public static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($user) {
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+
+            $mimessages = Message::where('from','=',$user->id)->get();
+            $mimessages1 = Message::where('to','=',$user->id)->get();
+            $mimessages->each->delete();
+            $mimessages1->each->delete();
+
+            $user->categories->each->update([
+                'user_id' => '2'
+            ]);
+
+            $conservatepremium = Document::where('user_id','=',$user->id)->where('premium','=','1')->get();
+            $conservatepremium->each->update([
+                'user_id' => '2'
+            ]);
+
+            $deletepublic = Document::where('user_id','=',$user->id)->where('premium','=','0')->get();
+            $deletepublic->each->delete();
+
+        });
+    }
+
+
     protected $hidden = [
         'password', 'remember_token',
     ];
@@ -60,6 +79,8 @@ class User extends Authenticatable
 
     public function messages()
     {
-        return $this->hasMany(Message::class);
+        return $this->hasMany(Message::class,'from');
     }
+
+
 }

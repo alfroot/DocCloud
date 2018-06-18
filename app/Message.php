@@ -4,13 +4,16 @@ namespace App;
 
 use App\Traits\DatesTranslator;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Message extends Model
 {
-    use DatesTranslator;
+    use DatesTranslator,SoftDeletes;
     protected $fillable = ['id', 'from', 'to', 'content', 'read', 'extension_id', 'storage', 'premium' ];
-    protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate'];
+    protected $dates = ['created_at', 'updated_at', 'disabled_at','mydate','deleted_at'];
     protected $hidden = ['storage'];
+
+
 
     public function user()
     {
@@ -22,8 +25,5 @@ class Message extends Model
         return $this->belongsTo(User::class,'to','id');
     }
 
-    public function response()
-    {
-        return $this->belongsTo(Message::class, 'response');
-    }
+
 }

@@ -14,6 +14,7 @@ class CreateMessagesTable extends Migration
     public function up()
     {
         Schema::create('messages', function (Blueprint $table) {
+            $table->softDeletes();
             $table->increments('id');
             $table->unsignedInteger('from');
             $table->foreign('from')->references('id')->on('users');
@@ -22,8 +23,6 @@ class CreateMessagesTable extends Migration
             $table->text('body');
             $table->text('subject');
             $table->boolean('read');
-            $table->unsignedInteger('response')->nullable();
-            $table->foreign('response')->references('id')->on('messages')->onDelete('cascade');
             $table->timestamps();
         });
     }

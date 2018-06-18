@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class ChartsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         return view('admin.charts.index');
@@ -15,7 +20,7 @@ class ChartsController extends Controller
 
     public function chartpays()
     {
-        $purchasesmonth =  DB::select( DB::raw("select round(SUM(amount),2) as total, MONTHNAME(created_at) AS mes ,YEAR(created_at) AS year FROM pays group by MONTH(created_at) ORDER BY(created_at)"));
+        $purchasesmonth =  DB::select( DB::raw("select count(id) as total, MONTHNAME(created_at) AS mes ,YEAR(created_at) AS year FROM pays group by MONTHNAME(created_at),YEAR(created_at) ORDER BY(created_at)"));
 
 
         return $purchasesmonth;
@@ -39,7 +44,7 @@ documents d on c.id = d.category_id group by c.name"));
 
     public function chartUsers()
     {
-        $users =  DB::select( DB::raw("select count(id) as total, MONTHNAME(created_at) AS mes ,YEAR(created_at) AS year FROM users group by MONTH(created_at) ORDER BY(created_at)"));
+        $users =  DB::select( DB::raw("select count(id) as total, MONTHNAME(created_at) AS mes ,YEAR(created_at) AS year FROM users group by MONTH(created_at),YEAR(created_at) ORDER BY(created_at)"));
         return $users;
     }
 }

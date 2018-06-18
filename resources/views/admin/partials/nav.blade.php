@@ -1,7 +1,7 @@
 <ul class="sidebar-menu" data-widget="tree">
     <li class="header">HEADER</li>
     <!-- Optionally, you can add icons to the links -->
-    <li {{ request()->is('dashboard') ? 'class=active' : '' }}>
+    <li {{ request()->is('admin') ? 'class=active' : '' }}>
         <a href="{{route('dashboard')}}">
             <i class="fa fa-dashboard"></i> <span>Inicio</span>
         </a>

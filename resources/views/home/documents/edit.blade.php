@@ -252,7 +252,7 @@
                 $.ajax({
                     type: 'POST',
 
-                    url: 'http://doccloud.dev/category/getcats/',
+                    url: '/category/getcats/',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",

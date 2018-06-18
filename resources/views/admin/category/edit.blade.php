@@ -98,7 +98,7 @@
             $.ajax({
                 type: 'POST',
 
-                url: 'http://doccloud.dev/admin/category/getcatsper/',
+                url: '/admin/category/getcatsper/',
                 dataType: 'json',
                 data: {
                     "_token": "{{ csrf_token() }}",

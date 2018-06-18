@@ -55,7 +55,7 @@
                             <a href="{{route('admin.users.edit', $user->id)}}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
 
                                 {{ csrf_field() }} {{ method_field('DELETE') }}
-                                <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar al usuario?"
+                                <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar al usuario?, esto eliminará también los mensajes asociados a este usuario, sus documentos siempre se conservarán."
                                         data-confirm-button="Eliminar"
                                         data-cancel-button="Whoops no">
                                     <i class="fa fa-times"></i>

@@ -52,7 +52,7 @@
                         <th>ID</th>
                         <th>Usuario</th>
                         <th>Documento</th>
-                        <th>Categoria</th>
+
                         <th>Precio</th>
                         <th>Acciones</th>
                     </tr>
@@ -65,13 +65,11 @@
                             <td class="global_filter" id="global_filter">{{$payment->id}}</td>
                             <td class="global_filter" id="global_filter">{{$payment->user->name}}</td>
                             <td class="global_filter" id="global_filter">{{ is_null($payment->document_id)? '-': $payment->document->name}}</td>
-                            <td class="global_filter" id="global_filter">{{ is_null($payment->category_id)? '-': $payment->category->name}}</td>
+
                             <td class="global_filter" id="global_filter">{{$payment->amount}}</td>
                             <td>
                                 {!! Form::open(['action' => ['Admin\PaymentsController@destroy',$payment->id], 'method' => 'delete', 'class' => 'align-content-center']) !!}
-                                <a href="{{ route('admin.payment.show', $payment->id) }}"  class="btn btn-xs btn-default">
-                                    <i class="fa fa-eye"></i>
-                                </a>
+
                                 <a href="{{ route('admin.payment.edit', $payment->id) }}" class="btn btn-xs btn-info">
                                     <i class="fa fa-pencil"></i>
                                 </a>

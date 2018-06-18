@@ -3,19 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
 {
-    protected $fillable =['name', 'description', 'category_parent_id', 'id'];
+    use  SoftDeletes;
+    protected $fillable =['name', 'description', 'category_parent_id', 'id','user_id'];
+    protected $dates = ['deleted_at'];
 
     public function documents()
     {
         return $this->hasMany(Document::class);
-    }
-
-    public function payments()
-    {
-        return $this->hasMany(Pay::class);
     }
 
 
@@ -39,8 +37,19 @@ class Category extends Model
         parent::boot();
         static::deleting(function ($category) {
 
-            $category->documents->each->delete();
+            //Las categorias hijas y los documentos de esta se iran a la categoria descategorizadas
+            $category->documents->each->update([
+                'category_id' => '2'
+            ]);
+
+            $category->children->each->update([
+                'category_parent_id' => '2'
+            ]);
+
+
+
         });
+
     }
 
 

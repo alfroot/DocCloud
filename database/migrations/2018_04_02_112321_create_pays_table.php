@@ -14,13 +14,12 @@ class CreatePaysTable extends Migration
     public function up()
     {
         Schema::create('pays', function (Blueprint $table) {
+            $table->softDeletes();
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedInteger('document_id')->nullable();
             $table->foreign('document_id')->references('id')->on('documents');
-            $table->unsignedInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
             $table->float('amount');
             $table->timestamps();
         });

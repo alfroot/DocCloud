@@ -22,7 +22,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'name' => $faker->firstName,
         'lastname' => $faker->lastName,
         'email' => $faker->unique()->safeEmail,
-        'password' => bcrypt('123456'), // secret
+        'password' => bcrypt('doccloud18'), // secret
         'profilephoto' => 'profiles/'.$faker->unique()->numberBetween(1,189).'.jpg',
         'created_at' => $date,
         'updated_at' => $date,

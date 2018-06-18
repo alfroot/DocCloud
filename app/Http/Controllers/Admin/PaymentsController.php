@@ -15,6 +15,11 @@ use Telegram\Bot\Laravel\Facades\Telegram;
 
 class PaymentsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 
 
     public function index()
@@ -74,7 +79,8 @@ class PaymentsController extends Controller
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
             $this->validate($request, [
                 'user_id' => 'required',
-                'amount' => 'numeric'
+                'amount' => 'numeric|required',
+                'document_id' => 'required'
             ]);
 
             $payment = new Pay($request->all());
@@ -106,9 +112,9 @@ class PaymentsController extends Controller
         if (auth()->user()->hasrole('SuperAdmin','Admin')) {
             $payment = Pay::find($id);
             $users = User::all();
-            $categories = Category::all();
+
             $documents = Document::all();
-            return view('admin.payments.edit', compact('payment', 'documents', 'users', 'categories'));
+            return view('admin.payments.edit', compact('payment', 'documents', 'users'));
         }else{
             return redirect('/home')->with('danger', 'No tienes permisos');
         }
@@ -121,12 +127,13 @@ class PaymentsController extends Controller
             $payment = Pay::find($id);
             $this->validate($request, [
                 'user_id' => 'required',
-                'amount' => 'numeric'
+                'amount' => 'numeric|required',
+                'document_id' => 'required'
             ]);
 
             $payment->user_id = $request->user_id;
             $payment->document_id = $request->document_id;
-            $payment->category_id = $request->category_id;
+
             $payment->amount = $request->amount;
             $payment->save();
 

@@ -89,7 +89,7 @@
         </div>
         <div class="box-body">
             <div class="chart">
-                <canvas id="mycanvas1" style="height: 250px; width: 789px;" width="789" height="250"></canvas>
+                <canvas id="mycanvas1" style="height: 800px; width: 600px;"></canvas>
             </div>
         </div>
         <!-- /.box-body -->
@@ -200,8 +200,9 @@
                     var score = [];
 
 
-                    Chart.defaults.global.legend.display = true;
+                    Chart.defaults.global.legend.display = false;
                     Chart.defaults.global.legend.position = 'left';
+
 
                     for(var i in data) {
                         player.push(data[i].name);
@@ -227,7 +228,7 @@
                     var ctx = $("#mycanvas1");
 
                     var barGraph = new Chart(ctx, {
-                        type: 'doughnut',
+                        type: 'polarArea',
                         data: chartdata
                     });
                 },
@@ -287,50 +288,6 @@
 
 
 
-    <script>
-        $(".confirm").confirm();
-    </script>
-    <script>
-        function filterGlobal () {
 
-            $('#payments-table').DataTable().search(
-                $('#global_filter').val(),
-                $('#global_regex').prop('checked'),
-                $('#global_smart').prop('checked')
-            ).draw();
-        }
-
-        function filterColumn ( i ) {
-            $('#payments-table').DataTable().column( i ).search(
-                $('#col'+i+'_filter').val(),
-                $('#col'+i+'_regex').prop('checked'),
-                $('#col'+i+'_smart').prop('checked')
-            ).draw();
-        }
-
-        $(document).ready(function() {
-            $('#payments-table').DataTable({
-                'paging'      : true,
-                'lengthChange': false,
-                'searching'   : true,
-                'ordering'    : true,
-                'info'        : true,
-                'autoWidth'   : false,
-
-                language: {
-                    url: '/adminlte/bower_components/Spanish.json'
-                }
-            });
-            $('#payments-table').DataTable();
-
-            $('input.global_filter').on( 'keyup click', function () {
-                filterGlobal();
-            } );
-
-            $('input.column_filter').on( 'keyup click', function () {
-                filterColumn( $(this).parents('tr').attr('data-column') );
-            } );
-        } );
-    </script>
 
 @endpush

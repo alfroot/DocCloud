@@ -14,6 +14,11 @@ use Telegram\Bot\Laravel\Facades\Telegram;
 
 class DocumentsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 
     public function index()
     {
@@ -158,15 +163,16 @@ class DocumentsController extends Controller
 
     public function destroy($id)
     {
-        if (auth()->user()->hasrole('SuperAdmin','Admin')) {
 
-            $document = Document::find($id);
+        $document = Document::find($id);
+        if($document->premium === 1){
+
+            return redirect()->route('admin.documents.index')->with('danger', 'No puedes borrar un documento monetizado');
+        }else{
+
             $document->delete();
-
-            return redirect()->route('admin.documents.index')->with('flash', 'Documento Borrado');
-
-        }else  {
-            return redirect('/home')->with('danger', 'No tienes permisos');
+            return redirect()->route('admin.documents.index')->with('danger', 'Documento borrado');
         }
+
     }
 }

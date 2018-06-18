@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Document;
 use App\Pay;
 use Illuminate\Contracts\Session\Session;
@@ -117,7 +118,7 @@ class PaypalController extends Controller
 
     }
 
-    public function postPayment(Document $document)
+    public function postPaymentDoc(Document $document)
     {
         $payer = new Payer();
         $payer->setPaymentMethod('paypal');
@@ -183,47 +184,104 @@ class PaypalController extends Controller
         return \Redirect::route('cart-show')
             ->with('error', 'Ups! Error desconocido.');
     }
+    public function postPaymentCat($categori, $total)
+    {
+        $payer = new Payer();
+        $payer->setPaymentMethod('paypal');
+        $items = array();
+        $subtotal = 0;
+        $currency = 'EUR';
+        $category = Category::find($categori);
+
+
+        $item = new Item();
+        $item->setName($category->name)
+            ->setCurrency($currency)
+            ->setDescription($category->description)
+            ->setQuantity(1)
+            ->setPrice($total);
+        $items[] = $item;
+
+
+        $item_list = new ItemList();
+        $item_list->setItems($items);
+        $details = new Details();
+        $details->setSubtotal($total);
+
+        $amount = new Amount();
+        $amount->setCurrency($currency)
+            ->setTotal($total)
+            ->setDetails($details);
+        $transaction = new Transaction();
+        $transaction->setAmount($amount)
+            ->setItemList($item_list)
+            ->setDescription('Compra de los derechos sobre los documentos de una categoría');
+        $redirect_urls = new RedirectUrls();
+        $redirect_urls->setReturnUrl(\URL::route('payment.status2',[$category,$total]))
+            ->setCancelUrl(\URL::route('payment.status2',[$category,$total]));
+        $payment = new Payment();
+        $payment->setIntent('Sale')
+            ->setPayer($payer)
+            ->setRedirectUrls($redirect_urls)
+            ->setTransactions(array($transaction));
+        try {
+            $payment->create($this->apiContext);
+        } catch (PayPal\Exception\PPConnectionException $ex) {
+            if (Config::get('app.debug')) {
+                echo "Exception: " . $ex->getMessage() . PHP_EOL;
+                $err_data = json_decode($ex->getData(), true);
+                exit;
+            } else {
+                die('Ups! Algo salió mal');
+            }
+        }
+        foreach($payment->getLinks() as $link) {
+            if($link->getRel() == 'approval_url') {
+                $redirect_url = $link->getHref();
+                break;
+            }
+        }
+        // add payment ID to session
+        \Session::put('paypal_payment_id', $payment->getId());
+        if(isset($redirect_url)) {
+            // redirect to paypal
+            return \Redirect::away($redirect_url);
+        }
+        return \Redirect::route('cart-show')
+            ->with('error', 'Ups! Error desconocido.');
+    }
 
 
 
     public function getPaymentStatus(Document $document)
     {
-        // Get the payment ID before session clear
+
         $payment_id = \Session::get('paypal_payment_id');
-        // clear the session payment ID
+
         \Session::forget('paypal_payment_id');
         $payerId = Input::get('PayerID');
         $token = Input::get('token');
-        //if (empty(\Input::get('PayerID')) || empty(\Input::get('token'))) {
+
         if (empty($payerId) || empty($token)) {
             return \Redirect::route('home')
                 ->with('flash', 'Hubo un problema al intentar pagar con Paypal');
         }
 
 
-
         $payment = Payment::get($payment_id, $this->apiContext);
-        // PaymentExecution object includes information necessary
-        // to execute a PayPal account payment.
-        // The payer_id is added to the request query parameters
-        // when the user is redirected from paypal back to your site
+
         $execution = new PaymentExecution();
         $execution->setPayerId(Input::get('PayerID'));
-        //Execute the payment
+
         $result = $payment->execute($execution, $this->apiContext);
 
         if ($result->getState() == 'approved') { // payment made
-            // Registrar el pedido --- ok
-            // Registrar el Detalle del pedido  --- ok
-            // Eliminar carrito
-            // Enviar correo a user
-            // Enviar correo a admin
-            // Redireccionar
+
             $this->saveOrderDoc($document);
             $documentele = Document::find($document->id);
             $balance =  DB::select( DB::raw("select round((SUM(amount)/100),2) * 30 as doc, round((SUM(amount)/100),2) * 70 as users , round(SUM(amount),2) as total from pays"));
 
-            $text = 'El usuario <b>'.auth()->user()->name .' '. auth()->user()->lastname .'</b> ha comprado el documento '.$documentele->name.'(id:'.$documentele->id.') por un total: '.$document->price. '€ '
+            $text = 'El usuario <b>'.auth()->user()->name .' '. auth()->user()->lastname .'</b> ha comprado el documento <b>'.$documentele->name.'</b> por un total: '.$document->price. '€ '
                 . '<b>'.PHP_EOL.'Saldo Total : '.$balance[0]->total.' € </b>'.PHP_EOL.'<b>Saldo de los Usuarios : </b>'.$balance[0]->users.' €'.PHP_EOL.'<b>Saldo de DocCloud : </b>'.$balance[0]->doc.' €';
 
             Telegram::sendMessage([
@@ -231,7 +289,59 @@ class PaypalController extends Controller
                 'parse_mode' => 'HTML',
                 'text' => $text
             ]);
-//            \Session::forget('cart');
+
+            return \Redirect::route('home')
+                ->with('flash', 'Compra realizada de forma correcta');
+        }
+        return \Redirect::route('home')
+            ->with('flash', 'La compra fue cancelada');
+    }
+
+    public function getPaymentStatus2(Category $category,$total)
+    {
+
+
+        $payment_id = \Session::get('paypal_payment_id');
+
+        \Session::forget('paypal_payment_id');
+        $payerId = Input::get('PayerID');
+        $token = Input::get('token');
+
+        if (empty($payerId) || empty($token)) {
+            return \Redirect::route('home')
+                ->with('flash', 'Hubo un problema al intentar pagar con Paypal');
+        }
+
+
+        $payment = Payment::get($payment_id, $this->apiContext);
+
+        $execution = new PaymentExecution();
+        $execution->setPayerId(Input::get('PayerID'));
+
+        $result = $payment->execute($execution, $this->apiContext);
+
+        if ($result->getState() == 'approved') { // payment made
+
+            $docus = session()->get('documentstopay');
+
+            $price = round($total / count($docus),2);
+            foreach ($docus as $doc){
+                $this->saveOrderDocCat($doc,$price);
+            }
+
+
+            $documentele = Category::find($category->id);
+            $balance =  DB::select( DB::raw("select round((SUM(amount)/100),2) * 30 as doc, round((SUM(amount)/100),2) * 70 as users , round(SUM(amount),2) as total from pays"));
+
+            $text = 'El usuario <b>'.auth()->user()->name .' '. auth()->user()->lastname .'</b> ha comprado la categoria <b>'.$documentele->name.'</b> con acceso a '.count($docus).' documentos por un total: '.$total. '€ '
+                . '<b>'.PHP_EOL.'Saldo Total : '.$balance[0]->total.' € </b>'.PHP_EOL.'<b>Saldo de los Usuarios : </b>'.$balance[0]->users.' €'.PHP_EOL.'<b>Saldo de DocCloud : </b>'.$balance[0]->doc.' €';
+
+            Telegram::sendMessage([
+                'chat_id' => env('TELEGRAM_CHANNEL_ID', '-1001208921290'),
+                'parse_mode' => 'HTML',
+                'text' => $text
+            ]);
+
             return \Redirect::route('home')
                 ->with('flash', 'Compra realizada de forma correcta');
         }
@@ -245,6 +355,15 @@ class PaypalController extends Controller
         $payment->user_id = auth()->user()->id;
         $payment->document_id = $document->id;
         $payment->amount = $document->price;
+        $payment->save();
+    }
+
+    public function saveOrderDocCat($document,$price)
+    {
+        $payment = new Pay();
+        $payment->user_id = auth()->user()->id;
+        $payment->document_id = $document->id;
+        $payment->amount = $price;
         $payment->save();
     }
 
