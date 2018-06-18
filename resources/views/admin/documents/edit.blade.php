@@ -148,7 +148,7 @@
                     <div class="form-goup col-md-4">
                         <div class="dropzone"></div>
                     </div>
-                <input type="text" name="price">
+                
                 @endif
             </div>
 

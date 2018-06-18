@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Document;
 use App\Extension;
+use App\Pay;
 use App\Tag;
 use App\User;
 use http\Exception;
@@ -114,13 +115,17 @@ class DocumentsController extends Controller
     {
         $actualuser = Auth::id();
 
+        $payOk = Pay::where('document_id','=',$document->id)->where('user_id','=',$actualuser)->get();
+      if(!isset($document->storage)){
+          return redirect('/documents/index')->with('flash', 'Aun no hay archivo subido');
+      }
 
-        if( $actualuser === $document->user_id) {
+        if( $actualuser == $document->user_id || count($payOk) > 0 || $document->premium == 0) {
 
             return response()->download(public_path('/storage/'.$document->storage));
 
         }else{
-            return back('/home')->with('danger', 'No tienes permisos');
+            return redirect('/home')->with('danger', 'No tienes permisos');
         }
     }
 
@@ -182,7 +187,7 @@ class DocumentsController extends Controller
         $document = Document::find($id);
         if($document->premium === 1){
 
-            return redirect()->route('documents.index')->with('danger', 'No puedes borrar un documento monetizado');
+            return redirect()->route('documents.index')->with('flash', 'No puedes borrar un documento monetizado');
         }else{
 
             $document->delete();

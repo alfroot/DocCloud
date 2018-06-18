@@ -143,7 +143,7 @@
                var id = $("#msgid").val();
                 $.ajax({
                     type: 'POST',
-                    url: 'http://doccloud.dev/admin/messages/readed/',
+                    url: '/admin/messages/readed/',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",

@@ -13,6 +13,6 @@
 @section('content')
 
 
-        <iframe src = "/ViewerJS/?title={{$document->name}}#../storage/{{$document->storage}}" width='1000' height='800' allowfullscreen webkitallowfullscreen style="text-align:center;"></iframe>
+        <iframe src = "/ViewerJS/?title={{$document->name}}#../storage/{{$document->storage}}" width='1000' height='800'  webkitallowfullscreen style="text-align:center;"></iframe>
         {{--<iframe src="http://docs.google.com/gview?url=http://www.alfonsopozo.es/f1hVwAsaG49QWITKKa7mPVwglFEq67UBjiDzCXb9.ppt&embedded=true" style="width:1000px; height:800px;" frameborder="0"></iframe>--}}
 @endsection

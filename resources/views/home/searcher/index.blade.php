@@ -242,11 +242,11 @@
 
                                 ul.append("<div class=\"media\">" +
                                     "                        <div class=\"media-left\">" +
-                                    "                            <a href=\"/show/document/"+data.responseJSON[j].id+"\"><img src=\"/ElaAdmin/images/typesdoc/"+data.responseJSON[j].extension.name+".png\" class=\"media-object\"></a>" +
+                                    "                            <a href=\"/show/document/"+data.responseJSON[j].id+"/"+data.responseJSON[j].category_id+"/0\"><img src=\"/ElaAdmin/images/typesdoc/"+data.responseJSON[j].extension.name+".png\" class=\"media-object\"></a>" +
                                     "                        </div>" +
 
                                     "                        <div class=\"media-body\">" +
-                                    "                            <a href=\"/show/document/"+data.responseJSON[j].id+"\"><h4 class=\"media-heading\">" + data.responseJSON[j].name + ""+imagepay+"</h4></a>" +
+                                    "                            <a href=\"/show/document/"+data.responseJSON[j].id+"/"+data.responseJSON[j].category_id+"/0\">" + data.responseJSON[j].name + ""+imagepay+"</h4></a>" +
                                     "                            <p>" + data.responseJSON[j].description.substr(0,50) +'..'+ "</p>" +
                                     "                            <p class=\"\">" + m+'/' + y + "</p>" +
                                     "                        </div>" +

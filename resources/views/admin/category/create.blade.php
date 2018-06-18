@@ -39,7 +39,7 @@
 
             <label for="">Buscador de categoría padre</label>
             <input placeholder="Introduce la categoria" id="dad" class="form-group">
-
+            {!! $errors->first('category_parent_id', '<span class="help-block">:message</span>') !!}
 
 
             <div id="content" class="form-group col-md-12" style="display: none">

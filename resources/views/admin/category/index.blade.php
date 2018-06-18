@@ -45,7 +45,7 @@
                                     <a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-xs btn-info">
                                         <i class="fa fa-pencil"></i>
                                     </a>
-                                    <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar la categoria? Esto eliminará también sus documentos asociados"
+                                    <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar la categoria? Sus documentos asociados y sus categorias hijas pasarán a la categoria DocCloud Descategorizados"
                                             data-confirm-button="Eliminar"
                                             data-cancel-button="Whoops no">
                                         <i class="fa fa-times"></i>
@@ -100,7 +100,7 @@
                                 <a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-xs btn-info">
                                     <i class="fa fa-pencil"></i>
                                 </a>
-                            <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar la categoria? Esto eliminará también sus categorias descendientes y los documentos asociados a todas"
+                            <button class="confirm btn btn-xs btn-danger" type="submit" data-text="¿Desa eliminar la categoria? Sus documentos asociados y sus categorias hijas pasarán a la categoria DocCloud Descategorizados""
                                     data-confirm-button="Eliminar"
                                     data-cancel-button="Whoops no">
                                 <i class="fa fa-times"></i>

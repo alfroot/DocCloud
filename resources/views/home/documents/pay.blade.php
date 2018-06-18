@@ -169,7 +169,7 @@
 
                                            <div id="project">
                                                <h2>Descripción de la compra</h2>
-                                               <p>Compra de acceso permanente a los documentos de la categoria <b>{{$categori->name}}</b>, al comprar esta categoría obtendrá los derechos de descarga y uso de por vida de los documentos de esta. </p>
+                                               <p>Compra de acceso permanente a los documentos de la categoria <b>{{$categori->name}}</b>, al comprar esta categoría obtendrá los derechos de descarga y uso de por vida de los documentos actualmente dentro de esta. </p>
                                            </div>
 
                                        </div>

@@ -20,7 +20,7 @@ class ChartsController extends Controller
 
     public function chartpays()
     {
-        $purchasesmonth =  DB::select( DB::raw("select count(id) as total, MONTHNAME(created_at) AS mes ,YEAR(created_at) AS year FROM pays group by MONTHNAME(created_at),YEAR(created_at) ORDER BY(created_at)"));
+        $purchasesmonth =  DB::select( DB::raw("select round(SUM(amount),2) as total, MONTHNAME(created_at) AS mes ,YEAR(created_at) AS year FROM pays group by MONTHNAME(created_at),YEAR(created_at) ORDER BY(created_at)"));
 
 
         return $purchasesmonth;

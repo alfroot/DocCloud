@@ -111,9 +111,9 @@
                     @endif
                     </tbody>
                 </table>
-
+            @if(isset($payments))
             <div class="aling-center">{{$payments->render()}}</div>
-
+            @endif
 
         </div>
     </div>

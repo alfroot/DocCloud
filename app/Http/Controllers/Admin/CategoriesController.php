@@ -88,6 +88,7 @@ class CategoriesController extends Controller
             $this->validate($request, [
                 'name' => 'required|min:3',
                 'description' => 'required |min:3',
+                'category_parent_id' => 'required'
             ]);
 
             $category = new Category($request->all());

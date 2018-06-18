@@ -49,7 +49,7 @@ class PaymentsController extends Controller
                 $users =  DB::select( DB::raw("select id from users where name like '%$request->search%'"));
                 $in = array_column($users, 'id');
 
-                $paymentsearch = Pay::whereIn('user_id',$in)->limit(2000)->get();
+                $paymentsearch = Pay::whereIn('user_id',$in)->limit(2000)->paginate(10);
 
 
             }

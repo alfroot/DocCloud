@@ -60,7 +60,7 @@
 
 
             $.ajax({
-                url: "http://doccloud.dev/money/totals/",
+                url: "/money/totals/",
                 method: "GET",
                 success: function(data) {
 
@@ -111,7 +111,7 @@
 
 
             $.ajax({
-                url: "http://doccloud.dev/money/total/",
+                url: "/money/total/",
                 method: "GET",
                 success: function(data) {
 

@@ -15,7 +15,19 @@
 @endsection
 
 @section('content')
-
+    <div class="col-md-2">
+        <div class="card p-30">
+            <div class="media">
+                <div class="media-left meida media-middle">
+                    <span><a href="/documents/download/{{$document->id}}"><i class="fa fa-download f-s-40 color-primary"></i></a></span>
+                </div>
+                <div class="media-body media-text-right">
+                    <h2 id="tot"></h2>
+                    <p class="m-b-0">Descargar</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-12">
             <div class="card">

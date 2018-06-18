@@ -125,7 +125,7 @@
         $(document).ready(function(){
 
             $.ajax({
-                url: "http://doccloud.dev/admin/charts/totals/",
+                url: "/admin/charts/totals/",
                 method: "GET",
                 success: function(data) {
 
@@ -145,7 +145,7 @@
             });
 
             $.ajax({
-                url: "http://doccloud.dev/admin/charts/pays/",
+                url: "/admin/charts/pays/",
                 method: "GET",
                 success: function(data) {
 
@@ -192,7 +192,7 @@
 
         $(document).ready(function(){
             $.ajax({
-                url: "http://doccloud.dev/admin/charts/doccat/",
+                url: "/admin/charts/doccat/",
                 method: "GET",
                 success: function(data) {
 
@@ -245,7 +245,7 @@
 
         $(document).ready(function(){
             $.ajax({
-                url: "http://doccloud.dev/admin/charts/users/",
+                url: "/admin/charts/users/",
                 method: "GET",
                 success: function(data) {
                     console.log(data);
