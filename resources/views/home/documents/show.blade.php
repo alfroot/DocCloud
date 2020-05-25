@@ -28,11 +28,20 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row col-md-12">
         <div class="col-lg-12">
             <div class="card">
-                <iframe src = "/ViewerJS/?title={{$document->name}}#../storage/{{$document->storage}}" width=auto height='800' allowfullscreen webkitallowfullscreen></iframe>
-                {{--<iframe src="http://docs.google.com/gview?url=http://www.alfonsopozo.es/f1hVwAsaG49QWITKKa7mPVwglFEq67UBjiDzCXb9.ppt&embedded=true" style="width:1000px; height:800px;" frameborder="0"></iframe>--}}
+                <iframe src = "/ViewerJS/?title={{$document->name}}#../storage/{{$document->storage}}" width=auto height='800'  webkitallowfullscreen></iframe>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row col-md-12">
+        <div class="col-lg-12">
+            <div class="card">
+                <iframe src="http://docs.google.com/gview?url=alfonsopozo.es/storage/{{$document->storage}}&embedded=true" style="width:1000px; height:800px;" frameborder="0"></iframe>
+
             </div>
         </div>
     </div>

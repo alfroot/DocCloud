@@ -44,7 +44,9 @@
 
                                       @endif
                                   </h4>
-                                <p><b>Descripción: </b> {{$document->description}}</p>
+                                @if(isset($document->description))
+                                    <p><b>Descripción: </b> {{$document->description}}</p>
+                                @endif
 
 
                             </div>

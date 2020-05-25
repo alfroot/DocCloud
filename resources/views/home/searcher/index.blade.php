@@ -3,7 +3,7 @@
 @section('migaspan')
     <div class="row page-titles">
         <div class="col-md-5 align-self-center">
-            <h3 class="text-primary">Encuentra</h3> </div>
+            <h3 class="text-primary">Juanko comepollas</h3> </div>
         <div class="col-md-7 align-self-center">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/home">Dasboard</a></li>
@@ -131,7 +131,7 @@
                 $.ajax({
                     type: 'POST',
 
-                    url: '/search/users/',
+                    url: '{{route('getusers')}}',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",
@@ -194,7 +194,7 @@
                 $.ajax({
                     type: 'POST',
 
-                    url: '/search/documents/',
+                    url: '{{route('getdocuments')}}',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",
@@ -269,7 +269,7 @@
                 $.ajax({
                     type: 'POST',
 
-                    url: '/search/categories/',
+                    url: '{{route('getcategories')}}',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",

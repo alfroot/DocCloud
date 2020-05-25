@@ -77,7 +77,7 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <h2>SOBRE {{ config('app.name', 'Laravel') }}</h2>
-                <p>DocCloud es el proyecto de fin de grado de Alfonso Pozo, en el se trata de abordar y demostrar los conocimientos aprendidos durante el curso de DAW. La aplicación consiste en una red social de intercambio publico y gratuito o compra de documentos, todos estos pueden ser descargados o tener almacenados en la nube.</p>
+                <p>DocCloud es el proyecto de fin de grado de Alfonso Pozo, en el se trata de abordar y demostrar los conocimientos aprendidos durante el curso de DAW. La aplicación consiste en una red social de intercambio gratuito o compra de documentos, todos estos pueden ser descargados o tener almacenados en la nube.</p>
                 <p>La idea de negocio consiste en la monetización de documentos, al monetizar un archivo DocCloud se queda con el 30% de los beneficios de un documento por gestión y almacenaje. El otro 70% es la propiedad intelectual e ira destinada al usuario.</p>
                 <p>Al mismo tiempo DocCloud es una red social, en la que podemos disfrutar de un timeline,  comunicación con otros usuarios e interacciones.</p>
 

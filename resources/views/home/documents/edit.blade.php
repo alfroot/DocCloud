@@ -216,7 +216,7 @@
 
 
         var myDropzone = new Dropzone('.dropzone', {
-            url: '/documents/{{ $document->id }}/documents',
+            url: '{{ route('documentsavepublic',$document->id)  }}',
             paramName: 'document',
             acceptedFiles: 'application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.oasis.opendocument.spreadsheet,application/vnd.oasis.opendocument.text,application/msword,text/plain,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/vnd.ms-excel,',
             maxFilesize: 10,
@@ -251,8 +251,7 @@
                 var dad = $("#dad").val();
                 $.ajax({
                     type: 'POST',
-
-                    url: '/category/getcats/',
+                    url: '{{route('getcatspub')}}',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",

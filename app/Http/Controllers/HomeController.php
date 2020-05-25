@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function index()
     {
             $user = auth()->user();
-            $documentstimeline = Document::whereNotNull('storage')->orderBy('created_at','desc')->paginate(15);
+            $documentstimeline = Document::whereNotNull('category_id')->whereNotNull('storage')->orderBy('created_at','desc')->paginate(15);
             return view('/home/dashboard/dashboard' , compact('user','documentstimeline'));
 
     }

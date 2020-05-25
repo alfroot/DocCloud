@@ -61,8 +61,8 @@
                                 <div class="box-body"  >
                                     <div id="showcat" class="row"></div>
                                     <select  id="childs" name="category_id" class="form-control select2">
-                                       @if($document->category)
-                                        <option value="{{ old('name', $document->category->id) }}">{{$document->category->name}}</option>
+                                        @if($document->category)
+                                            <option value="{{ old('name', $document->category->id) }}">{{$document->category->name}}</option>
                                         @endif
                                     </select>
 
@@ -79,10 +79,10 @@
 
                     </div>
 
-                    </div>
-
-
                 </div>
+
+
+            </div>
 
 
             <div class="col-md-4">
@@ -108,49 +108,49 @@
             <div class="col-md-4">
                 <div class="box box-primary">
                     <div class="box-body">
-                <label id="in" class="box-title">Monetizar <img src="/images/if_money_36203.png" alt=""></label>
+                        <label id="in" class="box-title">Monetizar <img src="/images/if_money_36203.png" alt=""></label>
                         <div id="in2">
                             <label>Precio Actual: {{$document->price}}</label><br>
                         </div>
-                <select name="premium">
+                        <select name="premium">
 
-                    <option id="si" value="1" {{ $document->premium == 1 ? 'selected' : '' }} >Si</option>
-                    <option id="no" value="0"  {{ $document->premium == 0 ? 'selected' : '' }}>No</option>
-                </select>
-                <br>
-                <br>
-            </div>
+                            <option id="si" value="1" {{ $document->premium == 1 ? 'selected' : '' }} >Si</option>
+                            <option id="no" value="0"  {{ $document->premium == 0 ? 'selected' : '' }}>No</option>
+                        </select>
+                        <br>
+                        <br>
+                    </div>
                 </div>
             </div>
 
             {!! Form::close() !!}
-                @if (!empty($document->storage))
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="box box-primary">
-                                <div class="box-body">
+            @if (!empty($document->storage))
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box box-primary">
+                            <div class="box-body">
 
-                                    <form action="{{ route('admin.documents.destroy', $document) }}" method="POST">
-                                        {{ csrf_field() }} {{ method_field('DELETE') }}
-                                        <div class="col-md-2 align-content-center">
-                                            <button class="btn btn-danger btn-xs" style="position: absolute">
-                                                <i class="fa fa-remove"></i>
-                                            </button>
-                                            <img src="/images/if_document_1055071.png" class="img-bordered"  width="150" height="150">
-                                        </div>
-                                    </form>
-                                </div>
+                                <form action="{{ route('admin.documents.destroy', $document) }}" method="POST">
+                                    {{ csrf_field() }} {{ method_field('DELETE') }}
+                                    <div class="col-md-2 align-content-center">
+                                        <button class="btn btn-danger btn-xs" style="position: absolute">
+                                            <i class="fa fa-remove"></i>
+                                        </button>
+                                        <img src="/images/if_document_1055071.png" class="img-bordered"  width="150" height="150">
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                @endif
-                @if(empty($document->storage))
-                    <div class="form-goup col-md-4">
-                        <div class="dropzone"></div>
-                    </div>
-                
-                @endif
-            </div>
+                </div>
+            @endif
+            @if(empty($document->storage))
+                <div class="form-goup col-md-4">
+                    <div class="dropzone"></div>
+                </div>
+
+        @endif
+    </div>
 
 
 
@@ -191,7 +191,7 @@
         });
 
         var myDropzone = new Dropzone('.dropzone', {
-            url: '/admin/documents/{{ $document->id }}/documents',
+            url: '{{ route('documentsave',$document->id)  }}',
             paramName: 'document',
             acceptedFiles: 'application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.oasis.opendocument.spreadsheet,application/vnd.oasis.opendocument.text,application/msword,text/plain,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/vnd.ms-excel,',
             maxFilesize: 10,
@@ -210,7 +210,7 @@
             '<img src="/ElaAdmin/images/typesdoc/pptx.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
             '<img src="/ElaAdmin/images/typesdoc/txt.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
             '<img src="/ElaAdmin/images/typesdoc/xls.png" class=""  style="margin-right: 2% ; margin-top: 2%" width="35" height="35">' +
-                '</div>' +
+            '</div>' +
             '<br><br><p>Arrastra aquí tu documento</p>'
         });
         /*myDropzone.on('error', function(file, res) {
@@ -230,7 +230,7 @@
                 $.ajax({
                     type: 'POST',
 
-                    url: '/admin/category/getcats/',
+                    url: '{{route('getcats')}}',
                     dataType: 'json',
                     data: {
                         "_token": "{{ csrf_token() }}",

@@ -16,7 +16,7 @@ class PaysTableSeeder extends Seeder
 
 
         for ($i = 1; $i <= 35; $i++) {
-            for($y = 3; $y <= 35; $y++){
+            for($y = 1; $y <= 35; $y++){
                 if ($y%2==0){
                     factory(Pay::class, 1)->create([
                         'amount' => '8.99',
@@ -30,7 +30,7 @@ class PaysTableSeeder extends Seeder
         }
 
         for ($i = 36; $i <= 50; $i++) {
-            for($y = 3; $y <= 60; $y++){
+            for($y = 1; $y <= 60; $y++){
                 if ($y%2==0){
                 factory(Pay::class, 1)->create([
                 'amount' => '8.99',

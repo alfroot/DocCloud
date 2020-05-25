@@ -24,6 +24,7 @@ class DocumentsController extends Controller
 
     public function index()
     {
+
         $documents = Document::all()->where('user_id', '=', Auth::id());
 
         $user = User::find(Auth::id());
@@ -47,8 +48,6 @@ class DocumentsController extends Controller
 
     public function store(Request $request)
     {
-
-
             $user = Auth::id();
 
             $this->validate($request,
@@ -60,7 +59,6 @@ class DocumentsController extends Controller
             $document = Document::create($request->all());
 
             return redirect()->route('documents.edit', $document);
-
 
     }
 
