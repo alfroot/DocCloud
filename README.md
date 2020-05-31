@@ -38,7 +38,7 @@ GRANT ALL PRIVILEGES ON doccloud.* TO 'user'@'localhost' WITH GRANT OPTION;
 </code></pre>
 
 Add servername to your host file /etc/hosts.
-<pre><code class="language-shell">sudo 127.0.0.1  doccloud.com;</code></pre>
+<pre><code class="language-shell">127.0.0.1  doccloud.com;</code></pre>
 
 Add .conf file to nginx.
 <pre><code class="language-shell">cd laradock/nginx/sites/
@@ -50,7 +50,7 @@ Edit doccloud.conf and replace the following lines
 root /var/www/doccloud/public;
 </code></pre>
 
-Restart containers in laradock directory root.
+Restart containers in laradock root directory.
 <pre><code class="language-shell">docker-compose stop;
 docker-compose up nginx mysql workspace;
 </code></pre>
