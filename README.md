@@ -55,10 +55,11 @@ Restart containers in laradock directory root.
 docker-compose up nginx mysql workspace;
 </code></pre>
 
-### Laravel Migrate & Seeding Database Doccloud
+### Laravel Migrate & Seeding Doccloud Database
 Go inside workspace
 <pre><code class="language-shell">docker-compose exec --user=laradock workspace bash</code></pre>
 <pre><code class="language-shell">cd doccloud
+cp env-example .env
 php artisan migrate:fresh --seed
 </code></pre>
 
